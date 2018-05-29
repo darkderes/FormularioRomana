@@ -117,16 +117,57 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="genesisDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+  <metadata name="Humedad.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Formalizada.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
   <metadata name="traer_Resumen_RecepcionBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>152, 17</value>
+  </metadata>
+  <metadata name="genesisDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
   <metadata name="traer_Resumen_RecepcionTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>425, 17</value>
   </metadata>
   <metadata name="tableAdapterManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>692, 17</value>
+  </metadata>
+  <metadata name="productoBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1212, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="button2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAPASURBVEhLtZRrSFNhGMePaZZ2Y2a6mZFUYnZBEdTy
+        0iqJoeWUzSFW2kVIKAslIeiCZjfK7pKVXbBahB8qKTOaupw6Xc0bbtPZNJzpplNXipf6dHqew06swxnd
+        6IXfOJz3+f9/7+EcRpAk+V+hfoRCIZGQkECIRCJCLBYTSUlJiyQSyQYAV7oNXBtwD2dwFjOYDQgIIBwu
+        hmAWhKP37T+Udb3kadHzuo4ytWFY0WMeU7XpjbIHpS+KcQ9ncJYW0KCIib1gVmJiYnz+pZvnK5qMssr2
+        wRp1t7W+f3SqxR5lh6n61KVbF3AWM/YCNihBfHw8wj9ZcOOCrM0kx3K5dqim1zLZxBTgvWqN+W3+xaIC
+        zNiyDqEEcXFx3ml79+VUqHupkyMqw2gds5wG9960GKt2pWfkYDY2NpZwBCUQCASbLxY/Ka7SDCpowa+o
+        0gwprt8vvYdZADtYoQQxMTGpz2q1L+0FNTqLQtM31vBxaELNfIKewYn3OFPe0PkaswB2sEIJ+Hx+przd
+        pADBjxP2sBTTGIcnm3CmvnNIiVkAO1ihBJGRkYcUOnM9PjYtYCu2B2cauywqzALYwQolCAsL21Ou1Mre
+        6ix1fyKoeq+XYxbADlYoQUhIiKDg5oNH7wyjalrQNzLVzFaM4F5t53BD4Z1HpZgFsIMVShAUFMQTbBXm
+        vtOb1PX64UYU4ItkK0fwxTcbzC2x24R5mAWwgxVK4O/vT/j5+W3NzDl2V2v8rFF2jah0n8ZUbOUm63Rb
+        /8iEPvvIiYeBgYFZ4eHhHIBwBCXw9fUluFyuG4fD2Z2+P/thW7dJC19Rx+CXrzosHLBOt5o/T7ePjH/r
+        GrBYuw9k5ZSWlJSQ8FdQHBoaKoIiD2Yxjb2AcHd3d3N1dRX5r1x1Je/c5VetWn376Phkv3V8ckDT8UF3
+        +WqhbPWatddg5ji8wMdlZS9I+NO7DZJkKPNkliNMAeHi4oIsAcTAYeCMDbzGe7jnCZI969atl1ZUVJJi
+        sQQlqVDo9buC38ELJBkREZFSuVxJSiTJKNkLpdx/Fjg7O9PXXJAcjIqKliqVrWRy8naUZECxz0+Cv1lO
+        Tk60yAckh6OjN0qbm7vIlJSdKMmE8sX/JKCXTeQLkqN8foxUp+sjd+xIQ0k2fMYOBU4MZthwtsPFjpkg
+        Wg6S3E2btkgNBgsZHBx8hNpjEWAhXeAKuAFzgfkAB/AEvAEfYAmwFFgGrAAJHyRnPTw8TvN4vAS4x3Mk
+        oE9LS2YDKJoDzAMWAChbCCwCvAAuwANQjMAhCM53c/aFfWiKBkUAAAAASUVORK5CYII=
+</value>
+  </data>
+  <metadata name="variedadBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>863, 17</value>
+  </metadata>
+  <metadata name="variedadTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1040, 17</value>
+  </metadata>
+  <metadata name="productoTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
   </metadata>
 </root>
