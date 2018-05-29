@@ -387,7 +387,12 @@ namespace FormularioRomana
 
         private void cod_ProductorTextBox_TextChanged(object sender, EventArgs e)
         {
-
+            short productor = 0;
+            Boolean Isnum = short.TryParse(cod_ProductorTextBox.Text, out productor);
+            if (Isnum)
+            {
+                productoresTableAdapter.FiltroProductorByCodigo(genesisDataSet1.Productores, productor);
+            }
         }
     }
 }
