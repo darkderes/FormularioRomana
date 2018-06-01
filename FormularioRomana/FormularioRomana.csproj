@@ -72,6 +72,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GenesisDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="InformeRomana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformeRomana.Designer.cs">
+      <DependentUpon>InformeRomana.cs</DependentUpon>
+    </Compile>
     <Compile Include="Informe_Recepcion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormRecepciónes.resx">
       <DependentUpon>FormRecepciónes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeRomana.rdlc" />
+    <EmbeddedResource Include="InformeRomana.resx">
+      <DependentUpon>InformeRomana.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Informe_Recepcion.rdlc" />
     <EmbeddedResource Include="Informe_Recepcion.resx">

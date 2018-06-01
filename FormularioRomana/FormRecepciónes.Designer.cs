@@ -34,13 +34,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.traer_Resumen_RecepcionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.genesisDataSet = new FormularioRomana.GenesisDataSet();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.tableAdapterManager = new FormularioRomana.GenesisDataSetTableAdapters.TableAdapterManager();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
@@ -53,26 +51,18 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.productosComboBox = new System.Windows.Forms.ComboBox();
-            this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label16 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
             this.nom_ProductorComboBox = new System.Windows.Forms.ComboBox();
-            this.productoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.genesisDataSet1 = new FormularioRomana.GenesisDataSet();
             this.cod_ProductorTextBox = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.CmbVariedad = new System.Windows.Forms.ComboBox();
-            this.variedadBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label3 = new System.Windows.Forms.Label();
-            this.variedadTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.VariedadTableAdapter();
-            this.productoTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.ProductoTableAdapter();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.productoresTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.ProductoresTableAdapter();
-            this.traer_Resumen_RecepcionTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.Traer_Resumen_RecepcionTableAdapter();
-            this.traer_Resumen_Recepcion_FiltroBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.traer_Resumen_Recepcion_FiltroTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.Traer_Resumen_Recepcion_FiltroTableAdapter();
             this.traer_Resumen_Recepcion_FiltroDataGridView = new System.Windows.Forms.DataGridView();
+            this.label4 = new System.Windows.Forms.Label();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -88,25 +78,29 @@
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label4 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.traer_Resumen_RecepcionBindingSource)).BeginInit();
+            this.traer_Resumen_Recepcion_FiltroBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.variedadBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.traer_Resumen_RecepcionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tableAdapterManager = new FormularioRomana.GenesisDataSetTableAdapters.TableAdapterManager();
+            this.variedadTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.VariedadTableAdapter();
+            this.productoTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.ProductoTableAdapter();
+            this.productoresTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.ProductoresTableAdapter();
+            this.traer_Resumen_Recepcion_FiltroTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.Traer_Resumen_Recepcion_FiltroTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.genesisDataSet)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.genesisDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.traer_Resumen_Recepcion_FiltroDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.traer_Resumen_Recepcion_FiltroBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoresBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genesisDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.variedadBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.traer_Resumen_Recepcion_FiltroBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.traer_Resumen_Recepcion_FiltroDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.traer_Resumen_RecepcionBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // traer_Resumen_RecepcionBindingSource
-            // 
-            this.traer_Resumen_RecepcionBindingSource.DataMember = "Traer_Resumen_Recepcion";
-            this.traer_Resumen_RecepcionBindingSource.DataSource = this.genesisDataSet;
             // 
             // genesisDataSet
             // 
@@ -127,7 +121,7 @@
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(756, 534);
+            this.button4.Location = new System.Drawing.Point(762, 534);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(5);
             this.button4.Size = new System.Drawing.Size(77, 28);
@@ -140,7 +134,7 @@
             this.button3.BackColor = System.Drawing.Color.Firebrick;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(847, 534);
+            this.button3.Location = new System.Drawing.Point(845, 534);
             this.button3.Name = "button3";
             this.button3.Padding = new System.Windows.Forms.Padding(5);
             this.button3.Size = new System.Drawing.Size(76, 28);
@@ -154,7 +148,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(665, 534);
+            this.button1.Location = new System.Drawing.Point(679, 534);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(5);
             this.button1.Size = new System.Drawing.Size(77, 28);
@@ -162,25 +156,6 @@
             this.button1.Text = "AGREGAR";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.BasesPalletTableAdapter = null;
-            this.tableAdapterManager.Connection = null;
-            this.tableAdapterManager.DetalleRecepcionesTableAdapter = null;
-            this.tableAdapterManager.Envases_ProcesosTableAdapter = null;
-            this.tableAdapterManager.EnvasesTableAdapter = null;
-            this.tableAdapterManager.EstadosTableAdapter = null;
-            this.tableAdapterManager.Humedad_RecepcionTableAdapter = null;
-            this.tableAdapterManager.ProcesosTableAdapter = null;
-            this.tableAdapterManager.ProductoresTableAdapter = null;
-            this.tableAdapterManager.ProductoTableAdapter = null;
-            this.tableAdapterManager.RecepcionesTableAdapter = null;
-            this.tableAdapterManager.RomanaTableAdapter = null;
-            this.tableAdapterManager.Tarja_RecepcionTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = FormularioRomana.GenesisDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.VariedadTableAdapter = null;
             // 
             // groupBox1
             // 
@@ -325,11 +300,6 @@
             this.productosComboBox.TabIndex = 22;
             this.productosComboBox.ValueMember = "Cod_Productos";
             // 
-            // productoBindingSource
-            // 
-            this.productoBindingSource.DataMember = "Producto";
-            this.productoBindingSource.DataSource = this.genesisDataSet;
-            // 
             // label16
             // 
             this.label16.AutoSize = true;
@@ -371,11 +341,6 @@
             this.nom_ProductorComboBox.TabIndex = 19;
             this.nom_ProductorComboBox.ValueMember = "Cod_Productor";
             this.nom_ProductorComboBox.SelectedIndexChanged += new System.EventHandler(this.nom_ProductorComboBox_SelectedIndexChanged);
-            // 
-            // productoresBindingSource
-            // 
-            this.productoresBindingSource.DataMember = "Productores";
-            this.productoresBindingSource.DataSource = this.genesisDataSet1;
             // 
             // genesisDataSet1
             // 
@@ -426,11 +391,6 @@
             this.CmbVariedad.TabIndex = 9;
             this.CmbVariedad.ValueMember = "Cod_Variedad";
             // 
-            // variedadBindingSource
-            // 
-            this.variedadBindingSource.DataMember = "Variedad";
-            this.variedadBindingSource.DataSource = this.genesisDataSet;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -441,14 +401,6 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Productor";
             // 
-            // variedadTableAdapter
-            // 
-            this.variedadTableAdapter.ClearBeforeFill = true;
-            // 
-            // productoTableAdapter
-            // 
-            this.productoTableAdapter.ClearBeforeFill = true;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
@@ -458,23 +410,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 23;
             this.pictureBox2.TabStop = false;
-            // 
-            // productoresTableAdapter
-            // 
-            this.productoresTableAdapter.ClearBeforeFill = true;
-            // 
-            // traer_Resumen_RecepcionTableAdapter
-            // 
-            this.traer_Resumen_RecepcionTableAdapter.ClearBeforeFill = true;
-            // 
-            // traer_Resumen_Recepcion_FiltroBindingSource
-            // 
-            this.traer_Resumen_Recepcion_FiltroBindingSource.DataMember = "Traer_Resumen_Recepcion_Filtro";
-            this.traer_Resumen_Recepcion_FiltroBindingSource.DataSource = this.genesisDataSet;
-            // 
-            // traer_Resumen_Recepcion_FiltroTableAdapter
-            // 
-            this.traer_Resumen_Recepcion_FiltroTableAdapter.ClearBeforeFill = true;
             // 
             // traer_Resumen_Recepcion_FiltroDataGridView
             // 
@@ -522,6 +457,16 @@
             this.traer_Resumen_Recepcion_FiltroDataGridView.Size = new System.Drawing.Size(909, 285);
             this.traer_Resumen_Recepcion_FiltroDataGridView.TabIndex = 24;
             this.traer_Resumen_Recepcion_FiltroDataGridView.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.traer_Resumen_Recepcion_FiltroDataGridView_CellFormatting);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(12, 540);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(100, 13);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "N/A = No Aplica";
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -634,22 +579,72 @@
             this.dataGridViewTextBoxColumn15.ReadOnly = true;
             this.dataGridViewTextBoxColumn15.Width = 80;
             // 
-            // label4
+            // traer_Resumen_Recepcion_FiltroBindingSource
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 549);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "N/A = No Aplica";
+            this.traer_Resumen_Recepcion_FiltroBindingSource.DataMember = "Traer_Resumen_Recepcion_Filtro";
+            this.traer_Resumen_Recepcion_FiltroBindingSource.DataSource = this.genesisDataSet;
+            // 
+            // productoBindingSource
+            // 
+            this.productoBindingSource.DataMember = "Producto";
+            this.productoBindingSource.DataSource = this.genesisDataSet;
+            // 
+            // productoresBindingSource
+            // 
+            this.productoresBindingSource.DataMember = "Productores";
+            this.productoresBindingSource.DataSource = this.genesisDataSet1;
+            // 
+            // variedadBindingSource
+            // 
+            this.variedadBindingSource.DataMember = "Variedad";
+            this.variedadBindingSource.DataSource = this.genesisDataSet;
+            // 
+            // traer_Resumen_RecepcionBindingSource
+            // 
+            this.traer_Resumen_RecepcionBindingSource.DataMember = "Traer_Resumen_Recepcion";
+            this.traer_Resumen_RecepcionBindingSource.DataSource = this.genesisDataSet;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.BasesPalletTableAdapter = null;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.DetalleRecepcionesTableAdapter = null;
+            this.tableAdapterManager.Envases_ProcesosTableAdapter = null;
+            this.tableAdapterManager.EnvasesTableAdapter = null;
+            this.tableAdapterManager.EstadosTableAdapter = null;
+            this.tableAdapterManager.Humedad_RecepcionTableAdapter = null;
+            this.tableAdapterManager.ProcesosTableAdapter = null;
+            this.tableAdapterManager.ProductoresTableAdapter = null;
+            this.tableAdapterManager.ProductoTableAdapter = null;
+            this.tableAdapterManager.RecepcionesTableAdapter = null;
+            this.tableAdapterManager.RomanaTableAdapter = null;
+            this.tableAdapterManager.Tarja_RecepcionTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = FormularioRomana.GenesisDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.VariedadTableAdapter = null;
+            // 
+            // variedadTableAdapter
+            // 
+            this.variedadTableAdapter.ClearBeforeFill = true;
+            // 
+            // productoTableAdapter
+            // 
+            this.productoTableAdapter.ClearBeforeFill = true;
+            // 
+            // productoresTableAdapter
+            // 
+            this.productoresTableAdapter.ClearBeforeFill = true;
+            // 
+            // traer_Resumen_Recepcion_FiltroTableAdapter
+            // 
+            this.traer_Resumen_Recepcion_FiltroTableAdapter.ClearBeforeFill = true;
             // 
             // FormRecepciónes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(933, 582);
+            this.ClientSize = new System.Drawing.Size(933, 567);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.traer_Resumen_Recepcion_FiltroDataGridView);
             this.Controls.Add(this.pictureBox2);
@@ -662,7 +657,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormRecepciónes";
             this.Load += new System.EventHandler(this.FormRecepciónes_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.traer_Resumen_RecepcionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.genesisDataSet)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -670,13 +664,14 @@
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.genesisDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.traer_Resumen_Recepcion_FiltroDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.traer_Resumen_Recepcion_FiltroBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoresBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genesisDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.variedadBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.traer_Resumen_Recepcion_FiltroBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.traer_Resumen_Recepcion_FiltroDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.traer_Resumen_RecepcionBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -709,7 +704,6 @@
         private GenesisDataSet genesisDataSet1;
         private System.Windows.Forms.BindingSource productoresBindingSource;
         private GenesisDataSetTableAdapters.ProductoresTableAdapter productoresTableAdapter;
-        private GenesisDataSetTableAdapters.Traer_Resumen_RecepcionTableAdapter traer_Resumen_RecepcionTableAdapter;
         private System.Windows.Forms.BindingSource traer_Resumen_Recepcion_FiltroBindingSource;
         private GenesisDataSetTableAdapters.Traer_Resumen_Recepcion_FiltroTableAdapter traer_Resumen_Recepcion_FiltroTableAdapter;
         private System.Windows.Forms.DataGridView traer_Resumen_Recepcion_FiltroDataGridView;

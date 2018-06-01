@@ -48,7 +48,9 @@ namespace FormularioRomana
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-         
+            // TODO: esta línea de código carga datos en la tabla 'genesisDataSet.Traer_Resumen_Recepcion' Puede moverla o quitarla según sea necesario.
+
+           
 
             this.romanaTableAdapter.Fill(this.genesisDataSet.Romana);
             try
@@ -92,6 +94,7 @@ namespace FormularioRomana
                     if (comboBox2.Text == "Seca")
                     {
                         double pesajes = 0;
+                        groupBox1.Enabled = false;
                         if (bultos > 24 && bultos <= 50)
                         {
                             pesajes = 2;
@@ -106,31 +109,52 @@ namespace FormularioRomana
                         {
                             pesajes = 4;
                         }
-                        //if (bultos2 <= 80)
-                        //{
-                        //    if (bultos2 % pesajes == 0)
-                        //    {
-                        //        int aux = Convert.ToInt32(bultos2 / pesajes);
-                        //        MessageBox.Show(aux.ToString());
-                        //    }
-                        //    else
-                        //    {
-                        //        int aux = Convert.ToInt32(bultos / pesajes);
-                        //        int aux1 = Convert.ToInt32((aux * (pesajes - 1)));
-                        //        int aux2 = Convert.ToInt32(bultos - aux1);
-                        //        MessageBox.Show("Pesajes :" + (pesajes - 1).ToString() + " De " + (aux).ToString() + " 1 Pesaje de " + aux2);
-                        //    }
-                        //}
-                        //else
-                        //{
-                        //    MessageBox.Show("Error");
-                        //}
+                        if (bultos <= 80)
+                        {
+                        tabControl1.TabPages[1].Text = "Descripcion de Envases";
+                            if (bultos % pesajes == 0)
+                            {
+                                int aux = Convert.ToInt32(bultos / pesajes);
+                                for (int i = 0; i < pesajes; i++)
+                                {
+                                    id = Convert.ToInt32(recepcionesTableAdapter1.Insertar_Recepciones(Convert.ToInt16(cod_ProductorTextBox.Text), Convert.ToInt16(comboBox3.SelectedValue.ToString()), Convert.ToInt16(comboBox2.SelectedValue.ToString()), Convert.ToInt16(productosComboBox.SelectedValue.ToString()), Txt_NumGuia.Text, aux, "16448502-1"));
+                                }
+
+                                MessageBox.Show("Se han ingresado :" + (pesajes).ToString() + " De " + (aux).ToString());
+                                traer_Resumen_RecepcionTableAdapter.Fill(genesisDataSet.Traer_Resumen_Recepcion, Convert.ToInt16(cod_ProductorTextBox.Text), Convert.ToInt16(comboBox3.SelectedValue.ToString()), Convert.ToInt16(comboBox2.SelectedValue.ToString()), Txt_NumGuia.Text);
+                                tabControl1.Visible = true;
+                         
+                            }
+                            else
+                            {
+                                int  aux = Convert.ToInt32(bultos / pesajes);
+                                int aux1 = Convert.ToInt32((aux * (pesajes - 1)));
+                                int aux2 = Convert.ToInt32(bultos - aux1);
+                             
+                                for (int i = 0; i < pesajes - 1; i++)
+                                {
+                                    id = Convert.ToInt32(recepcionesTableAdapter1.Insertar_Recepciones(Convert.ToInt16(cod_ProductorTextBox.Text), Convert.ToInt16(comboBox3.SelectedValue.ToString()), Convert.ToInt16(comboBox2.SelectedValue.ToString()), Convert.ToInt16(productosComboBox.SelectedValue.ToString()), Txt_NumGuia.Text, aux, "16448502-1"));
+                                }
+
+                                id = Convert.ToInt32(recepcionesTableAdapter1.Insertar_Recepciones(Convert.ToInt16(cod_ProductorTextBox.Text), Convert.ToInt16(comboBox3.SelectedValue.ToString()), Convert.ToInt16(comboBox2.SelectedValue.ToString()), Convert.ToInt16(productosComboBox.SelectedValue.ToString()), Txt_NumGuia.Text, aux2, "16448502-1"));
+                                MessageBox.Show("Se han ingresado :" + (pesajes - 1).ToString() + " De " + (aux).ToString() + " 1 Pesaje de " + aux2);
+                                traer_Resumen_RecepcionTableAdapter.Fill(genesisDataSet.Traer_Resumen_Recepcion, Convert.ToInt16(cod_ProductorTextBox.Text), Convert.ToInt16(comboBox3.SelectedValue.ToString()), Convert.ToInt16(comboBox2.SelectedValue.ToString()),Txt_NumGuia.Text);
+                                tabControl1.Visible = true;
+                            }
+                                 groupBox3.Visible = false;
+                                
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error");
+                        }
                     }
                     if(comboBox2.Text == "Con Pelón")
                     {
                         try
                         {
                             tabControl1.Controls.Remove(tabControl1.TabPages[1]);
+                           // tabControl1.Controls.Remove(tabControl1.TabPages[4]);
                         }
                         catch (IndexOutOfRangeException ex)
                         {
@@ -193,13 +217,13 @@ namespace FormularioRomana
             cantidad_acum +=cantidad;
             if (isnumber)
             {
-                if (cantidad_acum <= bultos)
+                if (num_envases() <= bultos)
                 {
                     try
                     {
                         this.detalleRecepcionesTableAdapter.InsertarDetalleRecepciones(Convert.ToInt32(Lbl_Recepcion.Text), Convert.ToInt16(cod_ProductorTextBox.Text), Txt_NumGuia.Text,cantidad, Convert.ToInt16(CmbEnvase.SelectedValue.ToString()), Convert.ToInt16(CmbBaseBins.SelectedValue.ToString()));//insertar datos a tabla DetalleRecepciones
                         this.traer_Detalle_RecepcionTableAdapter.Fill(this.genesisDataSet.Traer_Detalle_Recepcion, new System.Nullable<int>(((int)(System.Convert.ChangeType(Lbl_Recepcion.Text, typeof(int))))), new System.Nullable<short>(((short)(System.Convert.ChangeType(cod_ProductorTextBox.Text, typeof(short))))), Txt_NumGuia.Text);//Trae datos de procedimiento almacenado traer_Detalle_Recepcion
-                        LblCantidadEnvases.Text = cantidad_acum.ToString();
+                        LblCantidadEnvases.Text = num_envases().ToString();
                         for (int i = 0; i < cantidad; i++)
                         {         
                           this.tarja_RecepcionTableAdapter.Insertar_Tarja_Recepcion(Convert.ToInt16(Lbl_Recepcion.Text),Convert.ToInt16(cod_ProductorTextBox.Text),Convert.ToInt16(comboBox3.SelectedValue.ToString()),Convert.ToInt16(comboBox2.SelectedValue.ToString()),Convert.ToInt16(productosComboBox.SelectedValue.ToString()),Convert.ToInt16(CmbEnvase.SelectedValue.ToString()),1,23.5,Convert.ToInt16(CmbBaseBins.SelectedValue.ToString()),25.5,null,null,null,null,null);
@@ -335,6 +359,7 @@ namespace FormularioRomana
                 Txt_Peso_Bruto.Text = (Convert.ToInt32(Txt_Con_Carga.Text) - Convert.ToInt32(Txt_Sin_Carga.Text)).ToString();
                 this.romanaTableAdapter.Insertar_Romana(Convert.ToInt32(Lbl_Recepcion.Text), Convert.ToInt16(cod_ProductorTextBox.Text), Txt_NumGuia.Text, Convert.ToInt32(Txt_Con_Carga.Text), Convert.ToInt32(Txt_Sin_Carga.Text), Convert.ToInt32(Txt_Peso_Bruto.Text));
                 MessageBox.Show("Datos de romana ingresados o actualizados correctamente");
+                Btn_Romana.Enabled = true;
             }
             catch (SqlException ex)
             {
@@ -392,6 +417,55 @@ namespace FormularioRomana
             if (Isnum)
             {
                 productoresTableAdapter.FiltroProductorByCodigo(genesisDataSet1.Productores, productor);
+            }
+        }
+
+        private void button13_Click_1(object sender, EventArgs e)
+        {
+            InformeRomana r = new InformeRomana(id);
+            r.ShowDialog();
+        }
+
+        private void traer_Resumen_RecepcionDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            cantidad = 0;
+            Lbl_Recepcion.Text = traer_Resumen_RecepcionDataGridView.Rows[e.RowIndex].Cells[nameof(dataGridViewTextBoxColumn11)].Value.ToString();
+            TxtBultos.Text = traer_Resumen_RecepcionDataGridView.Rows[e.RowIndex].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString();
+            this.traer_Detalle_RecepcionTableAdapter.Fill(this.genesisDataSet.Traer_Detalle_Recepcion, new System.Nullable<int>(((int)(System.Convert.ChangeType(Lbl_Recepcion.Text, typeof(int))))), new System.Nullable<short>(((short)(System.Convert.ChangeType(cod_ProductorTextBox.Text, typeof(short))))), Txt_NumGuia.Text);
+            label1.Visible = true;
+            Lbl_Recepcion.Visible = true;
+            LblCantidadEnvases.Text = num_envases().ToString();
+            tabControl1.SelectedIndex = 1;
+            
+        }
+        public int num_envases()
+        {
+            int acum = 0;
+            for(int i = 0;i < traer_Detalle_RecepcionDataGridView.RowCount;i++)
+            {
+                acum = acum + Convert.ToInt32(traer_Detalle_RecepcionDataGridView.Rows[i].Cells[nameof(dataGridViewTextBoxColumn5)].Value.ToString());
+            }
+            return acum;
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Txt_Peso_Bruto2.Text = (Convert.ToInt32(Txt_Con_Carga2.Text) - Convert.ToInt32(Txt_Sin_Carga2.Text)).ToString();
+                for (int i = 0; i < traer_Resumen_RecepcionDataGridView.RowCount; i++)
+                { 
+          
+                this.romanaTableAdapter.Insertar_Romana(Convert.ToInt32(traer_Resumen_RecepcionDataGridView.Rows[i].Cells[nameof(dataGridViewTextBoxColumn11)].Value.ToString()), Convert.ToInt16(cod_ProductorTextBox.Text), Txt_NumGuia.Text, Convert.ToInt32(Txt_Con_Carga2.Text), Convert.ToInt32(Txt_Sin_Carga2.Text), Convert.ToInt32(Txt_Peso_Bruto2.Text));
+                MessageBox.Show("Datos de romana ingresados o actualizados correctamente");
+                Btn_Romana.Enabled = true;
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message, "Anakena", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
         }
     }

@@ -30,6 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.Lbl_Recepcion = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -54,11 +58,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.productoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.Print_Etiquetas = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
@@ -86,6 +86,7 @@
             this.traerEnvasesProcesoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.Btn_Romana = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
@@ -95,6 +96,18 @@
             this.Txt_Sin_Carga = new System.Windows.Forms.TextBox();
             this.Txt_Con_Carga = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.Txt_Peso_Bruto2 = new System.Windows.Forms.TextBox();
+            this.Txt_Sin_Carga2 = new System.Windows.Forms.TextBox();
+            this.Txt_Con_Carga2 = new System.Windows.Forms.TextBox();
+            this.traer_Resumen_RecepcionDataGridView = new System.Windows.Forms.DataGridView();
+            this.traer_Resumen_RecepcionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.button7 = new System.Windows.Forms.Button();
@@ -105,22 +118,38 @@
             this.button9 = new System.Windows.Forms.Button();
             this.estadosTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.EstadosTableAdapter();
             this.productoTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.ProductoTableAdapter();
-            this.tableAdapterManager = new FormularioRomana.GenesisDataSetTableAdapters.TableAdapterManager();
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.variedadTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.VariedadTableAdapter();
             this.productoresTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.ProductoresTableAdapter();
             this.recepcionesTableAdapter1 = new FormularioRomana.GenesisDataSetTableAdapters.RecepcionesTableAdapter();
             this.basesPalletTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.BasesPalletTableAdapter();
+            this.detalleRecepcionesTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.DetalleRecepcionesTableAdapter();
+            this.romanaTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.RomanaTableAdapter();
+            this.tarja_RecepcionTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.Tarja_RecepcionTableAdapter();
+            this.humedad_RecepcionTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.Humedad_RecepcionTableAdapter();
+            this.tableAdapterManager = new FormularioRomana.GenesisDataSetTableAdapters.TableAdapterManager();
             this.traer_Envases_ProcesoTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.Traer_Envases_ProcesoTableAdapter();
             this.detalleRecepcionesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.detalleRecepcionesTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.DetalleRecepcionesTableAdapter();
             this.traer_Detalle_RecepcionTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.Traer_Detalle_RecepcionTableAdapter();
             this.romanaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.romanaTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.RomanaTableAdapter();
             this.tarja_RecepcionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tarja_RecepcionTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.Tarja_RecepcionTableAdapter();
             this.humedad_RecepcionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.humedad_RecepcionTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.Humedad_RecepcionTableAdapter();
+            this.traer_Resumen_RecepcionTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.Traer_Resumen_RecepcionTableAdapter();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BotonEnvase = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.genesisDataSet)).BeginInit();
@@ -137,6 +166,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.traerEnvasesProcesoBindingSource)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.traer_Resumen_RecepcionDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.traer_Resumen_RecepcionBindingSource)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -388,47 +421,6 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Productor";
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.SeaGreen;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(486, 590);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(5);
-            this.button1.Size = new System.Drawing.Size(85, 31);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "AGREGAR";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Firebrick;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(668, 590);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(5);
-            this.button3.Size = new System.Drawing.Size(84, 31);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "ELIMINAR";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.SteelBlue;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(577, 590);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(5);
-            this.button4.Size = new System.Drawing.Size(85, 31);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "MODIFICAR";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -438,14 +430,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.DarkGray;
-            this.panel1.Location = new System.Drawing.Point(2, 563);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(782, 11);
-            this.panel1.TabIndex = 17;
             // 
             // groupBox2
             // 
@@ -470,14 +454,14 @@
             // 
             // Print_Etiquetas
             // 
-            this.Print_Etiquetas.BackColor = System.Drawing.Color.SteelBlue;
-            this.Print_Etiquetas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Print_Etiquetas.BackColor = System.Drawing.Color.CadetBlue;
+            this.Print_Etiquetas.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Print_Etiquetas.ForeColor = System.Drawing.Color.White;
             this.Print_Etiquetas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Print_Etiquetas.Location = new System.Drawing.Point(644, 87);
+            this.Print_Etiquetas.Location = new System.Drawing.Point(649, 87);
             this.Print_Etiquetas.Name = "Print_Etiquetas";
             this.Print_Etiquetas.Padding = new System.Windows.Forms.Padding(5);
-            this.Print_Etiquetas.Size = new System.Drawing.Size(73, 31);
+            this.Print_Etiquetas.Size = new System.Drawing.Size(80, 32);
             this.Print_Etiquetas.TabIndex = 21;
             this.Print_Etiquetas.Text = "Etiquetas";
             this.Print_Etiquetas.UseVisualStyleBackColor = false;
@@ -701,6 +685,7 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Silver;
+            this.groupBox3.Controls.Add(this.Btn_Romana);
             this.groupBox3.Controls.Add(this.button11);
             this.groupBox3.Controls.Add(this.button6);
             this.groupBox3.Controls.Add(this.label14);
@@ -715,16 +700,32 @@
             this.groupBox3.TabIndex = 19;
             this.groupBox3.TabStop = false;
             // 
+            // Btn_Romana
+            // 
+            this.Btn_Romana.BackColor = System.Drawing.Color.CadetBlue;
+            this.Btn_Romana.Enabled = false;
+            this.Btn_Romana.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Romana.ForeColor = System.Drawing.Color.White;
+            this.Btn_Romana.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Romana.Location = new System.Drawing.Point(648, 39);
+            this.Btn_Romana.Name = "Btn_Romana";
+            this.Btn_Romana.Padding = new System.Windows.Forms.Padding(5);
+            this.Btn_Romana.Size = new System.Drawing.Size(72, 30);
+            this.Btn_Romana.TabIndex = 24;
+            this.Btn_Romana.Text = "Romana";
+            this.Btn_Romana.UseVisualStyleBackColor = false;
+            this.Btn_Romana.Click += new System.EventHandler(this.button13_Click_1);
+            // 
             // button11
             // 
             this.button11.BackColor = System.Drawing.Color.SteelBlue;
-            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button11.ForeColor = System.Drawing.Color.White;
             this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.Location = new System.Drawing.Point(201, 39);
+            this.button11.Location = new System.Drawing.Point(154, 42);
             this.button11.Name = "button11";
             this.button11.Padding = new System.Windows.Forms.Padding(5);
-            this.button11.Size = new System.Drawing.Size(70, 31);
+            this.button11.Size = new System.Drawing.Size(70, 27);
             this.button11.TabIndex = 8;
             this.button11.Text = "GUARDAR";
             this.button11.UseVisualStyleBackColor = false;
@@ -733,13 +734,13 @@
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.SteelBlue;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(452, 39);
+            this.button6.Location = new System.Drawing.Point(410, 42);
             this.button6.Name = "button6";
             this.button6.Padding = new System.Windows.Forms.Padding(5);
-            this.button6.Size = new System.Drawing.Size(70, 31);
+            this.button6.Size = new System.Drawing.Size(70, 27);
             this.button6.TabIndex = 7;
             this.button6.Text = "GUARDAR";
             this.button6.UseVisualStyleBackColor = false;
@@ -749,7 +750,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(544, 13);
+            this.label14.Location = new System.Drawing.Point(491, 16);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(151, 20);
             this.label14.TabIndex = 5;
@@ -759,7 +760,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(305, 12);
+            this.label13.Location = new System.Drawing.Point(252, 15);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(137, 20);
             this.label13.TabIndex = 4;
@@ -769,7 +770,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(61, 11);
+            this.label12.Location = new System.Drawing.Point(8, 14);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(133, 20);
             this.label12.TabIndex = 3;
@@ -780,7 +781,7 @@
             this.Txt_Peso_Bruto.BackColor = System.Drawing.SystemColors.MenuText;
             this.Txt_Peso_Bruto.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_Peso_Bruto.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.Txt_Peso_Bruto.Location = new System.Drawing.Point(558, 38);
+            this.Txt_Peso_Bruto.Location = new System.Drawing.Point(505, 41);
             this.Txt_Peso_Bruto.Name = "Txt_Peso_Bruto";
             this.Txt_Peso_Bruto.Size = new System.Drawing.Size(117, 38);
             this.Txt_Peso_Bruto.TabIndex = 2;
@@ -792,7 +793,7 @@
             this.Txt_Sin_Carga.BackColor = System.Drawing.SystemColors.MenuText;
             this.Txt_Sin_Carga.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_Sin_Carga.ForeColor = System.Drawing.Color.Red;
-            this.Txt_Sin_Carga.Location = new System.Drawing.Point(309, 37);
+            this.Txt_Sin_Carga.Location = new System.Drawing.Point(256, 40);
             this.Txt_Sin_Carga.Name = "Txt_Sin_Carga";
             this.Txt_Sin_Carga.Size = new System.Drawing.Size(117, 38);
             this.Txt_Sin_Carga.TabIndex = 1;
@@ -804,7 +805,7 @@
             this.Txt_Con_Carga.BackColor = System.Drawing.SystemColors.MenuText;
             this.Txt_Con_Carga.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_Con_Carga.ForeColor = System.Drawing.Color.Green;
-            this.Txt_Con_Carga.Location = new System.Drawing.Point(65, 38);
+            this.Txt_Con_Carga.Location = new System.Drawing.Point(12, 41);
             this.Txt_Con_Carga.Name = "Txt_Con_Carga";
             this.Txt_Con_Carga.Size = new System.Drawing.Size(117, 38);
             this.Txt_Con_Carga.TabIndex = 0;
@@ -813,15 +814,191 @@
             // 
             // tabControl1
             // 
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 179);
+            this.tabControl1.Location = new System.Drawing.Point(12, 178);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(758, 378);
             this.tabControl1.TabIndex = 20;
             this.tabControl1.Visible = false;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.AutoScroll = true;
+            this.tabPage4.BackColor = System.Drawing.Color.Silver;
+            this.tabPage4.Controls.Add(this.groupBox4);
+            this.tabPage4.Controls.Add(this.traer_Resumen_RecepcionDataGridView);
+            this.tabPage4.Location = new System.Drawing.Point(4, 23);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(750, 351);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Recepcion Seca";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.BackColor = System.Drawing.Color.Silver;
+            this.groupBox4.Controls.Add(this.button1);
+            this.groupBox4.Controls.Add(this.Txt_Sin_Carga2);
+            this.groupBox4.Controls.Add(this.button3);
+            this.groupBox4.Controls.Add(this.label18);
+            this.groupBox4.Controls.Add(this.label8);
+            this.groupBox4.Controls.Add(this.Txt_Con_Carga2);
+            this.groupBox4.Controls.Add(this.label17);
+            this.groupBox4.Controls.Add(this.Txt_Peso_Bruto2);
+            this.groupBox4.Location = new System.Drawing.Point(412, 24);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(281, 256);
+            this.groupBox4.TabIndex = 20;
+            this.groupBox4.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.CadetBlue;
+            this.button1.Enabled = false;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(196, 209);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(5);
+            this.button1.Size = new System.Drawing.Size(70, 30);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "Informe";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.SteelBlue;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(196, 173);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(5);
+            this.button3.Size = new System.Drawing.Size(70, 30);
+            this.button3.TabIndex = 8;
+            this.button3.Text = "GUARDAR";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(39, 173);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(151, 20);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "Peso bruto carga ";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(51, 93);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(137, 20);
+            this.label17.TabIndex = 4;
+            this.label17.Text = "Precio sin carga";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(49, 18);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(133, 20);
+            this.label18.TabIndex = 3;
+            this.label18.Text = "Peso con carga";
+            // 
+            // Txt_Peso_Bruto2
+            // 
+            this.Txt_Peso_Bruto2.BackColor = System.Drawing.SystemColors.MenuText;
+            this.Txt_Peso_Bruto2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_Peso_Bruto2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.Txt_Peso_Bruto2.Location = new System.Drawing.Point(53, 200);
+            this.Txt_Peso_Bruto2.Name = "Txt_Peso_Bruto2";
+            this.Txt_Peso_Bruto2.Size = new System.Drawing.Size(119, 38);
+            this.Txt_Peso_Bruto2.TabIndex = 2;
+            this.Txt_Peso_Bruto2.Text = "0";
+            this.Txt_Peso_Bruto2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Txt_Sin_Carga2
+            // 
+            this.Txt_Sin_Carga2.BackColor = System.Drawing.SystemColors.MenuText;
+            this.Txt_Sin_Carga2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_Sin_Carga2.ForeColor = System.Drawing.Color.Red;
+            this.Txt_Sin_Carga2.Location = new System.Drawing.Point(55, 118);
+            this.Txt_Sin_Carga2.Name = "Txt_Sin_Carga2";
+            this.Txt_Sin_Carga2.Size = new System.Drawing.Size(117, 38);
+            this.Txt_Sin_Carga2.TabIndex = 1;
+            this.Txt_Sin_Carga2.Text = "0";
+            this.Txt_Sin_Carga2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Txt_Con_Carga2
+            // 
+            this.Txt_Con_Carga2.BackColor = System.Drawing.SystemColors.MenuText;
+            this.Txt_Con_Carga2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_Con_Carga2.ForeColor = System.Drawing.Color.Green;
+            this.Txt_Con_Carga2.Location = new System.Drawing.Point(53, 45);
+            this.Txt_Con_Carga2.Name = "Txt_Con_Carga2";
+            this.Txt_Con_Carga2.Size = new System.Drawing.Size(117, 38);
+            this.Txt_Con_Carga2.TabIndex = 0;
+            this.Txt_Con_Carga2.Text = "0";
+            this.Txt_Con_Carga2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // traer_Resumen_RecepcionDataGridView
+            // 
+            this.traer_Resumen_RecepcionDataGridView.AllowUserToAddRows = false;
+            this.traer_Resumen_RecepcionDataGridView.AutoGenerateColumns = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.traer_Resumen_RecepcionDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.traer_Resumen_RecepcionDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.traer_Resumen_RecepcionDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn18,
+            this.dataGridViewTextBoxColumn19,
+            this.dataGridViewTextBoxColumn20,
+            this.dataGridViewTextBoxColumn21,
+            this.dataGridViewTextBoxColumn22,
+            this.dataGridViewTextBoxColumn23,
+            this.dataGridViewTextBoxColumn24,
+            this.BotonEnvase});
+            this.traer_Resumen_RecepcionDataGridView.DataSource = this.traer_Resumen_RecepcionBindingSource;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightYellow;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.traer_Resumen_RecepcionDataGridView.DefaultCellStyle = dataGridViewCellStyle4;
+            this.traer_Resumen_RecepcionDataGridView.Location = new System.Drawing.Point(39, 34);
+            this.traer_Resumen_RecepcionDataGridView.Name = "traer_Resumen_RecepcionDataGridView";
+            this.traer_Resumen_RecepcionDataGridView.RowHeadersVisible = false;
+            this.traer_Resumen_RecepcionDataGridView.Size = new System.Drawing.Size(286, 246);
+            this.traer_Resumen_RecepcionDataGridView.TabIndex = 0;
+            this.traer_Resumen_RecepcionDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.traer_Resumen_RecepcionDataGridView_CellClick);
+            // 
+            // traer_Resumen_RecepcionBindingSource
+            // 
+            this.traer_Resumen_RecepcionBindingSource.DataMember = "Traer_Resumen_Recepcion";
+            this.traer_Resumen_RecepcionBindingSource.DataSource = this.genesisDataSet;
             // 
             // tabPage1
             // 
@@ -896,7 +1073,7 @@
             // 
             // button10
             // 
-            this.button10.BackColor = System.Drawing.Color.SteelBlue;
+            this.button10.BackColor = System.Drawing.Color.CadetBlue;
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.Color.White;
             this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -931,24 +1108,6 @@
             // 
             this.productoTableAdapter.ClearBeforeFill = true;
             // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.BasesPalletTableAdapter = null;
-            this.tableAdapterManager.DetalleRecepcionesTableAdapter = null;
-            this.tableAdapterManager.Envases_ProcesosTableAdapter = null;
-            this.tableAdapterManager.EnvasesTableAdapter = null;
-            this.tableAdapterManager.EstadosTableAdapter = null;
-            this.tableAdapterManager.Humedad_RecepcionTableAdapter = null;
-            this.tableAdapterManager.ProcesosTableAdapter = null;
-            this.tableAdapterManager.ProductoresTableAdapter = null;
-            this.tableAdapterManager.ProductoTableAdapter = this.productoTableAdapter;
-            this.tableAdapterManager.RecepcionesTableAdapter = null;
-            this.tableAdapterManager.RomanaTableAdapter = null;
-            this.tableAdapterManager.Tarja_RecepcionTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = FormularioRomana.GenesisDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.VariedadTableAdapter = null;
-            // 
             // variedadTableAdapter
             // 
             this.variedadTableAdapter.ClearBeforeFill = true;
@@ -965,6 +1124,41 @@
             // 
             this.basesPalletTableAdapter.ClearBeforeFill = true;
             // 
+            // detalleRecepcionesTableAdapter
+            // 
+            this.detalleRecepcionesTableAdapter.ClearBeforeFill = true;
+            // 
+            // romanaTableAdapter
+            // 
+            this.romanaTableAdapter.ClearBeforeFill = true;
+            // 
+            // tarja_RecepcionTableAdapter
+            // 
+            this.tarja_RecepcionTableAdapter.ClearBeforeFill = true;
+            // 
+            // humedad_RecepcionTableAdapter
+            // 
+            this.humedad_RecepcionTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.BasesPalletTableAdapter = null;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.DetalleRecepcionesTableAdapter = null;
+            this.tableAdapterManager.Envases_ProcesosTableAdapter = null;
+            this.tableAdapterManager.EnvasesTableAdapter = null;
+            this.tableAdapterManager.EstadosTableAdapter = null;
+            this.tableAdapterManager.Humedad_RecepcionTableAdapter = null;
+            this.tableAdapterManager.ProcesosTableAdapter = null;
+            this.tableAdapterManager.ProductoresTableAdapter = null;
+            this.tableAdapterManager.ProductoTableAdapter = null;
+            this.tableAdapterManager.RecepcionesTableAdapter = null;
+            this.tableAdapterManager.RomanaTableAdapter = null;
+            this.tableAdapterManager.Tarja_RecepcionTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = FormularioRomana.GenesisDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.VariedadTableAdapter = null;
+            // 
             // traer_Envases_ProcesoTableAdapter
             // 
             this.traer_Envases_ProcesoTableAdapter.ClearBeforeFill = true;
@@ -973,10 +1167,6 @@
             // 
             this.detalleRecepcionesBindingSource.DataMember = "DetalleRecepciones";
             this.detalleRecepcionesBindingSource.DataSource = this.genesisDataSet;
-            // 
-            // detalleRecepcionesTableAdapter
-            // 
-            this.detalleRecepcionesTableAdapter.ClearBeforeFill = true;
             // 
             // traer_Detalle_RecepcionTableAdapter
             // 
@@ -987,40 +1177,141 @@
             this.romanaBindingSource.DataMember = "Romana";
             this.romanaBindingSource.DataSource = this.genesisDataSet;
             // 
-            // romanaTableAdapter
-            // 
-            this.romanaTableAdapter.ClearBeforeFill = true;
-            // 
             // tarja_RecepcionBindingSource
             // 
             this.tarja_RecepcionBindingSource.DataMember = "Tarja_Recepcion";
             this.tarja_RecepcionBindingSource.DataSource = this.genesisDataSet;
-            // 
-            // tarja_RecepcionTableAdapter
-            // 
-            this.tarja_RecepcionTableAdapter.ClearBeforeFill = true;
             // 
             // humedad_RecepcionBindingSource
             // 
             this.humedad_RecepcionBindingSource.DataMember = "Humedad_Recepcion";
             this.humedad_RecepcionBindingSource.DataSource = this.genesisDataSet;
             // 
-            // humedad_RecepcionTableAdapter
+            // traer_Resumen_RecepcionTableAdapter
             // 
-            this.humedad_RecepcionTableAdapter.ClearBeforeFill = true;
+            this.traer_Resumen_RecepcionTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "Cod_Recepcion";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Format = "d";
+            dataGridViewCellStyle2.NullValue = null;
+            this.dataGridViewTextBoxColumn11.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewTextBoxColumn11.HeaderText = "Recepcion";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "Cod_Productor";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Cod_Productor";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "Productor";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Productor";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "Cod_Variedad";
+            this.dataGridViewTextBoxColumn14.HeaderText = "Cod_Variedad";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "Des_Variedad";
+            this.dataGridViewTextBoxColumn15.HeaderText = "Des_Variedad";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "Cod_Estado";
+            this.dataGridViewTextBoxColumn16.HeaderText = "Cod_Estado";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "Estado";
+            this.dataGridViewTextBoxColumn17.HeaderText = "Estado";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "Cod_Productos";
+            this.dataGridViewTextBoxColumn18.HeaderText = "Cod_Productos";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "Productos";
+            this.dataGridViewTextBoxColumn19.HeaderText = "Productos";
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "Num_Guia";
+            this.dataGridViewTextBoxColumn20.HeaderText = "Num_Guia";
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "Bultos";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Format = "N0";
+            dataGridViewCellStyle3.NullValue = null;
+            this.dataGridViewTextBoxColumn21.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewTextBoxColumn21.HeaderText = "Bultos";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.Width = 80;
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.DataPropertyName = "Rut_Usuario";
+            this.dataGridViewTextBoxColumn22.HeaderText = "Rut_Usuario";
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            this.dataGridViewTextBoxColumn22.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.DataPropertyName = "Humedad";
+            this.dataGridViewTextBoxColumn23.HeaderText = "Humedad";
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            this.dataGridViewTextBoxColumn23.ReadOnly = true;
+            this.dataGridViewTextBoxColumn23.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn24
+            // 
+            this.dataGridViewTextBoxColumn24.DataPropertyName = "Formalizada";
+            this.dataGridViewTextBoxColumn24.HeaderText = "Formalizada";
+            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            this.dataGridViewTextBoxColumn24.ReadOnly = true;
+            this.dataGridViewTextBoxColumn24.Visible = false;
+            // 
+            // BotonEnvase
+            // 
+            this.BotonEnvase.HeaderText = "Describir envases";
+            this.BotonEnvase.Name = "BotonEnvase";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(782, 633);
+            this.ClientSize = new System.Drawing.Size(784, 578);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
@@ -1049,6 +1340,11 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.tabControl1.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.traer_Resumen_RecepcionDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.traer_Resumen_RecepcionBindingSource)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
@@ -1076,12 +1372,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox TxtBultos;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox cod_ProductorTextBox;
         private System.Windows.Forms.ComboBox nom_ProductorComboBox;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -1155,6 +1447,35 @@
         private GenesisDataSetTableAdapters.Tarja_RecepcionTableAdapter tarja_RecepcionTableAdapter;
         private System.Windows.Forms.BindingSource humedad_RecepcionBindingSource;
         private GenesisDataSetTableAdapters.Humedad_RecepcionTableAdapter humedad_RecepcionTableAdapter;
+        private System.Windows.Forms.Button Btn_Romana;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.BindingSource traer_Resumen_RecepcionBindingSource;
+        private GenesisDataSetTableAdapters.Traer_Resumen_RecepcionTableAdapter traer_Resumen_RecepcionTableAdapter;
+        private System.Windows.Forms.DataGridView traer_Resumen_RecepcionDataGridView;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox Txt_Peso_Bruto2;
+        private System.Windows.Forms.TextBox Txt_Sin_Carga2;
+        private System.Windows.Forms.TextBox Txt_Con_Carga2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
+        private System.Windows.Forms.DataGridViewButtonColumn BotonEnvase;
     }
 }
 
