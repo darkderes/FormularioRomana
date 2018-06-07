@@ -97,16 +97,60 @@
             this.Txt_Con_Carga = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.LblBultos4 = new System.Windows.Forms.Label();
+            this.button21 = new System.Windows.Forms.Button();
+            this.button22 = new System.Windows.Forms.Button();
+            this.button23 = new System.Windows.Forms.Button();
+            this.LblRecepcion4 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.LblBultos1 = new System.Windows.Forms.Label();
+            this.LblRecepcion1 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.button18 = new System.Windows.Forms.Button();
+            this.LblBultos3 = new System.Windows.Forms.Label();
+            this.button19 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
+            this.LblRecepcion3 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
+            this.LblBultos2 = new System.Windows.Forms.Label();
+            this.button17 = new System.Windows.Forms.Button();
+            this.LblRecepcion2 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.Txt_Peso_Bruto2 = new System.Windows.Forms.TextBox();
             this.Txt_Sin_Carga2 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.Txt_Peso_Bruto2 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.Txt_Con_Carga2 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.traer_Resumen_RecepcionDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BotonEnvase = new System.Windows.Forms.DataGridViewButtonColumn();
             this.traer_Resumen_RecepcionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -135,21 +179,7 @@
             this.tarja_RecepcionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.humedad_RecepcionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.traer_Resumen_RecepcionTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.Traer_Resumen_RecepcionTableAdapter();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BotonEnvase = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Btn_Back = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.genesisDataSet)).BeginInit();
@@ -167,6 +197,11 @@
             this.groupBox3.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.traer_Resumen_RecepcionDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.traer_Resumen_RecepcionBindingSource)).BeginInit();
@@ -434,6 +469,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Silver;
+            this.groupBox2.Controls.Add(this.Btn_Back);
             this.groupBox2.Controls.Add(this.Print_Etiquetas);
             this.groupBox2.Controls.Add(this.button12);
             this.groupBox2.Controls.Add(this.LblCantidadEnvases);
@@ -829,6 +865,11 @@
             // 
             this.tabPage4.AutoScroll = true;
             this.tabPage4.BackColor = System.Drawing.Color.Silver;
+            this.tabPage4.Controls.Add(this.panel4);
+            this.tabPage4.Controls.Add(this.panel1);
+            this.tabPage4.Controls.Add(this.panel3);
+            this.tabPage4.Controls.Add(this.panel2);
+            this.tabPage4.Controls.Add(this.pictureBox2);
             this.tabPage4.Controls.Add(this.groupBox4);
             this.tabPage4.Controls.Add(this.traer_Resumen_RecepcionDataGridView);
             this.tabPage4.Location = new System.Drawing.Point(4, 23);
@@ -837,20 +878,342 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Recepcion Seca";
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.LblBultos4);
+            this.panel4.Controls.Add(this.button21);
+            this.panel4.Controls.Add(this.button22);
+            this.panel4.Controls.Add(this.button23);
+            this.panel4.Controls.Add(this.LblRecepcion4);
+            this.panel4.Controls.Add(this.label22);
+            this.panel4.Location = new System.Drawing.Point(573, 31);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(88, 126);
+            this.panel4.TabIndex = 23;
+            // 
+            // LblBultos4
+            // 
+            this.LblBultos4.AutoSize = true;
+            this.LblBultos4.Location = new System.Drawing.Point(19, 112);
+            this.LblBultos4.Name = "LblBultos4";
+            this.LblBultos4.Size = new System.Drawing.Size(44, 14);
+            this.LblBultos4.TabIndex = 29;
+            this.LblBultos4.Text = "label26";
+            this.LblBultos4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button21
+            // 
+            this.button21.BackColor = System.Drawing.Color.IndianRed;
+            this.button21.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button21.Location = new System.Drawing.Point(3, 86);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(74, 23);
+            this.button21.TabIndex = 32;
+            this.button21.Text = "Recepción";
+            this.button21.UseVisualStyleBackColor = false;
+            // 
+            // button22
+            // 
+            this.button22.BackColor = System.Drawing.Color.IndianRed;
+            this.button22.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button22.Location = new System.Drawing.Point(3, 57);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(74, 23);
+            this.button22.TabIndex = 31;
+            this.button22.Text = "Calidad";
+            this.button22.UseVisualStyleBackColor = false;
+            // 
+            // button23
+            // 
+            this.button23.BackColor = System.Drawing.Color.IndianRed;
+            this.button23.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button23.Location = new System.Drawing.Point(3, 31);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(74, 23);
+            this.button23.TabIndex = 30;
+            this.button23.Text = "Envases";
+            this.button23.UseVisualStyleBackColor = false;
+            this.button23.Click += new System.EventHandler(this.button23_Click);
+            // 
+            // LblRecepcion4
+            // 
+            this.LblRecepcion4.AutoSize = true;
+            this.LblRecepcion4.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblRecepcion4.Location = new System.Drawing.Point(19, 14);
+            this.LblRecepcion4.Name = "LblRecepcion4";
+            this.LblRecepcion4.Size = new System.Drawing.Size(44, 14);
+            this.LblRecepcion4.TabIndex = 29;
+            this.LblRecepcion4.Text = "label23";
+            this.LblRecepcion4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.ForeColor = System.Drawing.Color.DarkRed;
+            this.label22.Location = new System.Drawing.Point(14, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(60, 14);
+            this.label22.TabIndex = 27;
+            this.label22.Text = "Recepción";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.button14);
+            this.panel1.Controls.Add(this.button13);
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.LblBultos1);
+            this.panel1.Controls.Add(this.LblRecepcion1);
+            this.panel1.Controls.Add(this.label19);
+            this.panel1.Location = new System.Drawing.Point(259, 31);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(88, 129);
+            this.panel1.TabIndex = 24;
+            // 
+            // button14
+            // 
+            this.button14.BackColor = System.Drawing.Color.IndianRed;
+            this.button14.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button14.Location = new System.Drawing.Point(3, 86);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(74, 23);
+            this.button14.TabIndex = 4;
+            this.button14.Text = "Recepción";
+            this.button14.UseVisualStyleBackColor = false;
+            // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.IndianRed;
+            this.button13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button13.Location = new System.Drawing.Point(3, 57);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(74, 23);
+            this.button13.TabIndex = 3;
+            this.button13.Text = "Calidad";
+            this.button13.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.IndianRed;
+            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button4.Location = new System.Drawing.Point(3, 31);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(74, 23);
+            this.button4.TabIndex = 2;
+            this.button4.Text = "Envases";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // LblBultos1
+            // 
+            this.LblBultos1.AutoSize = true;
+            this.LblBultos1.Location = new System.Drawing.Point(19, 112);
+            this.LblBultos1.Name = "LblBultos1";
+            this.LblBultos1.Size = new System.Drawing.Size(44, 14);
+            this.LblBultos1.TabIndex = 5;
+            this.LblBultos1.Text = "label23";
+            this.LblBultos1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // LblRecepcion1
+            // 
+            this.LblRecepcion1.AutoSize = true;
+            this.LblRecepcion1.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblRecepcion1.Location = new System.Drawing.Point(19, 14);
+            this.LblRecepcion1.Name = "LblRecepcion1";
+            this.LblRecepcion1.Size = new System.Drawing.Size(44, 14);
+            this.LblRecepcion1.TabIndex = 1;
+            this.LblRecepcion1.Text = "label23";
+            this.LblRecepcion1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.ForeColor = System.Drawing.Color.DarkRed;
+            this.label19.Location = new System.Drawing.Point(13, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(60, 14);
+            this.label19.TabIndex = 0;
+            this.label19.Text = "Recepción";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.button18);
+            this.panel3.Controls.Add(this.LblBultos3);
+            this.panel3.Controls.Add(this.button19);
+            this.panel3.Controls.Add(this.button20);
+            this.panel3.Controls.Add(this.LblRecepcion3);
+            this.panel3.Controls.Add(this.label21);
+            this.panel3.Location = new System.Drawing.Point(465, 31);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(88, 126);
+            this.panel3.TabIndex = 26;
+            // 
+            // button18
+            // 
+            this.button18.BackColor = System.Drawing.Color.IndianRed;
+            this.button18.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button18.Location = new System.Drawing.Point(3, 86);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(74, 23);
+            this.button18.TabIndex = 31;
+            this.button18.Text = "Recepción";
+            this.button18.UseVisualStyleBackColor = false;
+            // 
+            // LblBultos3
+            // 
+            this.LblBultos3.AutoSize = true;
+            this.LblBultos3.Location = new System.Drawing.Point(16, 112);
+            this.LblBultos3.Name = "LblBultos3";
+            this.LblBultos3.Size = new System.Drawing.Size(44, 14);
+            this.LblBultos3.TabIndex = 28;
+            this.LblBultos3.Text = "label25";
+            this.LblBultos3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button19
+            // 
+            this.button19.BackColor = System.Drawing.Color.IndianRed;
+            this.button19.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button19.Location = new System.Drawing.Point(3, 57);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(74, 23);
+            this.button19.TabIndex = 30;
+            this.button19.Text = "Calidad";
+            this.button19.UseVisualStyleBackColor = false;
+            // 
+            // button20
+            // 
+            this.button20.BackColor = System.Drawing.Color.IndianRed;
+            this.button20.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button20.Location = new System.Drawing.Point(3, 31);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(74, 23);
+            this.button20.TabIndex = 29;
+            this.button20.Text = "Envases";
+            this.button20.UseVisualStyleBackColor = false;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
+            // 
+            // LblRecepcion3
+            // 
+            this.LblRecepcion3.AutoSize = true;
+            this.LblRecepcion3.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblRecepcion3.Location = new System.Drawing.Point(17, 14);
+            this.LblRecepcion3.Name = "LblRecepcion3";
+            this.LblRecepcion3.Size = new System.Drawing.Size(44, 14);
+            this.LblRecepcion3.TabIndex = 28;
+            this.LblRecepcion3.Text = "label23";
+            this.LblRecepcion3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.ForeColor = System.Drawing.Color.DarkRed;
+            this.label21.Location = new System.Drawing.Point(16, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(60, 14);
+            this.label21.TabIndex = 27;
+            this.label21.Text = "Recepción";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.button15);
+            this.panel2.Controls.Add(this.button16);
+            this.panel2.Controls.Add(this.LblBultos2);
+            this.panel2.Controls.Add(this.button17);
+            this.panel2.Controls.Add(this.LblRecepcion2);
+            this.panel2.Controls.Add(this.label20);
+            this.panel2.Location = new System.Drawing.Point(364, 31);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(88, 126);
+            this.panel2.TabIndex = 25;
+            // 
+            // button15
+            // 
+            this.button15.BackColor = System.Drawing.Color.IndianRed;
+            this.button15.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button15.Location = new System.Drawing.Point(3, 86);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(74, 23);
+            this.button15.TabIndex = 30;
+            this.button15.Text = "Recepción";
+            this.button15.UseVisualStyleBackColor = false;
+            // 
+            // button16
+            // 
+            this.button16.BackColor = System.Drawing.Color.IndianRed;
+            this.button16.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button16.Location = new System.Drawing.Point(3, 57);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(74, 23);
+            this.button16.TabIndex = 29;
+            this.button16.Text = "Calidad";
+            this.button16.UseVisualStyleBackColor = false;
+            // 
+            // LblBultos2
+            // 
+            this.LblBultos2.AutoSize = true;
+            this.LblBultos2.Location = new System.Drawing.Point(21, 112);
+            this.LblBultos2.Name = "LblBultos2";
+            this.LblBultos2.Size = new System.Drawing.Size(44, 14);
+            this.LblBultos2.TabIndex = 27;
+            this.LblBultos2.Text = "label24";
+            this.LblBultos2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button17
+            // 
+            this.button17.BackColor = System.Drawing.Color.IndianRed;
+            this.button17.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button17.Location = new System.Drawing.Point(3, 31);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(74, 23);
+            this.button17.TabIndex = 28;
+            this.button17.Text = "Envases";
+            this.button17.UseVisualStyleBackColor = false;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
+            // 
+            // LblRecepcion2
+            // 
+            this.LblRecepcion2.AutoSize = true;
+            this.LblRecepcion2.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblRecepcion2.Location = new System.Drawing.Point(25, 14);
+            this.LblRecepcion2.Name = "LblRecepcion2";
+            this.LblRecepcion2.Size = new System.Drawing.Size(44, 14);
+            this.LblRecepcion2.TabIndex = 2;
+            this.LblRecepcion2.Text = "label23";
+            this.LblRecepcion2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.ForeColor = System.Drawing.Color.DarkRed;
+            this.label20.Location = new System.Drawing.Point(16, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(60, 14);
+            this.label20.TabIndex = 27;
+            this.label20.Text = "Recepción";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::FormularioRomana.Properties.Resources.Track;
+            this.pictureBox2.Location = new System.Drawing.Point(71, 13);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(613, 237);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 21;
+            this.pictureBox2.TabStop = false;
+            // 
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.Color.Silver;
             this.groupBox4.Controls.Add(this.button1);
             this.groupBox4.Controls.Add(this.Txt_Sin_Carga2);
             this.groupBox4.Controls.Add(this.button3);
-            this.groupBox4.Controls.Add(this.label18);
+            this.groupBox4.Controls.Add(this.Txt_Peso_Bruto2);
             this.groupBox4.Controls.Add(this.label8);
+            this.groupBox4.Controls.Add(this.label18);
             this.groupBox4.Controls.Add(this.Txt_Con_Carga2);
             this.groupBox4.Controls.Add(this.label17);
-            this.groupBox4.Controls.Add(this.Txt_Peso_Bruto2);
-            this.groupBox4.Location = new System.Drawing.Point(412, 24);
+            this.groupBox4.Location = new System.Drawing.Point(71, 242);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(281, 256);
+            this.groupBox4.Size = new System.Drawing.Size(613, 92);
             this.groupBox4.TabIndex = 20;
             this.groupBox4.TabStop = false;
             // 
@@ -861,7 +1224,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(196, 209);
+            this.button1.Location = new System.Drawing.Point(537, 34);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(5);
             this.button1.Size = new System.Drawing.Size(70, 30);
@@ -869,13 +1232,25 @@
             this.button1.Text = "Informe";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // Txt_Sin_Carga2
+            // 
+            this.Txt_Sin_Carga2.BackColor = System.Drawing.SystemColors.MenuText;
+            this.Txt_Sin_Carga2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_Sin_Carga2.ForeColor = System.Drawing.Color.Red;
+            this.Txt_Sin_Carga2.Location = new System.Drawing.Point(188, 44);
+            this.Txt_Sin_Carga2.Name = "Txt_Sin_Carga2";
+            this.Txt_Sin_Carga2.Size = new System.Drawing.Size(117, 38);
+            this.Txt_Sin_Carga2.TabIndex = 1;
+            this.Txt_Sin_Carga2.Text = "0";
+            this.Txt_Sin_Carga2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.SteelBlue;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(196, 173);
+            this.button3.Location = new System.Drawing.Point(461, 34);
             this.button3.Name = "button3";
             this.button3.Padding = new System.Windows.Forms.Padding(5);
             this.button3.Size = new System.Drawing.Size(70, 30);
@@ -884,71 +1259,59 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(39, 173);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(151, 20);
-            this.label8.TabIndex = 5;
-            this.label8.Text = "Peso bruto carga ";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(51, 93);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(137, 20);
-            this.label17.TabIndex = 4;
-            this.label17.Text = "Precio sin carga";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(49, 18);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(133, 20);
-            this.label18.TabIndex = 3;
-            this.label18.Text = "Peso con carga";
-            // 
             // Txt_Peso_Bruto2
             // 
             this.Txt_Peso_Bruto2.BackColor = System.Drawing.SystemColors.MenuText;
             this.Txt_Peso_Bruto2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_Peso_Bruto2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.Txt_Peso_Bruto2.Location = new System.Drawing.Point(53, 200);
+            this.Txt_Peso_Bruto2.Location = new System.Drawing.Point(317, 44);
             this.Txt_Peso_Bruto2.Name = "Txt_Peso_Bruto2";
             this.Txt_Peso_Bruto2.Size = new System.Drawing.Size(119, 38);
             this.Txt_Peso_Bruto2.TabIndex = 2;
             this.Txt_Peso_Bruto2.Text = "0";
             this.Txt_Peso_Bruto2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // Txt_Sin_Carga2
+            // label8
             // 
-            this.Txt_Sin_Carga2.BackColor = System.Drawing.SystemColors.MenuText;
-            this.Txt_Sin_Carga2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_Sin_Carga2.ForeColor = System.Drawing.Color.Red;
-            this.Txt_Sin_Carga2.Location = new System.Drawing.Point(55, 118);
-            this.Txt_Sin_Carga2.Name = "Txt_Sin_Carga2";
-            this.Txt_Sin_Carga2.Size = new System.Drawing.Size(117, 38);
-            this.Txt_Sin_Carga2.TabIndex = 1;
-            this.Txt_Sin_Carga2.Text = "0";
-            this.Txt_Sin_Carga2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(304, 21);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(151, 20);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "Peso bruto carga ";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(19, 19);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(133, 20);
+            this.label18.TabIndex = 3;
+            this.label18.Text = "Peso con carga";
             // 
             // Txt_Con_Carga2
             // 
             this.Txt_Con_Carga2.BackColor = System.Drawing.SystemColors.MenuText;
             this.Txt_Con_Carga2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_Con_Carga2.ForeColor = System.Drawing.Color.Green;
-            this.Txt_Con_Carga2.Location = new System.Drawing.Point(53, 45);
+            this.Txt_Con_Carga2.Location = new System.Drawing.Point(35, 44);
             this.Txt_Con_Carga2.Name = "Txt_Con_Carga2";
             this.Txt_Con_Carga2.Size = new System.Drawing.Size(117, 38);
             this.Txt_Con_Carga2.TabIndex = 0;
             this.Txt_Con_Carga2.Text = "0";
             this.Txt_Con_Carga2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(168, 21);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(137, 20);
+            this.label17.TabIndex = 4;
+            this.label17.Text = "Precio sin carga";
             // 
             // traer_Resumen_RecepcionDataGridView
             // 
@@ -988,12 +1351,125 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.traer_Resumen_RecepcionDataGridView.DefaultCellStyle = dataGridViewCellStyle4;
-            this.traer_Resumen_RecepcionDataGridView.Location = new System.Drawing.Point(39, 34);
+            this.traer_Resumen_RecepcionDataGridView.Location = new System.Drawing.Point(3, 3);
             this.traer_Resumen_RecepcionDataGridView.Name = "traer_Resumen_RecepcionDataGridView";
             this.traer_Resumen_RecepcionDataGridView.RowHeadersVisible = false;
-            this.traer_Resumen_RecepcionDataGridView.Size = new System.Drawing.Size(286, 246);
+            this.traer_Resumen_RecepcionDataGridView.Size = new System.Drawing.Size(113, 77);
             this.traer_Resumen_RecepcionDataGridView.TabIndex = 0;
             this.traer_Resumen_RecepcionDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.traer_Resumen_RecepcionDataGridView_CellClick);
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "Cod_Recepcion";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Format = "d";
+            dataGridViewCellStyle2.NullValue = null;
+            this.dataGridViewTextBoxColumn11.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewTextBoxColumn11.HeaderText = "Recepcion";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "Cod_Productor";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Cod_Productor";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "Productor";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Productor";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "Cod_Variedad";
+            this.dataGridViewTextBoxColumn14.HeaderText = "Cod_Variedad";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "Des_Variedad";
+            this.dataGridViewTextBoxColumn15.HeaderText = "Des_Variedad";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "Cod_Estado";
+            this.dataGridViewTextBoxColumn16.HeaderText = "Cod_Estado";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "Estado";
+            this.dataGridViewTextBoxColumn17.HeaderText = "Estado";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "Cod_Productos";
+            this.dataGridViewTextBoxColumn18.HeaderText = "Cod_Productos";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "Productos";
+            this.dataGridViewTextBoxColumn19.HeaderText = "Productos";
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "Num_Guia";
+            this.dataGridViewTextBoxColumn20.HeaderText = "Num_Guia";
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "Bultos";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Format = "N0";
+            dataGridViewCellStyle3.NullValue = null;
+            this.dataGridViewTextBoxColumn21.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewTextBoxColumn21.HeaderText = "Bultos";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.Width = 80;
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.DataPropertyName = "Rut_Usuario";
+            this.dataGridViewTextBoxColumn22.HeaderText = "Rut_Usuario";
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            this.dataGridViewTextBoxColumn22.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.DataPropertyName = "Humedad";
+            this.dataGridViewTextBoxColumn23.HeaderText = "Humedad";
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            this.dataGridViewTextBoxColumn23.ReadOnly = true;
+            this.dataGridViewTextBoxColumn23.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn24
+            // 
+            this.dataGridViewTextBoxColumn24.DataPropertyName = "Formalizada";
+            this.dataGridViewTextBoxColumn24.HeaderText = "Formalizada";
+            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            this.dataGridViewTextBoxColumn24.ReadOnly = true;
+            this.dataGridViewTextBoxColumn24.Visible = false;
+            // 
+            // BotonEnvase
+            // 
+            this.BotonEnvase.HeaderText = "Describir envases";
+            this.BotonEnvase.Name = "BotonEnvase";
             // 
             // traer_Resumen_RecepcionBindingSource
             // 
@@ -1191,125 +1667,23 @@
             // 
             this.traer_Resumen_RecepcionTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn11
+            // Btn_Back
             // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "Cod_Recepcion";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.Format = "d";
-            dataGridViewCellStyle2.NullValue = null;
-            this.dataGridViewTextBoxColumn11.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewTextBoxColumn11.HeaderText = "Recepcion";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "Cod_Productor";
-            this.dataGridViewTextBoxColumn12.HeaderText = "Cod_Productor";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "Productor";
-            this.dataGridViewTextBoxColumn13.HeaderText = "Productor";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "Cod_Variedad";
-            this.dataGridViewTextBoxColumn14.HeaderText = "Cod_Variedad";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "Des_Variedad";
-            this.dataGridViewTextBoxColumn15.HeaderText = "Des_Variedad";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            this.dataGridViewTextBoxColumn15.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "Cod_Estado";
-            this.dataGridViewTextBoxColumn16.HeaderText = "Cod_Estado";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            this.dataGridViewTextBoxColumn16.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn17
-            // 
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "Estado";
-            this.dataGridViewTextBoxColumn17.HeaderText = "Estado";
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            this.dataGridViewTextBoxColumn17.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn18
-            // 
-            this.dataGridViewTextBoxColumn18.DataPropertyName = "Cod_Productos";
-            this.dataGridViewTextBoxColumn18.HeaderText = "Cod_Productos";
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            this.dataGridViewTextBoxColumn18.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn19
-            // 
-            this.dataGridViewTextBoxColumn19.DataPropertyName = "Productos";
-            this.dataGridViewTextBoxColumn19.HeaderText = "Productos";
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            this.dataGridViewTextBoxColumn19.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn20
-            // 
-            this.dataGridViewTextBoxColumn20.DataPropertyName = "Num_Guia";
-            this.dataGridViewTextBoxColumn20.HeaderText = "Num_Guia";
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            this.dataGridViewTextBoxColumn20.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn21
-            // 
-            this.dataGridViewTextBoxColumn21.DataPropertyName = "Bultos";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Format = "N0";
-            dataGridViewCellStyle3.NullValue = null;
-            this.dataGridViewTextBoxColumn21.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewTextBoxColumn21.HeaderText = "Bultos";
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            this.dataGridViewTextBoxColumn21.Width = 80;
-            // 
-            // dataGridViewTextBoxColumn22
-            // 
-            this.dataGridViewTextBoxColumn22.DataPropertyName = "Rut_Usuario";
-            this.dataGridViewTextBoxColumn22.HeaderText = "Rut_Usuario";
-            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
-            this.dataGridViewTextBoxColumn22.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn23
-            // 
-            this.dataGridViewTextBoxColumn23.DataPropertyName = "Humedad";
-            this.dataGridViewTextBoxColumn23.HeaderText = "Humedad";
-            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
-            this.dataGridViewTextBoxColumn23.ReadOnly = true;
-            this.dataGridViewTextBoxColumn23.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn24
-            // 
-            this.dataGridViewTextBoxColumn24.DataPropertyName = "Formalizada";
-            this.dataGridViewTextBoxColumn24.HeaderText = "Formalizada";
-            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
-            this.dataGridViewTextBoxColumn24.ReadOnly = true;
-            this.dataGridViewTextBoxColumn24.Visible = false;
-            // 
-            // BotonEnvase
-            // 
-            this.BotonEnvase.HeaderText = "Describir envases";
-            this.BotonEnvase.Name = "BotonEnvase";
+            this.Btn_Back.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Btn_Back.BackgroundImage")));
+            this.Btn_Back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_Back.Location = new System.Drawing.Point(12, 206);
+            this.Btn_Back.Name = "Btn_Back";
+            this.Btn_Back.Size = new System.Drawing.Size(42, 32);
+            this.Btn_Back.TabIndex = 24;
+            this.Btn_Back.UseVisualStyleBackColor = true;
+            this.Btn_Back.Click += new System.EventHandler(this.Btn_Back_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(784, 578);
+            this.ClientSize = new System.Drawing.Size(783, 578);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
@@ -1341,6 +1715,15 @@
             this.groupBox3.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.traer_Resumen_RecepcionDataGridView)).EndInit();
@@ -1476,6 +1859,36 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
         private System.Windows.Forms.DataGridViewButtonColumn BotonEnvase;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label LblRecepcion4;
+        private System.Windows.Forms.Label LblRecepcion1;
+        private System.Windows.Forms.Label LblRecepcion3;
+        private System.Windows.Forms.Label LblRecepcion2;
+        private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.Button button22;
+        private System.Windows.Forms.Button button23;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Label LblBultos4;
+        private System.Windows.Forms.Label LblBultos3;
+        private System.Windows.Forms.Label LblBultos2;
+        private System.Windows.Forms.Label LblBultos1;
+        private System.Windows.Forms.Button Btn_Back;
     }
 }
 

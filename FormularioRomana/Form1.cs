@@ -22,6 +22,7 @@ namespace FormularioRomana
         short bases_pallet = 0;
         int id = 0;
         int bultos;
+        int btn_envases = 0;
         public Form1()
         {
             InitializeComponent();
@@ -49,8 +50,11 @@ namespace FormularioRomana
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'genesisDataSet.Traer_Resumen_Recepcion' Puede moverla o quitarla según sea necesario.
+            panel1.Visible = false;
+            panel2.Visible = false;
+            panel3.Visible = false;
+            panel4.Visible = false;
 
-           
 
             this.romanaTableAdapter.Fill(this.genesisDataSet.Romana);
             try
@@ -122,6 +126,7 @@ namespace FormularioRomana
 
                                 MessageBox.Show("Se han ingresado :" + (pesajes).ToString() + " De " + (aux).ToString());
                                 traer_Resumen_RecepcionTableAdapter.Fill(genesisDataSet.Traer_Resumen_Recepcion, Convert.ToInt16(cod_ProductorTextBox.Text), Convert.ToInt16(comboBox3.SelectedValue.ToString()), Convert.ToInt16(comboBox2.SelectedValue.ToString()), Txt_NumGuia.Text);
+                                  
                                 tabControl1.Visible = true;
                          
                             }
@@ -142,7 +147,52 @@ namespace FormularioRomana
                                 tabControl1.Visible = true;
                             }
                                  groupBox3.Visible = false;
-                                
+                                 traer_Resumen_RecepcionDataGridView.Visible = false;
+
+                            tabControl1.Controls.Remove(tabControl1.TabPages["tabPage1"]);
+                            tabControl1.Controls.Remove(tabControl1.TabPages["tabPage2"]);
+                            tabControl1.Controls.Remove(tabControl1.TabPages["tabPage3"]);
+                            int Num_proceso = traer_Resumen_RecepcionDataGridView.RowCount;
+                                           
+                            if (Num_proceso == 2)
+                            {
+                                panel1.Visible = true;
+                                panel2.Visible = true;    
+                                LblRecepcion1.Text = traer_Resumen_RecepcionDataGridView.Rows[0].Cells[nameof(dataGridViewTextBoxColumn11)].Value.ToString();
+                                LblRecepcion2.Text = traer_Resumen_RecepcionDataGridView.Rows[1].Cells[nameof(dataGridViewTextBoxColumn11)].Value.ToString();
+                                LblBultos1.Text = "Bultos : " + traer_Resumen_RecepcionDataGridView.Rows[0].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString();
+                                LblBultos2.Text = "Bultos : " + traer_Resumen_RecepcionDataGridView.Rows[1].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString();
+                            }
+                            else
+                            if (Num_proceso == 3)
+                            {
+                                panel1.Visible = true;
+                                panel2.Visible = true;
+                                panel3.Visible = true;
+                                LblRecepcion1.Text = traer_Resumen_RecepcionDataGridView.Rows[0].Cells[nameof(dataGridViewTextBoxColumn11)].Value.ToString();
+                                LblRecepcion2.Text = traer_Resumen_RecepcionDataGridView.Rows[1].Cells[nameof(dataGridViewTextBoxColumn11)].Value.ToString();
+                                LblRecepcion3.Text = traer_Resumen_RecepcionDataGridView.Rows[2].Cells[nameof(dataGridViewTextBoxColumn11)].Value.ToString();
+                                LblBultos1.Text = "Bultos : " + traer_Resumen_RecepcionDataGridView.Rows[0].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString();
+                                LblBultos2.Text = "Bultos : " + traer_Resumen_RecepcionDataGridView.Rows[1].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString();
+                                LblBultos3.Text = "Bultos : " + traer_Resumen_RecepcionDataGridView.Rows[2].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString();
+                            }
+                            else
+                            if (Num_proceso == 4)
+                            {
+                                panel1.Visible = true;
+                                panel2.Visible = true;
+                                panel3.Visible = true;
+                                panel4.Visible = true;
+                                LblRecepcion1.Text = traer_Resumen_RecepcionDataGridView.Rows[0].Cells[nameof(dataGridViewTextBoxColumn11)].Value.ToString();
+                                LblRecepcion2.Text = traer_Resumen_RecepcionDataGridView.Rows[1].Cells[nameof(dataGridViewTextBoxColumn11)].Value.ToString();
+                                LblRecepcion3.Text = traer_Resumen_RecepcionDataGridView.Rows[2].Cells[nameof(dataGridViewTextBoxColumn11)].Value.ToString();
+                                LblRecepcion4.Text = traer_Resumen_RecepcionDataGridView.Rows[3].Cells[nameof(dataGridViewTextBoxColumn11)].Value.ToString();
+                                LblBultos1.Text = "Bultos : " + traer_Resumen_RecepcionDataGridView.Rows[0].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString();
+                                LblBultos2.Text = "Bultos : " + traer_Resumen_RecepcionDataGridView.Rows[1].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString();
+                                LblBultos3.Text = "Bultos : " + traer_Resumen_RecepcionDataGridView.Rows[2].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString();
+                                LblBultos4.Text = "Bultos : " + traer_Resumen_RecepcionDataGridView.Rows[3].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString();
+                            }
+                                                    
                         }
                         else
                         {
@@ -153,7 +203,7 @@ namespace FormularioRomana
                     {
                         try
                         {
-                            tabControl1.Controls.Remove(tabControl1.TabPages[1]);
+                            tabControl1.Controls.Remove(tabControl1.TabPages["tabPage4"]);
                            // tabControl1.Controls.Remove(tabControl1.TabPages[4]);
                         }
                         catch (IndexOutOfRangeException ex)
@@ -467,6 +517,136 @@ namespace FormularioRomana
                 MessageBox.Show(ex.Message, "Anakena", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            btn_envases = 1;
+            cantidad = 0;
+            Lbl_Recepcion.Text = LblRecepcion1.Text;
+            TxtBultos.Text = traer_Resumen_RecepcionDataGridView.Rows[0].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString();
+            this.traer_Detalle_RecepcionTableAdapter.Fill(this.genesisDataSet.Traer_Detalle_Recepcion, new System.Nullable<int>(((int)(System.Convert.ChangeType(Lbl_Recepcion.Text, typeof(int))))), new System.Nullable<short>(((short)(System.Convert.ChangeType(cod_ProductorTextBox.Text, typeof(short))))), Txt_NumGuia.Text);
+            label1.Visible = true;
+            Lbl_Recepcion.Visible = true;
+            LblCantidadEnvases.Text = num_envases().ToString();
+           // tabControl1.SelectedIndex = 1;
+            tabControl1.TabPages.Add(tabPage1);
+            tabControl1.TabPages.Remove(tabPage4);
+        }
+
+        private void Btn_Back_Click(object sender, EventArgs e)
+        {
+            tabControl1.TabPages.Add(tabPage4);
+            tabControl1.TabPages.Remove(tabPage1);
+            if (btn_envases == 1)
+            {
+                if ((traer_Detalle_RecepcionDataGridView.RowCount > 0) && (TxtBultos.Text == LblCantidadEnvases.Text))
+                {
+                    button4.BackColor = Color.MediumSeaGreen;
+                }
+                else
+                if ((traer_Detalle_RecepcionDataGridView.RowCount > 0) && (TxtBultos.Text != LblCantidadEnvases.Text))
+                {
+                    button4.BackColor = Color.DarkGoldenrod;
+                }
+                else
+                {
+                    button4.BackColor = Color.IndianRed;
+                }
+            }
+            else
+            if (btn_envases == 2)
+            {
+                if ((traer_Detalle_RecepcionDataGridView.RowCount > 0) && (TxtBultos.Text == LblCantidadEnvases.Text))
+                {
+                    button17.BackColor = Color.MediumSeaGreen;
+                }
+                else
+                if ((traer_Detalle_RecepcionDataGridView.RowCount > 0) && (TxtBultos.Text != LblCantidadEnvases.Text))
+                {
+                    button17.BackColor = Color.DarkGoldenrod;
+                }
+                else
+                {
+                    button17.BackColor = Color.IndianRed;
+                }
+            }
+            else
+            if (btn_envases == 3)
+            {
+                if ((traer_Detalle_RecepcionDataGridView.RowCount > 0) && (TxtBultos.Text == LblCantidadEnvases.Text))
+                {
+                    button20.BackColor = Color.MediumSeaGreen;
+                }
+                else
+                if ((traer_Detalle_RecepcionDataGridView.RowCount > 0) && (TxtBultos.Text != LblCantidadEnvases.Text))
+                {
+                    button20.BackColor = Color.DarkGoldenrod;
+                }
+                else
+                {
+                    button20.BackColor = Color.IndianRed;
+                }
+            }
+            else
+            if (btn_envases == 4)
+            {
+                if ((traer_Detalle_RecepcionDataGridView.RowCount > 0) && (TxtBultos.Text == LblCantidadEnvases.Text))
+                {
+                    button23.BackColor = Color.MediumSeaGreen;
+                }
+                else
+                if ((traer_Detalle_RecepcionDataGridView.RowCount > 0) && (TxtBultos.Text != LblCantidadEnvases.Text))
+                {
+                    button23.BackColor = Color.DarkGoldenrod;
+                }
+                else
+                {
+                    button23.BackColor = Color.IndianRed;
+                }
+            }
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            btn_envases = 2;
+            cantidad = 0;
+            Lbl_Recepcion.Text = LblRecepcion2.Text;
+            TxtBultos.Text = traer_Resumen_RecepcionDataGridView.Rows[1].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString();
+            this.traer_Detalle_RecepcionTableAdapter.Fill(this.genesisDataSet.Traer_Detalle_Recepcion, new System.Nullable<int>(((int)(System.Convert.ChangeType(Lbl_Recepcion.Text, typeof(int))))), new System.Nullable<short>(((short)(System.Convert.ChangeType(cod_ProductorTextBox.Text, typeof(short))))), Txt_NumGuia.Text);
+            label1.Visible = true;
+            Lbl_Recepcion.Visible = true;
+            LblCantidadEnvases.Text = num_envases().ToString();
+            tabControl1.TabPages.Add(tabPage1);
+            tabControl1.TabPages.Remove(tabPage4);
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            btn_envases = 3;
+            cantidad = 0;
+            Lbl_Recepcion.Text = LblRecepcion3.Text;
+            TxtBultos.Text = traer_Resumen_RecepcionDataGridView.Rows[2].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString();
+            this.traer_Detalle_RecepcionTableAdapter.Fill(this.genesisDataSet.Traer_Detalle_Recepcion, new System.Nullable<int>(((int)(System.Convert.ChangeType(Lbl_Recepcion.Text, typeof(int))))), new System.Nullable<short>(((short)(System.Convert.ChangeType(cod_ProductorTextBox.Text, typeof(short))))), Txt_NumGuia.Text);
+            label1.Visible = true;
+            Lbl_Recepcion.Visible = true;
+            LblCantidadEnvases.Text = num_envases().ToString();
+            tabControl1.TabPages.Add(tabPage1);
+            tabControl1.TabPages.Remove(tabPage4);
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            cantidad = 0;
+            btn_envases = 4;
+            Lbl_Recepcion.Text = LblRecepcion4.Text;
+            TxtBultos.Text = traer_Resumen_RecepcionDataGridView.Rows[3].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString();
+            this.traer_Detalle_RecepcionTableAdapter.Fill(this.genesisDataSet.Traer_Detalle_Recepcion, new System.Nullable<int>(((int)(System.Convert.ChangeType(Lbl_Recepcion.Text, typeof(int))))), new System.Nullable<short>(((short)(System.Convert.ChangeType(cod_ProductorTextBox.Text, typeof(short))))), Txt_NumGuia.Text);
+            label1.Visible = true;
+            Lbl_Recepcion.Visible = true;
+            LblCantidadEnvases.Text = num_envases().ToString();
+            tabControl1.TabPages.Add(tabPage1);
+            tabControl1.TabPages.Remove(tabPage4);
         }
     }
 }
