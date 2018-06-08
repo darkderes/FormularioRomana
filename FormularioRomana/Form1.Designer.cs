@@ -60,6 +60,7 @@
             this.productoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.Btn_Back = new System.Windows.Forms.Button();
             this.Print_Etiquetas = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.LblCantidadEnvases = new System.Windows.Forms.Label();
@@ -99,27 +100,23 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
             this.LblBultos4 = new System.Windows.Forms.Label();
-            this.button21 = new System.Windows.Forms.Button();
             this.button22 = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
             this.LblRecepcion4 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button14 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.LblBultos1 = new System.Windows.Forms.Label();
             this.LblRecepcion1 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button18 = new System.Windows.Forms.Button();
             this.LblBultos3 = new System.Windows.Forms.Label();
             this.button19 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
             this.LblRecepcion3 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.LblBultos2 = new System.Windows.Forms.Label();
             this.button17 = new System.Windows.Forms.Button();
@@ -127,7 +124,7 @@
             this.label20 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Btn_Romana2 = new System.Windows.Forms.Button();
             this.Txt_Sin_Carga2 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.Txt_Peso_Bruto2 = new System.Windows.Forms.TextBox();
@@ -154,10 +151,18 @@
             this.traer_Resumen_RecepcionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.button24 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.Txt_Humedad = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.romana_SecaDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.romana_SecaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.estadosTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.EstadosTableAdapter();
@@ -179,7 +184,7 @@
             this.tarja_RecepcionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.humedad_RecepcionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.traer_Resumen_RecepcionTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.Traer_Resumen_RecepcionTableAdapter();
-            this.Btn_Back = new System.Windows.Forms.Button();
+            this.romana_SecaTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.Romana_SecaTableAdapter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.genesisDataSet)).BeginInit();
@@ -208,6 +213,8 @@
             this.tabPage1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.romana_SecaDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.romana_SecaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.detalleRecepcionesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.romanaBindingSource)).BeginInit();
@@ -487,6 +494,17 @@
             this.groupBox2.Size = new System.Drawing.Size(744, 248);
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
+            // 
+            // Btn_Back
+            // 
+            this.Btn_Back.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Btn_Back.BackgroundImage")));
+            this.Btn_Back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_Back.Location = new System.Drawing.Point(12, 206);
+            this.Btn_Back.Name = "Btn_Back";
+            this.Btn_Back.Size = new System.Drawing.Size(42, 32);
+            this.Btn_Back.TabIndex = 24;
+            this.Btn_Back.UseVisualStyleBackColor = true;
+            this.Btn_Back.Click += new System.EventHandler(this.Btn_Back_Click);
             // 
             // Print_Etiquetas
             // 
@@ -881,53 +899,42 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.LblBultos4);
-            this.panel4.Controls.Add(this.button21);
             this.panel4.Controls.Add(this.button22);
             this.panel4.Controls.Add(this.button23);
             this.panel4.Controls.Add(this.LblRecepcion4);
             this.panel4.Controls.Add(this.label22);
             this.panel4.Location = new System.Drawing.Point(573, 31);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(88, 126);
+            this.panel4.Size = new System.Drawing.Size(84, 129);
             this.panel4.TabIndex = 23;
             // 
             // LblBultos4
             // 
             this.LblBultos4.AutoSize = true;
-            this.LblBultos4.Location = new System.Drawing.Point(19, 112);
+            this.LblBultos4.Location = new System.Drawing.Point(19, 97);
             this.LblBultos4.Name = "LblBultos4";
             this.LblBultos4.Size = new System.Drawing.Size(44, 14);
             this.LblBultos4.TabIndex = 29;
             this.LblBultos4.Text = "label26";
             this.LblBultos4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button21
-            // 
-            this.button21.BackColor = System.Drawing.Color.IndianRed;
-            this.button21.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button21.Location = new System.Drawing.Point(3, 86);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(74, 23);
-            this.button21.TabIndex = 32;
-            this.button21.Text = "Recepción";
-            this.button21.UseVisualStyleBackColor = false;
-            // 
             // button22
             // 
             this.button22.BackColor = System.Drawing.Color.IndianRed;
             this.button22.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button22.Location = new System.Drawing.Point(3, 57);
+            this.button22.Location = new System.Drawing.Point(3, 71);
             this.button22.Name = "button22";
             this.button22.Size = new System.Drawing.Size(74, 23);
             this.button22.TabIndex = 31;
             this.button22.Text = "Calidad";
             this.button22.UseVisualStyleBackColor = false;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
             // 
             // button23
             // 
             this.button23.BackColor = System.Drawing.Color.IndianRed;
             this.button23.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button23.Location = new System.Drawing.Point(3, 31);
+            this.button23.Location = new System.Drawing.Point(3, 42);
             this.button23.Name = "button23";
             this.button23.Size = new System.Drawing.Size(74, 23);
             this.button23.TabIndex = 30;
@@ -939,7 +946,7 @@
             // 
             this.LblRecepcion4.AutoSize = true;
             this.LblRecepcion4.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblRecepcion4.Location = new System.Drawing.Point(19, 14);
+            this.LblRecepcion4.Location = new System.Drawing.Point(19, 25);
             this.LblRecepcion4.Name = "LblRecepcion4";
             this.LblRecepcion4.Size = new System.Drawing.Size(44, 14);
             this.LblRecepcion4.TabIndex = 29;
@@ -958,7 +965,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button14);
             this.panel1.Controls.Add(this.button13);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.LblBultos1);
@@ -966,36 +972,26 @@
             this.panel1.Controls.Add(this.label19);
             this.panel1.Location = new System.Drawing.Point(259, 31);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(88, 129);
+            this.panel1.Size = new System.Drawing.Size(84, 129);
             this.panel1.TabIndex = 24;
-            // 
-            // button14
-            // 
-            this.button14.BackColor = System.Drawing.Color.IndianRed;
-            this.button14.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button14.Location = new System.Drawing.Point(3, 86);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(74, 23);
-            this.button14.TabIndex = 4;
-            this.button14.Text = "Recepción";
-            this.button14.UseVisualStyleBackColor = false;
             // 
             // button13
             // 
             this.button13.BackColor = System.Drawing.Color.IndianRed;
             this.button13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button13.Location = new System.Drawing.Point(3, 57);
+            this.button13.Location = new System.Drawing.Point(3, 71);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(74, 23);
             this.button13.TabIndex = 3;
             this.button13.Text = "Calidad";
             this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.button13_Click_2);
             // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.IndianRed;
             this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.Location = new System.Drawing.Point(3, 31);
+            this.button4.Location = new System.Drawing.Point(3, 42);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(74, 23);
             this.button4.TabIndex = 2;
@@ -1006,7 +1002,7 @@
             // LblBultos1
             // 
             this.LblBultos1.AutoSize = true;
-            this.LblBultos1.Location = new System.Drawing.Point(19, 112);
+            this.LblBultos1.Location = new System.Drawing.Point(18, 97);
             this.LblBultos1.Name = "LblBultos1";
             this.LblBultos1.Size = new System.Drawing.Size(44, 14);
             this.LblBultos1.TabIndex = 5;
@@ -1017,7 +1013,7 @@
             // 
             this.LblRecepcion1.AutoSize = true;
             this.LblRecepcion1.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblRecepcion1.Location = new System.Drawing.Point(19, 14);
+            this.LblRecepcion1.Location = new System.Drawing.Point(18, 25);
             this.LblRecepcion1.Name = "LblRecepcion1";
             this.LblRecepcion1.Size = new System.Drawing.Size(44, 14);
             this.LblRecepcion1.TabIndex = 1;
@@ -1028,15 +1024,15 @@
             // 
             this.label19.AutoSize = true;
             this.label19.ForeColor = System.Drawing.Color.DarkRed;
-            this.label19.Location = new System.Drawing.Point(13, 0);
+            this.label19.Location = new System.Drawing.Point(15, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(60, 14);
             this.label19.TabIndex = 0;
             this.label19.Text = "Recepción";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button18);
             this.panel3.Controls.Add(this.LblBultos3);
             this.panel3.Controls.Add(this.button19);
             this.panel3.Controls.Add(this.button20);
@@ -1044,24 +1040,13 @@
             this.panel3.Controls.Add(this.label21);
             this.panel3.Location = new System.Drawing.Point(465, 31);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(88, 126);
+            this.panel3.Size = new System.Drawing.Size(84, 129);
             this.panel3.TabIndex = 26;
-            // 
-            // button18
-            // 
-            this.button18.BackColor = System.Drawing.Color.IndianRed;
-            this.button18.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button18.Location = new System.Drawing.Point(3, 86);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(74, 23);
-            this.button18.TabIndex = 31;
-            this.button18.Text = "Recepción";
-            this.button18.UseVisualStyleBackColor = false;
             // 
             // LblBultos3
             // 
             this.LblBultos3.AutoSize = true;
-            this.LblBultos3.Location = new System.Drawing.Point(16, 112);
+            this.LblBultos3.Location = new System.Drawing.Point(17, 97);
             this.LblBultos3.Name = "LblBultos3";
             this.LblBultos3.Size = new System.Drawing.Size(44, 14);
             this.LblBultos3.TabIndex = 28;
@@ -1072,18 +1057,19 @@
             // 
             this.button19.BackColor = System.Drawing.Color.IndianRed;
             this.button19.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button19.Location = new System.Drawing.Point(3, 57);
+            this.button19.Location = new System.Drawing.Point(7, 71);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(74, 23);
             this.button19.TabIndex = 30;
             this.button19.Text = "Calidad";
             this.button19.UseVisualStyleBackColor = false;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
             // button20
             // 
             this.button20.BackColor = System.Drawing.Color.IndianRed;
             this.button20.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button20.Location = new System.Drawing.Point(3, 31);
+            this.button20.Location = new System.Drawing.Point(7, 42);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(74, 23);
             this.button20.TabIndex = 29;
@@ -1095,7 +1081,7 @@
             // 
             this.LblRecepcion3.AutoSize = true;
             this.LblRecepcion3.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblRecepcion3.Location = new System.Drawing.Point(17, 14);
+            this.LblRecepcion3.Location = new System.Drawing.Point(17, 25);
             this.LblRecepcion3.Name = "LblRecepcion3";
             this.LblRecepcion3.Size = new System.Drawing.Size(44, 14);
             this.LblRecepcion3.TabIndex = 28;
@@ -1114,7 +1100,6 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button15);
             this.panel2.Controls.Add(this.button16);
             this.panel2.Controls.Add(this.LblBultos2);
             this.panel2.Controls.Add(this.button17);
@@ -1122,35 +1107,25 @@
             this.panel2.Controls.Add(this.label20);
             this.panel2.Location = new System.Drawing.Point(364, 31);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(88, 126);
+            this.panel2.Size = new System.Drawing.Size(84, 129);
             this.panel2.TabIndex = 25;
-            // 
-            // button15
-            // 
-            this.button15.BackColor = System.Drawing.Color.IndianRed;
-            this.button15.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button15.Location = new System.Drawing.Point(3, 86);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(74, 23);
-            this.button15.TabIndex = 30;
-            this.button15.Text = "Recepción";
-            this.button15.UseVisualStyleBackColor = false;
             // 
             // button16
             // 
             this.button16.BackColor = System.Drawing.Color.IndianRed;
             this.button16.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button16.Location = new System.Drawing.Point(3, 57);
+            this.button16.Location = new System.Drawing.Point(7, 71);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(74, 23);
             this.button16.TabIndex = 29;
             this.button16.Text = "Calidad";
             this.button16.UseVisualStyleBackColor = false;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // LblBultos2
             // 
             this.LblBultos2.AutoSize = true;
-            this.LblBultos2.Location = new System.Drawing.Point(21, 112);
+            this.LblBultos2.Location = new System.Drawing.Point(21, 97);
             this.LblBultos2.Name = "LblBultos2";
             this.LblBultos2.Size = new System.Drawing.Size(44, 14);
             this.LblBultos2.TabIndex = 27;
@@ -1161,7 +1136,7 @@
             // 
             this.button17.BackColor = System.Drawing.Color.IndianRed;
             this.button17.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button17.Location = new System.Drawing.Point(3, 31);
+            this.button17.Location = new System.Drawing.Point(7, 42);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(74, 23);
             this.button17.TabIndex = 28;
@@ -1173,7 +1148,7 @@
             // 
             this.LblRecepcion2.AutoSize = true;
             this.LblRecepcion2.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblRecepcion2.Location = new System.Drawing.Point(25, 14);
+            this.LblRecepcion2.Location = new System.Drawing.Point(21, 25);
             this.LblRecepcion2.Name = "LblRecepcion2";
             this.LblRecepcion2.Size = new System.Drawing.Size(44, 14);
             this.LblRecepcion2.TabIndex = 2;
@@ -1195,7 +1170,7 @@
             this.pictureBox2.Image = global::FormularioRomana.Properties.Resources.Track;
             this.pictureBox2.Location = new System.Drawing.Point(71, 13);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(613, 237);
+            this.pictureBox2.Size = new System.Drawing.Size(622, 237);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 21;
             this.pictureBox2.TabStop = false;
@@ -1203,7 +1178,7 @@
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.Color.Silver;
-            this.groupBox4.Controls.Add(this.button1);
+            this.groupBox4.Controls.Add(this.Btn_Romana2);
             this.groupBox4.Controls.Add(this.Txt_Sin_Carga2);
             this.groupBox4.Controls.Add(this.button3);
             this.groupBox4.Controls.Add(this.Txt_Peso_Bruto2);
@@ -1211,33 +1186,34 @@
             this.groupBox4.Controls.Add(this.label18);
             this.groupBox4.Controls.Add(this.Txt_Con_Carga2);
             this.groupBox4.Controls.Add(this.label17);
-            this.groupBox4.Location = new System.Drawing.Point(71, 242);
+            this.groupBox4.Location = new System.Drawing.Point(71, 256);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(613, 92);
             this.groupBox4.TabIndex = 20;
             this.groupBox4.TabStop = false;
             // 
-            // button1
+            // Btn_Romana2
             // 
-            this.button1.BackColor = System.Drawing.Color.CadetBlue;
-            this.button1.Enabled = false;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(537, 34);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(5);
-            this.button1.Size = new System.Drawing.Size(70, 30);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "Informe";
-            this.button1.UseVisualStyleBackColor = false;
+            this.Btn_Romana2.BackColor = System.Drawing.Color.CadetBlue;
+            this.Btn_Romana2.Enabled = false;
+            this.Btn_Romana2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Romana2.ForeColor = System.Drawing.Color.White;
+            this.Btn_Romana2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Romana2.Location = new System.Drawing.Point(537, 34);
+            this.Btn_Romana2.Name = "Btn_Romana2";
+            this.Btn_Romana2.Padding = new System.Windows.Forms.Padding(5);
+            this.Btn_Romana2.Size = new System.Drawing.Size(70, 30);
+            this.Btn_Romana2.TabIndex = 24;
+            this.Btn_Romana2.Text = "Informe";
+            this.Btn_Romana2.UseVisualStyleBackColor = false;
+            this.Btn_Romana2.Click += new System.EventHandler(this.Btn_Romana2_Click);
             // 
             // Txt_Sin_Carga2
             // 
             this.Txt_Sin_Carga2.BackColor = System.Drawing.SystemColors.MenuText;
             this.Txt_Sin_Carga2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_Sin_Carga2.ForeColor = System.Drawing.Color.Red;
-            this.Txt_Sin_Carga2.Location = new System.Drawing.Point(188, 44);
+            this.Txt_Sin_Carga2.Location = new System.Drawing.Point(172, 44);
             this.Txt_Sin_Carga2.Name = "Txt_Sin_Carga2";
             this.Txt_Sin_Carga2.Size = new System.Drawing.Size(117, 38);
             this.Txt_Sin_Carga2.TabIndex = 1;
@@ -1247,7 +1223,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.SteelBlue;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold);
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(461, 34);
@@ -1255,7 +1231,7 @@
             this.button3.Padding = new System.Windows.Forms.Padding(5);
             this.button3.Size = new System.Drawing.Size(70, 30);
             this.button3.TabIndex = 8;
-            this.button3.Text = "GUARDAR";
+            this.button3.Text = "Guardar";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -1275,7 +1251,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(304, 21);
+            this.label8.Location = new System.Drawing.Point(304, 19);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(151, 20);
             this.label8.TabIndex = 5;
@@ -1307,11 +1283,11 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(168, 21);
+            this.label17.Location = new System.Drawing.Point(168, 19);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(137, 20);
+            this.label17.Size = new System.Drawing.Size(127, 20);
             this.label17.TabIndex = 4;
-            this.label17.Text = "Precio sin carga";
+            this.label17.Text = "Peso sin carga";
             // 
             // traer_Resumen_RecepcionDataGridView
             // 
@@ -1492,6 +1468,7 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.Silver;
+            this.tabPage3.Controls.Add(this.button24);
             this.tabPage3.Controls.Add(this.button7);
             this.tabPage3.Controls.Add(this.Txt_Humedad);
             this.tabPage3.Controls.Add(this.label15);
@@ -1500,6 +1477,17 @@
             this.tabPage3.Size = new System.Drawing.Size(750, 351);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Control Calidad";
+            // 
+            // button24
+            // 
+            this.button24.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button24.BackgroundImage")));
+            this.button24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button24.Location = new System.Drawing.Point(12, 206);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(42, 32);
+            this.button24.TabIndex = 25;
+            this.button24.UseVisualStyleBackColor = true;
+            this.button24.Click += new System.EventHandler(this.button24_Click);
             // 
             // button7
             // 
@@ -1537,7 +1525,9 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.AutoScroll = true;
             this.tabPage2.BackColor = System.Drawing.Color.Silver;
+            this.tabPage2.Controls.Add(this.romana_SecaDataGridView);
             this.tabPage2.Controls.Add(this.button10);
             this.tabPage2.Controls.Add(this.button9);
             this.tabPage2.Location = new System.Drawing.Point(4, 23);
@@ -1546,6 +1536,57 @@
             this.tabPage2.Size = new System.Drawing.Size(750, 351);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Recepcion";
+            // 
+            // romana_SecaDataGridView
+            // 
+            this.romana_SecaDataGridView.AutoGenerateColumns = false;
+            this.romana_SecaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.romana_SecaDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn25,
+            this.dataGridViewTextBoxColumn26,
+            this.dataGridViewTextBoxColumn27,
+            this.dataGridViewTextBoxColumn28});
+            this.romana_SecaDataGridView.DataSource = this.romana_SecaBindingSource;
+            this.romana_SecaDataGridView.Location = new System.Drawing.Point(412, 45);
+            this.romana_SecaDataGridView.Name = "romana_SecaDataGridView";
+            this.romana_SecaDataGridView.Size = new System.Drawing.Size(300, 220);
+            this.romana_SecaDataGridView.TabIndex = 8;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "Cod_productor";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Cod_productor";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
+            // dataGridViewTextBoxColumn25
+            // 
+            this.dataGridViewTextBoxColumn25.DataPropertyName = "Num_Guia";
+            this.dataGridViewTextBoxColumn25.HeaderText = "Num_Guia";
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            // 
+            // dataGridViewTextBoxColumn26
+            // 
+            this.dataGridViewTextBoxColumn26.DataPropertyName = "Peso_Con_Carga";
+            this.dataGridViewTextBoxColumn26.HeaderText = "Peso_Con_Carga";
+            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
+            // 
+            // dataGridViewTextBoxColumn27
+            // 
+            this.dataGridViewTextBoxColumn27.DataPropertyName = "Peso_Sin_Carga";
+            this.dataGridViewTextBoxColumn27.HeaderText = "Peso_Sin_Carga";
+            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
+            // 
+            // dataGridViewTextBoxColumn28
+            // 
+            this.dataGridViewTextBoxColumn28.DataPropertyName = "Peso_Bruto";
+            this.dataGridViewTextBoxColumn28.HeaderText = "Peso_Bruto";
+            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
+            // 
+            // romana_SecaBindingSource
+            // 
+            this.romana_SecaBindingSource.DataMember = "Romana_Seca";
+            this.romana_SecaBindingSource.DataSource = this.genesisDataSet;
             // 
             // button10
             // 
@@ -1630,6 +1671,7 @@
             this.tableAdapterManager.ProductoresTableAdapter = null;
             this.tableAdapterManager.ProductoTableAdapter = null;
             this.tableAdapterManager.RecepcionesTableAdapter = null;
+            this.tableAdapterManager.Romana_SecaTableAdapter = null;
             this.tableAdapterManager.RomanaTableAdapter = null;
             this.tableAdapterManager.Tarja_RecepcionTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = FormularioRomana.GenesisDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -1667,23 +1709,16 @@
             // 
             this.traer_Resumen_RecepcionTableAdapter.ClearBeforeFill = true;
             // 
-            // Btn_Back
+            // romana_SecaTableAdapter
             // 
-            this.Btn_Back.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Btn_Back.BackgroundImage")));
-            this.Btn_Back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_Back.Location = new System.Drawing.Point(12, 206);
-            this.Btn_Back.Name = "Btn_Back";
-            this.Btn_Back.Size = new System.Drawing.Size(42, 32);
-            this.Btn_Back.TabIndex = 24;
-            this.Btn_Back.UseVisualStyleBackColor = true;
-            this.Btn_Back.Click += new System.EventHandler(this.Btn_Back_Click);
+            this.romana_SecaTableAdapter.ClearBeforeFill = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(783, 578);
+            this.ClientSize = new System.Drawing.Size(784, 578);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
@@ -1732,6 +1767,8 @@
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.romana_SecaDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.romana_SecaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.detalleRecepcionesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.romanaBindingSource)).EndInit();
@@ -1836,7 +1873,7 @@
         private GenesisDataSetTableAdapters.Traer_Resumen_RecepcionTableAdapter traer_Resumen_RecepcionTableAdapter;
         private System.Windows.Forms.DataGridView traer_Resumen_RecepcionDataGridView;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Btn_Romana2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label17;
@@ -1872,16 +1909,12 @@
         private System.Windows.Forms.Label LblRecepcion1;
         private System.Windows.Forms.Label LblRecepcion3;
         private System.Windows.Forms.Label LblRecepcion2;
-        private System.Windows.Forms.Button button21;
         private System.Windows.Forms.Button button22;
         private System.Windows.Forms.Button button23;
-        private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Label LblBultos4;
@@ -1889,6 +1922,15 @@
         private System.Windows.Forms.Label LblBultos2;
         private System.Windows.Forms.Label LblBultos1;
         private System.Windows.Forms.Button Btn_Back;
+        private System.Windows.Forms.Button button24;
+        private System.Windows.Forms.BindingSource romana_SecaBindingSource;
+        private GenesisDataSetTableAdapters.Romana_SecaTableAdapter romana_SecaTableAdapter;
+        private System.Windows.Forms.DataGridView romana_SecaDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
     }
 }
 

@@ -49,6 +49,8 @@ namespace FormularioRomana
         }
         private void Form1_Load(object sender, EventArgs e)
         {
+   
+            this.romana_SecaTableAdapter.Fill(this.genesisDataSet.Romana_Seca);
             // TODO: esta línea de código carga datos en la tabla 'genesisDataSet.Traer_Resumen_Recepcion' Puede moverla o quitarla según sea necesario.
             panel1.Visible = false;
             panel2.Visible = false;
@@ -124,7 +126,7 @@ namespace FormularioRomana
                                     id = Convert.ToInt32(recepcionesTableAdapter1.Insertar_Recepciones(Convert.ToInt16(cod_ProductorTextBox.Text), Convert.ToInt16(comboBox3.SelectedValue.ToString()), Convert.ToInt16(comboBox2.SelectedValue.ToString()), Convert.ToInt16(productosComboBox.SelectedValue.ToString()), Txt_NumGuia.Text, aux, "16448502-1"));
                                 }
 
-                                MessageBox.Show("Se han ingresado :" + (pesajes).ToString() + " De " + (aux).ToString());
+                                MessageBox.Show("Se han ingresado : " + (pesajes).ToString() + " De " + (aux).ToString());
                                 traer_Resumen_RecepcionTableAdapter.Fill(genesisDataSet.Traer_Resumen_Recepcion, Convert.ToInt16(cod_ProductorTextBox.Text), Convert.ToInt16(comboBox3.SelectedValue.ToString()), Convert.ToInt16(comboBox2.SelectedValue.ToString()), Txt_NumGuia.Text);
                                   
                                 tabControl1.Visible = true;
@@ -142,7 +144,7 @@ namespace FormularioRomana
                                 }
 
                                 id = Convert.ToInt32(recepcionesTableAdapter1.Insertar_Recepciones(Convert.ToInt16(cod_ProductorTextBox.Text), Convert.ToInt16(comboBox3.SelectedValue.ToString()), Convert.ToInt16(comboBox2.SelectedValue.ToString()), Convert.ToInt16(productosComboBox.SelectedValue.ToString()), Txt_NumGuia.Text, aux2, "16448502-1"));
-                                MessageBox.Show("Se han ingresado :" + (pesajes - 1).ToString() + " De " + (aux).ToString() + " 1 Pesaje de " + aux2);
+                                MessageBox.Show("Se han ingresado : " + (pesajes - 1).ToString() + " Pesajes De " + (aux).ToString() + " bultos 1 Pesaje de " + aux2 + " Bultos");
                                 traer_Resumen_RecepcionTableAdapter.Fill(genesisDataSet.Traer_Resumen_Recepcion, Convert.ToInt16(cod_ProductorTextBox.Text), Convert.ToInt16(comboBox3.SelectedValue.ToString()), Convert.ToInt16(comboBox2.SelectedValue.ToString()),Txt_NumGuia.Text);
                                 tabControl1.Visible = true;
                             }
@@ -204,16 +206,13 @@ namespace FormularioRomana
                         try
                         {
                             tabControl1.Controls.Remove(tabControl1.TabPages["tabPage4"]);
-                           // tabControl1.Controls.Remove(tabControl1.TabPages[4]);
+                          
                         }
                         catch (IndexOutOfRangeException ex)
                         {
                             MessageBox.Show(ex.Message,"Anakena",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                            //  throw IndexOutOfRangeException e;
                         }
-
                     }
-
                 }
                 else
                 {
@@ -501,22 +500,44 @@ namespace FormularioRomana
 
         private void button3_Click(object sender, EventArgs e)
         {
+            int resultado = 0;
             try
             {
                 Txt_Peso_Bruto2.Text = (Convert.ToInt32(Txt_Con_Carga2.Text) - Convert.ToInt32(Txt_Sin_Carga2.Text)).ToString();
+                romana_SecaTableAdapter.InsertarRomanaSeca(Convert.ToInt16(cod_ProductorTextBox.Text), Txt_NumGuia.Text, Convert.ToInt32(Txt_Con_Carga2.Text), Convert.ToInt32(Txt_Sin_Carga2.Text), Convert.ToInt32(Txt_Peso_Bruto2.Text));
+                double Envase_c_carga = 0;
+                double Acum_c_carga = 0;
+                double Envase_s_carga = 0;
+                double Acum_s_carga = 0;
+                double envase_bruto = 0;
+                double acum_bruto = 0;
+                Envase_c_carga = Convert.ToDouble(Txt_Con_Carga2.Text) / bultos;
+                Envase_s_carga = Convert.ToDouble(Txt_Sin_Carga2.Text) / bultos;
+                envase_bruto = Envase_c_carga - Envase_s_carga;
                 for (int i = 0; i < traer_Resumen_RecepcionDataGridView.RowCount; i++)
-                { 
-          
-                this.romanaTableAdapter.Insertar_Romana(Convert.ToInt32(traer_Resumen_RecepcionDataGridView.Rows[i].Cells[nameof(dataGridViewTextBoxColumn11)].Value.ToString()), Convert.ToInt16(cod_ProductorTextBox.Text), Txt_NumGuia.Text, Convert.ToInt32(Txt_Con_Carga2.Text), Convert.ToInt32(Txt_Sin_Carga2.Text), Convert.ToInt32(Txt_Peso_Bruto2.Text));
-                MessageBox.Show("Datos de romana ingresados o actualizados correctamente");
-                Btn_Romana.Enabled = true;
+                {
+                    Acum_c_carga = Acum_c_carga + Convert.ToInt32(Convert.ToDouble(traer_Resumen_RecepcionDataGridView.Rows[i].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString()) * Envase_c_carga);
+                    Acum_s_carga = Acum_s_carga + Convert.ToInt32(Convert.ToDouble(traer_Resumen_RecepcionDataGridView.Rows[i].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString()) * Envase_s_carga);
+                    acum_bruto = acum_bruto + Convert.ToInt32(Convert.ToDouble(traer_Resumen_RecepcionDataGridView.Rows[i].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString()) * envase_bruto);
+                    if (i != traer_Resumen_RecepcionDataGridView.RowCount - 1)
+                    {
+                        this.romanaTableAdapter.Insertar_Romana(Convert.ToInt32(traer_Resumen_RecepcionDataGridView.Rows[i].Cells[nameof(dataGridViewTextBoxColumn11)].Value.ToString()), Convert.ToInt16(cod_ProductorTextBox.Text), Txt_NumGuia.Text, Convert.ToInt32(Convert.ToDouble(traer_Resumen_RecepcionDataGridView.Rows[i].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString()) * Envase_c_carga), Convert.ToInt32(Convert.ToDouble(traer_Resumen_RecepcionDataGridView.Rows[i].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString()) * Envase_s_carga), Convert.ToInt32(Convert.ToDouble(traer_Resumen_RecepcionDataGridView.Rows[i].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString()) * envase_bruto));
+                    }
+                    else
+                    {
+                     resultado  = this.romanaTableAdapter.Insertar_Romana(Convert.ToInt32(traer_Resumen_RecepcionDataGridView.Rows[i].Cells[nameof(dataGridViewTextBoxColumn11)].Value.ToString()), Convert.ToInt16(cod_ProductorTextBox.Text), Txt_NumGuia.Text, (Convert.ToInt32(Convert.ToDouble(traer_Resumen_RecepcionDataGridView.Rows[i].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString()) * Envase_c_carga)) + Convert.ToInt32((Convert.ToInt32(Txt_Con_Carga2.Text) - Acum_c_carga)), Convert.ToInt32(Convert.ToDouble(traer_Resumen_RecepcionDataGridView.Rows[i].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString()) * Envase_s_carga) + Convert.ToInt32(Convert.ToInt32(Txt_Sin_Carga2.Text) - Acum_s_carga), Convert.ToInt32(Convert.ToDouble(traer_Resumen_RecepcionDataGridView.Rows[i].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString()) * envase_bruto) + Convert.ToInt32(Convert.ToInt32(Txt_Peso_Bruto2.Text) - acum_bruto));
+                    }
                 }
+
+               MessageBox.Show("Datos de romana ingresados o actualizados correctamente", "Anakena", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Btn_Romana2.Enabled = true;
+
+
             }
             catch (SqlException ex)
             {
                 MessageBox.Show(ex.Message, "Anakena", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
+            }   
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -529,7 +550,6 @@ namespace FormularioRomana
             label1.Visible = true;
             Lbl_Recepcion.Visible = true;
             LblCantidadEnvases.Text = num_envases().ToString();
-           // tabControl1.SelectedIndex = 1;
             tabControl1.TabPages.Add(tabPage1);
             tabControl1.TabPages.Remove(tabPage4);
         }
@@ -647,6 +667,42 @@ namespace FormularioRomana
             LblCantidadEnvases.Text = num_envases().ToString();
             tabControl1.TabPages.Add(tabPage1);
             tabControl1.TabPages.Remove(tabPage4);
+        }
+
+        private void button13_Click_2(object sender, EventArgs e)
+        {
+            tabControl1.TabPages.Add(tabPage3);
+            tabControl1.TabPages.Remove(tabPage4);
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            tabControl1.TabPages.Add(tabPage3);
+            tabControl1.TabPages.Remove(tabPage4);
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            tabControl1.TabPages.Add(tabPage3);
+            tabControl1.TabPages.Remove(tabPage4);
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            tabControl1.TabPages.Add(tabPage3);
+            tabControl1.TabPages.Remove(tabPage4);
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+            tabControl1.TabPages.Add(tabPage4);
+            tabControl1.TabPages.Remove(tabPage3);
+        }
+
+        private void Btn_Romana2_Click(object sender, EventArgs e)
+        {
+            InformeRomana2 rom = new InformeRomana2(Convert.ToInt32(cod_ProductorTextBox.Text),Convert.ToInt32(Txt_NumGuia.Text));
+            rom.ShowDialog();
         }
     }
 }

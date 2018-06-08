@@ -78,6 +78,12 @@
     <Compile Include="InformeRomana.Designer.cs">
       <DependentUpon>InformeRomana.cs</DependentUpon>
     </Compile>
+    <Compile Include="InformeRomana2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformeRomana2.Designer.cs">
+      <DependentUpon>InformeRomana2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Informe_Recepcion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,10 @@
     <EmbeddedResource Include="InformeRomana.rdlc" />
     <EmbeddedResource Include="InformeRomana.resx">
       <DependentUpon>InformeRomana.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeRomana2.rdlc" />
+    <EmbeddedResource Include="InformeRomana2.resx">
+      <DependentUpon>InformeRomana2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Informe_Recepcion.rdlc" />
     <EmbeddedResource Include="Informe_Recepcion.resx">
