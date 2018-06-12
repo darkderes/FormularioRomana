@@ -179,9 +179,9 @@
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
             <Top>0.30952cm</Top>
-            <Left>12.06631cm</Left>
+            <Left>12.89061cm</Left>
             <Height>0.70583cm</Height>
-            <Width>2.5cm</Width>
+            <Width>1.62688cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -215,7 +215,7 @@
             </Paragraphs>
             <rd:DefaultName>Fecha</rd:DefaultName>
             <Top>0.30952cm</Top>
-            <Left>14.7427cm</Left>
+            <Left>14.6952cm</Left>
             <Height>0.70583cm</Height>
             <Width>3.4525cm</Width>
             <ZIndex>2</ZIndex>
@@ -269,7 +269,7 @@
         <Top>2.52828cm</Top>
         <Left>0.58023cm</Left>
         <Height>1.48445cm</Height>
-        <Width>18.59076cm</Width>
+        <Width>18.53916cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>

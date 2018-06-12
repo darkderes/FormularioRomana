@@ -98,6 +98,10 @@
             this.Txt_Con_Carga = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.humedad_RecepcionDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.humedad_RecepcionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel4 = new System.Windows.Forms.Panel();
             this.LblBultos4 = new System.Windows.Forms.Label();
             this.button22 = new System.Windows.Forms.Button();
@@ -182,7 +186,6 @@
             this.traer_Detalle_RecepcionTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.Traer_Detalle_RecepcionTableAdapter();
             this.romanaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tarja_RecepcionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.humedad_RecepcionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.traer_Resumen_RecepcionTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.Traer_Resumen_RecepcionTableAdapter();
             this.romana_SecaTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.Romana_SecaTableAdapter();
             this.groupBox1.SuspendLayout();
@@ -202,6 +205,8 @@
             this.groupBox3.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.humedad_RecepcionDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.humedad_RecepcionBindingSource)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -219,7 +224,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.detalleRecepcionesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.romanaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tarja_RecepcionBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.humedad_RecepcionBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -883,6 +887,7 @@
             // 
             this.tabPage4.AutoScroll = true;
             this.tabPage4.BackColor = System.Drawing.Color.Silver;
+            this.tabPage4.Controls.Add(this.humedad_RecepcionDataGridView);
             this.tabPage4.Controls.Add(this.panel4);
             this.tabPage4.Controls.Add(this.panel1);
             this.tabPage4.Controls.Add(this.panel3);
@@ -895,6 +900,38 @@
             this.tabPage4.Size = new System.Drawing.Size(750, 351);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Recepcion Seca";
+            // 
+            // humedad_RecepcionDataGridView
+            // 
+            this.humedad_RecepcionDataGridView.AllowUserToAddRows = false;
+            this.humedad_RecepcionDataGridView.AutoGenerateColumns = false;
+            this.humedad_RecepcionDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.humedad_RecepcionDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn29,
+            this.dataGridViewTextBoxColumn30});
+            this.humedad_RecepcionDataGridView.DataSource = this.humedad_RecepcionBindingSource;
+            this.humedad_RecepcionDataGridView.Location = new System.Drawing.Point(4, 153);
+            this.humedad_RecepcionDataGridView.Name = "humedad_RecepcionDataGridView";
+            this.humedad_RecepcionDataGridView.Size = new System.Drawing.Size(47, 97);
+            this.humedad_RecepcionDataGridView.TabIndex = 26;
+            this.humedad_RecepcionDataGridView.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn29
+            // 
+            this.dataGridViewTextBoxColumn29.DataPropertyName = "Num_Proceso";
+            this.dataGridViewTextBoxColumn29.HeaderText = "Num_Proceso";
+            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
+            // 
+            // dataGridViewTextBoxColumn30
+            // 
+            this.dataGridViewTextBoxColumn30.DataPropertyName = "Humedad";
+            this.dataGridViewTextBoxColumn30.HeaderText = "Humedad";
+            this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
+            // 
+            // humedad_RecepcionBindingSource
+            // 
+            this.humedad_RecepcionBindingSource.DataMember = "Humedad_Recepcion";
+            this.humedad_RecepcionBindingSource.DataSource = this.genesisDataSet;
             // 
             // panel4
             // 
@@ -1700,11 +1737,6 @@
             this.tarja_RecepcionBindingSource.DataMember = "Tarja_Recepcion";
             this.tarja_RecepcionBindingSource.DataSource = this.genesisDataSet;
             // 
-            // humedad_RecepcionBindingSource
-            // 
-            this.humedad_RecepcionBindingSource.DataMember = "Humedad_Recepcion";
-            this.humedad_RecepcionBindingSource.DataSource = this.genesisDataSet;
-            // 
             // traer_Resumen_RecepcionTableAdapter
             // 
             this.traer_Resumen_RecepcionTableAdapter.ClearBeforeFill = true;
@@ -1750,6 +1782,8 @@
             this.groupBox3.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.humedad_RecepcionDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.humedad_RecepcionBindingSource)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -1773,7 +1807,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.detalleRecepcionesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.romanaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tarja_RecepcionBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.humedad_RecepcionBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1931,6 +1964,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
+        private System.Windows.Forms.DataGridView humedad_RecepcionDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
     }
 }
 

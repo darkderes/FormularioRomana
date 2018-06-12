@@ -23,6 +23,7 @@ namespace FormularioRomana
         int id = 0;
         int bultos;
         int btn_envases = 0;
+        int btn_calidad = 0;
         public Form1()
         {
             InitializeComponent();
@@ -50,7 +51,7 @@ namespace FormularioRomana
         private void Form1_Load(object sender, EventArgs e)
         {
    
-            this.romana_SecaTableAdapter.Fill(this.genesisDataSet.Romana_Seca);
+            
             // TODO: esta línea de código carga datos en la tabla 'genesisDataSet.Traer_Resumen_Recepcion' Puede moverla o quitarla según sea necesario.
             panel1.Visible = false;
             panel2.Visible = false;
@@ -441,7 +442,7 @@ namespace FormularioRomana
             try
             {
                this.humedad_RecepcionTableAdapter.Insertar_Humedad_Recepcion(Convert.ToInt16(Lbl_Recepcion.Text),Convert.ToDecimal(Txt_Humedad.Text.Replace('.',',')));
-                Txt_Humedad.ReadOnly = true;
+              //  Txt_Humedad.ReadOnly = true;
                 MessageBox.Show("Humedad ingresada correctamente","Anakena",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
             catch (SqlException ex)
@@ -455,7 +456,7 @@ namespace FormularioRomana
         {
             FormBusquedaProductores rc = new FormBusquedaProductores();
             rc.ShowDialog();
-             cod_ProductorTextBox.Text = rc.codigo.ToString();
+            cod_ProductorTextBox.Text = rc.codigo.ToString();
             productoresTableAdapter.FiltroProductorByCodigo(genesisDataSet.Productores,(short)rc.codigo);
         }
 
@@ -625,6 +626,7 @@ namespace FormularioRomana
                     button23.BackColor = Color.IndianRed;
                 }
             }
+            Txt_Cantidad.Text = "";
         }
 
         private void button17_Click(object sender, EventArgs e)
@@ -671,30 +673,71 @@ namespace FormularioRomana
 
         private void button13_Click_2(object sender, EventArgs e)
         {
+            btn_calidad = 1;
+            Lbl_Recepcion.Text = LblRecepcion1.Text;
+            TxtBultos.Text = traer_Resumen_RecepcionDataGridView.Rows[0].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString();
+            humedad_RecepcionTableAdapter.FillByProceso(genesisDataSet.Humedad_Recepcion, Convert.ToInt16(LblRecepcion1.Text));
+            Txt_Humedad.Text = humedad_RecepcionDataGridView.RowCount > 0 ? humedad_RecepcionDataGridView.Rows[0].Cells[nameof(dataGridViewTextBoxColumn30)].Value.ToString() : "0,0";
+            label1.Visible = true;
+            Lbl_Recepcion.Visible = true;
             tabControl1.TabPages.Add(tabPage3);
             tabControl1.TabPages.Remove(tabPage4);
+            double humedad;
+            double.TryParse(Txt_Humedad.Text,out humedad);
+            if (humedad > 0) { button13.BackColor = Color.Green; } else { button13.BackColor = Color.DarkGoldenrod; }
         }
 
         private void button16_Click(object sender, EventArgs e)
         {
+            btn_calidad = 2;
+            Lbl_Recepcion.Text = LblRecepcion2.Text;
+            TxtBultos.Text = traer_Resumen_RecepcionDataGridView.Rows[1].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString();
+            humedad_RecepcionTableAdapter.FillByProceso(genesisDataSet.Humedad_Recepcion, Convert.ToInt16(LblRecepcion2.Text));
+            Txt_Humedad.Text = humedad_RecepcionDataGridView.RowCount > 0 ? humedad_RecepcionDataGridView.Rows[0].Cells[nameof(dataGridViewTextBoxColumn30)].Value.ToString() : "0,0";
+            label1.Visible = true;
+            Lbl_Recepcion.Visible = true;
             tabControl1.TabPages.Add(tabPage3);
             tabControl1.TabPages.Remove(tabPage4);
+            double humedad;
+            double.TryParse(Txt_Humedad.Text, out humedad);
+            if (humedad > 0) { button16.BackColor = Color.Green; } else { button16.BackColor = Color.DarkGoldenrod; }
         }
 
         private void button19_Click(object sender, EventArgs e)
         {
+            btn_calidad = 3;
+            Lbl_Recepcion.Text = LblRecepcion3.Text;
+            TxtBultos.Text = traer_Resumen_RecepcionDataGridView.Rows[2].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString();
+            humedad_RecepcionTableAdapter.FillByProceso(genesisDataSet.Humedad_Recepcion, Convert.ToInt16(LblRecepcion3.Text));
+            Txt_Humedad.Text = humedad_RecepcionDataGridView.RowCount > 0 ? humedad_RecepcionDataGridView.Rows[0].Cells[nameof(dataGridViewTextBoxColumn30)].Value.ToString() : "0,0";
+            label1.Visible = true;
+            Lbl_Recepcion.Visible = true;
             tabControl1.TabPages.Add(tabPage3);
             tabControl1.TabPages.Remove(tabPage4);
+            double humedad;
+            double.TryParse(Txt_Humedad.Text, out humedad);
+            if (humedad > 0) { button19.BackColor = Color.Green; } else { button19.BackColor = Color.DarkGoldenrod; }
         }
 
         private void button22_Click(object sender, EventArgs e)
         {
+            btn_calidad = 4;
+            Lbl_Recepcion.Text = LblRecepcion4.Text;
+            TxtBultos.Text = traer_Resumen_RecepcionDataGridView.Rows[3].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString();
+            humedad_RecepcionTableAdapter.FillByProceso(genesisDataSet.Humedad_Recepcion, Convert.ToInt16(LblRecepcion4.Text));
+            Txt_Humedad.Text = humedad_RecepcionDataGridView.RowCount > 0 ? humedad_RecepcionDataGridView.Rows[0].Cells[nameof(dataGridViewTextBoxColumn30)].Value.ToString() : "0,0";
+            label1.Visible = true;
+            Lbl_Recepcion.Visible = true;
             tabControl1.TabPages.Add(tabPage3);
             tabControl1.TabPages.Remove(tabPage4);
+            double humedad;
+            double.TryParse(Txt_Humedad.Text, out humedad);
+            if (humedad > 0) { button22.BackColor = Color.Green; } else { button22.BackColor = Color.DarkGoldenrod; }
         }
 
         private void button24_Click(object sender, EventArgs e)
         {
+            Txt_Humedad.Text = "";
             tabControl1.TabPages.Add(tabPage4);
             tabControl1.TabPages.Remove(tabPage3);
         }
