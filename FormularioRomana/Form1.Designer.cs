@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.Lbl_Recepcion = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -98,6 +98,7 @@
             this.Txt_Con_Carga = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.humedad_RecepcionDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -155,7 +156,7 @@
             this.traer_Resumen_RecepcionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.button24 = new System.Windows.Forms.Button();
+            this.Btn_Back_Calidad = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.Txt_Humedad = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -508,6 +509,7 @@
             this.Btn_Back.Size = new System.Drawing.Size(42, 32);
             this.Btn_Back.TabIndex = 24;
             this.Btn_Back.UseVisualStyleBackColor = true;
+            this.Btn_Back.Visible = false;
             this.Btn_Back.Click += new System.EventHandler(this.Btn_Back_Click);
             // 
             // Print_Etiquetas
@@ -685,6 +687,7 @@
             // 
             // CmbBaseBins
             // 
+            this.CmbBaseBins.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.basesPalletBindingSource, "Cod_BasesPallet", true));
             this.CmbBaseBins.DataSource = this.basesPalletBindingSource;
             this.CmbBaseBins.DisplayMember = "Des_BasePallet";
             this.CmbBaseBins.FormattingEnabled = true;
@@ -887,6 +890,7 @@
             // 
             this.tabPage4.AutoScroll = true;
             this.tabPage4.BackColor = System.Drawing.Color.Silver;
+            this.tabPage4.Controls.Add(this.button1);
             this.tabPage4.Controls.Add(this.humedad_RecepcionDataGridView);
             this.tabPage4.Controls.Add(this.panel4);
             this.tabPage4.Controls.Add(this.panel1);
@@ -900,6 +904,21 @@
             this.tabPage4.Size = new System.Drawing.Size(750, 351);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Recepcion Seca";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(363, 207);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(5);
+            this.button1.Size = new System.Drawing.Size(82, 31);
+            this.button1.TabIndex = 27;
+            this.button1.Text = "Formalizar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // humedad_RecepcionDataGridView
             // 
@@ -1207,7 +1226,7 @@
             this.pictureBox2.Image = global::FormularioRomana.Properties.Resources.Track;
             this.pictureBox2.Location = new System.Drawing.Point(71, 13);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(622, 237);
+            this.pictureBox2.Size = new System.Drawing.Size(613, 237);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 21;
             this.pictureBox2.TabStop = false;
@@ -1330,14 +1349,14 @@
             // 
             this.traer_Resumen_RecepcionDataGridView.AllowUserToAddRows = false;
             this.traer_Resumen_RecepcionDataGridView.AutoGenerateColumns = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.traer_Resumen_RecepcionDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.traer_Resumen_RecepcionDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.traer_Resumen_RecepcionDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.traer_Resumen_RecepcionDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn11,
@@ -1356,14 +1375,14 @@
             this.dataGridViewTextBoxColumn24,
             this.BotonEnvase});
             this.traer_Resumen_RecepcionDataGridView.DataSource = this.traer_Resumen_RecepcionBindingSource;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightYellow;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.traer_Resumen_RecepcionDataGridView.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.LightYellow;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.traer_Resumen_RecepcionDataGridView.DefaultCellStyle = dataGridViewCellStyle8;
             this.traer_Resumen_RecepcionDataGridView.Location = new System.Drawing.Point(3, 3);
             this.traer_Resumen_RecepcionDataGridView.Name = "traer_Resumen_RecepcionDataGridView";
             this.traer_Resumen_RecepcionDataGridView.RowHeadersVisible = false;
@@ -1374,10 +1393,10 @@
             // dataGridViewTextBoxColumn11
             // 
             this.dataGridViewTextBoxColumn11.DataPropertyName = "Cod_Recepcion";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.Format = "d";
-            dataGridViewCellStyle2.NullValue = null;
-            this.dataGridViewTextBoxColumn11.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.Format = "d";
+            dataGridViewCellStyle6.NullValue = null;
+            this.dataGridViewTextBoxColumn11.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewTextBoxColumn11.HeaderText = "Recepcion";
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             this.dataGridViewTextBoxColumn11.ReadOnly = true;
@@ -1448,10 +1467,10 @@
             // dataGridViewTextBoxColumn21
             // 
             this.dataGridViewTextBoxColumn21.DataPropertyName = "Bultos";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Format = "N0";
-            dataGridViewCellStyle3.NullValue = null;
-            this.dataGridViewTextBoxColumn21.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.Format = "N0";
+            dataGridViewCellStyle7.NullValue = null;
+            this.dataGridViewTextBoxColumn21.DefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewTextBoxColumn21.HeaderText = "Bultos";
             this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
             this.dataGridViewTextBoxColumn21.Width = 80;
@@ -1505,7 +1524,7 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.Silver;
-            this.tabPage3.Controls.Add(this.button24);
+            this.tabPage3.Controls.Add(this.Btn_Back_Calidad);
             this.tabPage3.Controls.Add(this.button7);
             this.tabPage3.Controls.Add(this.Txt_Humedad);
             this.tabPage3.Controls.Add(this.label15);
@@ -1515,16 +1534,17 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Control Calidad";
             // 
-            // button24
+            // Btn_Back_Calidad
             // 
-            this.button24.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button24.BackgroundImage")));
-            this.button24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button24.Location = new System.Drawing.Point(12, 206);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(42, 32);
-            this.button24.TabIndex = 25;
-            this.button24.UseVisualStyleBackColor = true;
-            this.button24.Click += new System.EventHandler(this.button24_Click);
+            this.Btn_Back_Calidad.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Btn_Back_Calidad.BackgroundImage")));
+            this.Btn_Back_Calidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_Back_Calidad.Location = new System.Drawing.Point(12, 206);
+            this.Btn_Back_Calidad.Name = "Btn_Back_Calidad";
+            this.Btn_Back_Calidad.Size = new System.Drawing.Size(42, 32);
+            this.Btn_Back_Calidad.TabIndex = 25;
+            this.Btn_Back_Calidad.UseVisualStyleBackColor = true;
+            this.Btn_Back_Calidad.Visible = false;
+            this.Btn_Back_Calidad.Click += new System.EventHandler(this.button24_Click);
             // 
             // button7
             // 
@@ -1589,6 +1609,7 @@
             this.romana_SecaDataGridView.Name = "romana_SecaDataGridView";
             this.romana_SecaDataGridView.Size = new System.Drawing.Size(300, 220);
             this.romana_SecaDataGridView.TabIndex = 8;
+            this.romana_SecaDataGridView.Visible = false;
             // 
             // dataGridViewTextBoxColumn10
             // 
@@ -1631,10 +1652,10 @@
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.Color.White;
             this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.Location = new System.Drawing.Point(315, 123);
+            this.button10.Location = new System.Drawing.Point(315, 122);
             this.button10.Name = "button10";
             this.button10.Padding = new System.Windows.Forms.Padding(5);
-            this.button10.Size = new System.Drawing.Size(82, 33);
+            this.button10.Size = new System.Drawing.Size(82, 34);
             this.button10.TabIndex = 8;
             this.button10.Text = "Imprimir";
             this.button10.UseVisualStyleBackColor = false;
@@ -1955,7 +1976,7 @@
         private System.Windows.Forms.Label LblBultos2;
         private System.Windows.Forms.Label LblBultos1;
         private System.Windows.Forms.Button Btn_Back;
-        private System.Windows.Forms.Button button24;
+        private System.Windows.Forms.Button Btn_Back_Calidad;
         private System.Windows.Forms.BindingSource romana_SecaBindingSource;
         private GenesisDataSetTableAdapters.Romana_SecaTableAdapter romana_SecaTableAdapter;
         private System.Windows.Forms.DataGridView romana_SecaDataGridView;
@@ -1967,6 +1988,7 @@
         private System.Windows.Forms.DataGridView humedad_RecepcionDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
+        private System.Windows.Forms.Button button1;
     }
 }
 

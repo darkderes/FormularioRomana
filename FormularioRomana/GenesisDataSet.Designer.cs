@@ -19693,7 +19693,7 @@ SELECT Id_Tarja, Fecha_Tarja, Tarja, Num_Proceso, Cod_Productor, Cod_Variedad, C
             this._commandCollection[2].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Num_Proceso", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Peso_Bruto", global::System.Data.SqlDbType.Decimal, 5, global::System.Data.ParameterDirection.Input, 7, 1, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Bulto", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -20325,7 +20325,7 @@ SELECT Id_Tarja, Fecha_Tarja, Tarja, Num_Proceso, Cod_Productor, Cod_Variedad, C
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int sp_llenar_peso_recepcion(global::System.Nullable<int> Num_Proceso, global::System.Nullable<decimal> Peso_Bruto) {
+        public virtual int sp_llenar_peso_recepcion(global::System.Nullable<int> Num_Proceso, global::System.Nullable<int> Bulto) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
             if ((Num_Proceso.HasValue == true)) {
                 command.Parameters[1].Value = ((int)(Num_Proceso.Value));
@@ -20333,8 +20333,8 @@ SELECT Id_Tarja, Fecha_Tarja, Tarja, Num_Proceso, Cod_Productor, Cod_Variedad, C
             else {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((Peso_Bruto.HasValue == true)) {
-                command.Parameters[2].Value = ((decimal)(Peso_Bruto.Value));
+            if ((Bulto.HasValue == true)) {
+                command.Parameters[2].Value = ((int)(Bulto.Value));
             }
             else {
                 command.Parameters[2].Value = global::System.DBNull.Value;

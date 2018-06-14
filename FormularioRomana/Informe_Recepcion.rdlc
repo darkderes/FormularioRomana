@@ -693,7 +693,7 @@
         <Top>0.17639cm</Top>
         <Left>0.81703cm</Left>
         <Height>1.01479cm</Height>
-        <Width>25.9109cm</Width>
+        <Width>25.91089cm</Width>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -1165,7 +1165,7 @@
         <Top>1.29701cm</Top>
         <Left>3.6067cm</Left>
         <Height>0.6cm</Height>
-        <Width>23.12123cm</Width>
+        <Width>23.12122cm</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>
@@ -1182,6 +1182,7 @@
               <TextRun>
                 <Value>Formula Ajuste H°</Value>
                 <Style>
+                  <FontSize>8pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -1191,7 +1192,14 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Pf = Pi * (1-Hi)                        Pi: Peso Inicial                                                                  AJUSTES POR HUMEDAD AL 8%</Value>
+                <Value>Pf = Pi * (1-Hi)                        Pi: Peso Inicial                                                                                                                               </Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value> AJUSTES POR HUMEDAD AL 8%</Value>
                 <Style>
                   <FontWeight>Bold</FontWeight>
                 </Style>
@@ -1204,6 +1212,7 @@
               <TextRun>
                 <Value>     (1-Hf)                                 Pf: Peso Final</Value>
                 <Style>
+                  <FontSize>8pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -1213,8 +1222,9 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>                                              Hi: Humedad Inicial</Value>
+                <Value>                                                Hi: Humedad Inicial</Value>
                 <Style>
+                  <FontSize>8pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -1224,8 +1234,9 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Pi-Pf = Ajuste Humedad        Hf:Humedad Final</Value>
+                <Value>Pi-Pf = Ajuste Humedad     Hf:Humedad Final</Value>
                 <Style>
+                  <FontSize>8pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -1235,9 +1246,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox63</rd:DefaultName>
         <Top>2.14785cm</Top>
-        <Left>3.19244cm</Left>
+        <Left>1.92244cm</Left>
         <Height>2.44227cm</Height>
-        <Width>20.37403cm</Width>
+        <Width>21.64403cm</Width>
         <ZIndex>6</ZIndex>
         <Visibility>
           <Hidden>=IIF(Sum(Fields!Humedad.Value, "DataSet1") &gt; 0,FALSE,TRUE)</Hidden>
@@ -1272,7 +1283,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!Peso_Neto.Value)-SUM(Fields!Peso_Neto_Final.Value)</Value>
+                              <Value>=(Sum(Fields!Peso_Neto.Value)-SUM(Fields!Peso_Neto_Final.Value))&amp;" KG"</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -1316,7 +1327,7 @@
         </TablixRowHierarchy>
         <DataSetName>DataSet2</DataSetName>
         <Top>2.48199cm</Top>
-        <Left>23.74286cm</Left>
+        <Left>23.70758cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>7</ZIndex>
