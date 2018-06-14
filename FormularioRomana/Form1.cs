@@ -281,7 +281,7 @@ namespace FormularioRomana
             cantidad_acum +=cantidad;
             if (isnumber)
             {
-                if (cantidad <= bultos)
+                if (cantidad_acum <= bultos)
                 {
                     try
                     {
@@ -319,6 +319,7 @@ namespace FormularioRomana
                 Txt_Peso_Bruto.Text = (Convert.ToInt32(Txt_Con_Carga.Text) - Convert.ToInt32(Txt_Sin_Carga.Text)).ToString();
                 this.romanaTableAdapter.Insertar_Romana(Convert.ToInt32(Lbl_Recepcion.Text), Convert.ToInt16(cod_ProductorTextBox.Text), Txt_NumGuia.Text, Convert.ToInt32(Txt_Con_Carga.Text), Convert.ToInt32(Txt_Sin_Carga.Text), Convert.ToInt32(Txt_Peso_Bruto.Text));
                 MessageBox.Show("Datos de romana ingresados o actualizados correctamente");
+                Btn_Romana.Enabled = true;
             }
             catch (SqlException ex)
             {
@@ -569,13 +570,14 @@ namespace FormularioRomana
         private void button4_Click(object sender, EventArgs e)
         {
             btn_envases = 1;
-            cantidad = 0;
+   
             Lbl_Recepcion.Text = LblRecepcion1.Text;
             TxtBultos.Text = traer_Resumen_RecepcionDataGridView.Rows[0].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString();
             this.traer_Detalle_RecepcionTableAdapter.Fill(this.genesisDataSet.Traer_Detalle_Recepcion, new System.Nullable<int>(((int)(System.Convert.ChangeType(Lbl_Recepcion.Text, typeof(int))))), new System.Nullable<short>(((short)(System.Convert.ChangeType(cod_ProductorTextBox.Text, typeof(short))))), Txt_NumGuia.Text);
             label1.Visible = true;
             Lbl_Recepcion.Visible = true;
             LblCantidadEnvases.Text = num_envases().ToString();
+            cantidad_acum = num_envases();
             tabControl1.TabPages.Add(tabPage1);
             tabControl1.TabPages.Remove(tabPage4);
             Btn_Back.Visible = true;
@@ -658,13 +660,14 @@ namespace FormularioRomana
         private void button17_Click(object sender, EventArgs e)
         {
             btn_envases = 2;
-            cantidad = 0;
+      
             Lbl_Recepcion.Text = LblRecepcion2.Text;
             TxtBultos.Text = traer_Resumen_RecepcionDataGridView.Rows[1].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString();
             this.traer_Detalle_RecepcionTableAdapter.Fill(this.genesisDataSet.Traer_Detalle_Recepcion, new System.Nullable<int>(((int)(System.Convert.ChangeType(Lbl_Recepcion.Text, typeof(int))))), new System.Nullable<short>(((short)(System.Convert.ChangeType(cod_ProductorTextBox.Text, typeof(short))))), Txt_NumGuia.Text);
             label1.Visible = true;
             Lbl_Recepcion.Visible = true;
             LblCantidadEnvases.Text = num_envases().ToString();
+            cantidad_acum = num_envases();
             tabControl1.TabPages.Add(tabPage1);
             tabControl1.TabPages.Remove(tabPage4);
             Btn_Back.Visible = true;
@@ -673,13 +676,13 @@ namespace FormularioRomana
         private void button20_Click(object sender, EventArgs e)
         {
             btn_envases = 3;
-            cantidad = 0;
             Lbl_Recepcion.Text = LblRecepcion3.Text;
             TxtBultos.Text = traer_Resumen_RecepcionDataGridView.Rows[2].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString();
             this.traer_Detalle_RecepcionTableAdapter.Fill(this.genesisDataSet.Traer_Detalle_Recepcion, new System.Nullable<int>(((int)(System.Convert.ChangeType(Lbl_Recepcion.Text, typeof(int))))), new System.Nullable<short>(((short)(System.Convert.ChangeType(cod_ProductorTextBox.Text, typeof(short))))), Txt_NumGuia.Text);
             label1.Visible = true;
             Lbl_Recepcion.Visible = true;
             LblCantidadEnvases.Text = num_envases().ToString();
+            cantidad_acum = num_envases();
             tabControl1.TabPages.Add(tabPage1);
             tabControl1.TabPages.Remove(tabPage4);
             Btn_Back.Visible = true;
@@ -687,7 +690,6 @@ namespace FormularioRomana
 
         private void button23_Click(object sender, EventArgs e)
         {
-            cantidad = 0;
             btn_envases = 4;
             Lbl_Recepcion.Text = LblRecepcion4.Text;
             TxtBultos.Text = traer_Resumen_RecepcionDataGridView.Rows[3].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString();
@@ -695,6 +697,7 @@ namespace FormularioRomana
             label1.Visible = true;
             Lbl_Recepcion.Visible = true;
             LblCantidadEnvases.Text = num_envases().ToString();
+            cantidad_acum = num_envases();
             tabControl1.TabPages.Add(tabPage1);
             tabControl1.TabPages.Remove(tabPage4);
             Btn_Back.Visible = true;
