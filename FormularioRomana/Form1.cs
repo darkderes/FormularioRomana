@@ -1335,38 +1335,74 @@ namespace FormularioRomana
         private void button1_Click(object sender, EventArgs e)
         {
             recepciones = 0;
-            
-            if(traer_Resumen_RecepcionDataGridView.RowCount == 4)
 
-            if ((button4.BackColor == Color.MediumSeaGreen) && (button13.BackColor == Color.MediumSeaGreen) && (button16.BackColor == Color.MediumSeaGreen) && (button17.BackColor == Color.MediumSeaGreen) && (button19.BackColor == Color.MediumSeaGreen) && (button20.BackColor == Color.MediumSeaGreen) && (button22.BackColor == Color.MediumSeaGreen) && (button23.BackColor == Color.MediumSeaGreen))
-            {
-                for (int i = 0; i < traer_Resumen_RecepcionDataGridView.RowCount; i++)
+            if (traer_Resumen_RecepcionDataGridView.RowCount == 4)
+            { 
+                if ((button4.BackColor == Color.MediumSeaGreen) && (button13.BackColor == Color.MediumSeaGreen) && (button16.BackColor == Color.MediumSeaGreen) && (button17.BackColor == Color.MediumSeaGreen) && (button19.BackColor == Color.MediumSeaGreen) && (button20.BackColor == Color.MediumSeaGreen) && (button22.BackColor == Color.MediumSeaGreen) && (button23.BackColor == Color.MediumSeaGreen))
                 {
-                    int.TryParse(traer_Resumen_RecepcionDataGridView.Rows[i].Cells[nameof(dataGridViewTextBoxColumn11)].Value.ToString(), out recepciones);
-                    int.TryParse(traer_Resumen_RecepcionDataGridView.Rows[i].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString(), out bultos);
-                    tarja_RecepcionTableAdapter.sp_llenar_peso_recepcion(recepciones, bultos);
-                    Informe_Recepcion x = new Informe_Recepcion(recepciones);
-                    x.ShowDialog();
-                    MessageBox.Show("recepción formalizada correctamente", "Anakena", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    for (int i = 0; i < traer_Resumen_RecepcionDataGridView.RowCount; i++)
+                    {
+                        int.TryParse(traer_Resumen_RecepcionDataGridView.Rows[i].Cells[nameof(dataGridViewTextBoxColumn11)].Value.ToString(), out recepciones);
+                        int.TryParse(traer_Resumen_RecepcionDataGridView.Rows[i].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString(), out bultos);
+                        tarja_RecepcionTableAdapter.sp_llenar_peso_recepcion(recepciones, bultos);
+                        Informe_Recepcion x = new Informe_Recepcion(recepciones);
+                        x.ShowDialog();
+                        MessageBox.Show("recepción formalizada correctamente", "Anakena", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No se puede formalizar sin ingresar todos los datos", "Anakena", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                }
+
+             else
+             if (traer_Resumen_RecepcionDataGridView.RowCount == 3)
+             {
+                if ((button4.BackColor == Color.MediumSeaGreen) && (button13.BackColor == Color.MediumSeaGreen) && (button16.BackColor == Color.MediumSeaGreen) && (button17.BackColor == Color.MediumSeaGreen) && (button19.BackColor == Color.MediumSeaGreen) && (button20.BackColor == Color.MediumSeaGreen))
+                {
+                    for (int i = 0; i < traer_Resumen_RecepcionDataGridView.RowCount; i++)
+                    {
+                        int.TryParse(traer_Resumen_RecepcionDataGridView.Rows[i].Cells[nameof(dataGridViewTextBoxColumn11)].Value.ToString(), out recepciones);
+                        int.TryParse(traer_Resumen_RecepcionDataGridView.Rows[i].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString(), out bultos);
+                        tarja_RecepcionTableAdapter.sp_llenar_peso_recepcion(recepciones, bultos);
+                        Informe_Recepcion x = new Informe_Recepcion(recepciones);
+                        x.ShowDialog();
+                        MessageBox.Show("recepción formalizada correctamente", "Anakena", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No se puede formalizar sin ingresar todos los datos", "Anakena", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
-            {MessageBox.Show("No se puede formalizar sin ingresar todos los datos", "Anakena", MessageBoxButtons.OK, MessageBoxIcon.Error); }
-            
+             if (traer_Resumen_RecepcionDataGridView.RowCount == 2)
+            {
+                if ((button4.BackColor == Color.MediumSeaGreen) && (button13.BackColor == Color.MediumSeaGreen) && (button16.BackColor == Color.MediumSeaGreen) && (button17.BackColor == Color.MediumSeaGreen) )
+                {
+                    for (int i = 0; i < traer_Resumen_RecepcionDataGridView.RowCount; i++)
+                    {
+                        int.TryParse(traer_Resumen_RecepcionDataGridView.Rows[i].Cells[nameof(dataGridViewTextBoxColumn11)].Value.ToString(), out recepciones);
+                        int.TryParse(traer_Resumen_RecepcionDataGridView.Rows[i].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString(), out bultos);
+                        tarja_RecepcionTableAdapter.sp_llenar_peso_recepcion(recepciones, bultos);
+                        Informe_Recepcion x = new Informe_Recepcion(recepciones);
+                        x.ShowDialog();
+                        MessageBox.Show("recepción formalizada correctamente", "Anakena", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No se puede formalizar sin ingresar todos los datos", "Anakena", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
         private void button10_Click(object sender, EventArgs e)
         {
             Informe_Recepcion x = new Informe_Recepcion(id);
             x.ShowDialog();
         }
-
-        private void fillToolStripButton_Click(object sender, EventArgs e)
-        {
-     
-
-        }
-
-
     }
 }

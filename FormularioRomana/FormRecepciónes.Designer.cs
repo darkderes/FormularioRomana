@@ -691,6 +691,7 @@
             this.traer_Cantidad_RecepcionesDataGridView.RowHeadersVisible = false;
             this.traer_Cantidad_RecepcionesDataGridView.Size = new System.Drawing.Size(50, 106);
             this.traer_Cantidad_RecepcionesDataGridView.TabIndex = 24;
+            this.traer_Cantidad_RecepcionesDataGridView.Visible = false;
             // 
             // dataGridViewTextBoxColumn17
             // 

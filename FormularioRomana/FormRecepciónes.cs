@@ -317,9 +317,20 @@ namespace FormularioRomana
                 if (IsRecepcion)
                 {
                     this.traer_Cantidad_RecepcionesTableAdapter.Fill(this.genesisDataSet.Traer_Cantidad_Recepciones, guia, new System.Nullable<short>(((short)(System.Convert.ChangeType(productor, typeof(short))))));
-                    if (traer_Cantidad_RecepcionesDataGridView.RowCount > 0)
+                    if (traer_Resumen_Recepcion_FiltroDataGridView.Rows[fila].Cells[nameof(dataGridViewTextBoxColumn15)].Value.ToString() == "No")
                     {
-                        MessageBox.Show(guia+"Si");
+                        if ((traer_Cantidad_RecepcionesDataGridView.RowCount > 0)&&(Convert.ToInt16(traer_Cantidad_RecepcionesDataGridView.Rows[0].Cells[nameof(dataGridViewTextBoxColumn17)].Value.ToString())>1))
+                        {
+                            if (MessageBox.Show("Existen mas de una recepcion vinculada al mismo numero de productor y guia,Desea eliminar todas las recepciones ???", "ANAKENA", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                            {
+                                MessageBox.Show("Entra");
+                            }
+                        }
+                    }
+                    else
+                    if (traer_Resumen_Recepcion_FiltroDataGridView.Rows[fila].Cells[nameof(dataGridViewTextBoxColumn15)].Value.ToString() == "Si")
+                    {
+                            
                     }
                 }
             }

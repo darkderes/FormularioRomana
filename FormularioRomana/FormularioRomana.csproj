@@ -61,11 +61,23 @@
     <Compile Include="FormBusquedaProductores.Designer.cs">
       <DependentUpon>FormBusquedaProductores.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPrincipal.Designer.cs">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRecepciónes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormRecepciónes.Designer.cs">
       <DependentUpon>FormRecepciónes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSecado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSecado.Designer.cs">
+      <DependentUpon>FormSecado.cs</DependentUpon>
     </Compile>
     <Compile Include="GenesisDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -98,8 +110,14 @@
     <EmbeddedResource Include="FormBusquedaProductores.resx">
       <DependentUpon>FormBusquedaProductores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormPrincipal.resx">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormRecepciónes.resx">
       <DependentUpon>FormRecepciónes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSecado.resx">
+      <DependentUpon>FormSecado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InformeRomana.rdlc" />
     <EmbeddedResource Include="InformeRomana.resx">

@@ -16,7 +16,7 @@ namespace FormularioRomana
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormRecepciónes());
+            Application.Run(new FormPrincipal());
         }
     }
 }
