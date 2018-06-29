@@ -30,10 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.Lbl_Recepcion = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -170,6 +173,9 @@
             this.romana_SecaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.informe_Recepcion_CuerpoDataGridView = new System.Windows.Forms.DataGridView();
+            this.informe_Recepcion_CuerpoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.estadosTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.EstadosTableAdapter();
             this.productoTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.ProductoTableAdapter();
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -189,6 +195,32 @@
             this.tarja_RecepcionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.traer_Resumen_RecepcionTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.Traer_Resumen_RecepcionTableAdapter();
             this.romana_SecaTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.Romana_SecaTableAdapter();
+            this.informe_RomanaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.informe_RomanaTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.Informe_RomanaTableAdapter();
+            this.informe_RomanaDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.informe_Romana_SecaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.informe_Romana_SecaTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.Informe_Romana_SecaTableAdapter();
+            this.informe_Romana_SecaDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.informe_Recepcion_CuerpoTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.Informe_Recepcion_CuerpoTableAdapter();
+            this.dataGridViewTextBoxColumn45 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn39 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn42 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn43 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn44 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Lbl_Peso_Final = new System.Windows.Forms.Label();
+            this.Lbl_Peso_Neto = new System.Windows.Forms.Label();
+            this.Lbl_Peso_Bruto = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.genesisDataSet)).BeginInit();
@@ -221,10 +253,17 @@
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.romana_SecaDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.romana_SecaBindingSource)).BeginInit();
+            this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.informe_Recepcion_CuerpoDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.informe_Recepcion_CuerpoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.detalleRecepcionesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.romanaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tarja_RecepcionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.informe_RomanaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.informe_RomanaDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.informe_Romana_SecaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.informe_Romana_SecaDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -581,6 +620,7 @@
             this.traer_Detalle_RecepcionDataGridView.DataSource = this.traer_Detalle_RecepcionBindingSource;
             this.traer_Detalle_RecepcionDataGridView.Location = new System.Drawing.Point(80, 51);
             this.traer_Detalle_RecepcionDataGridView.Name = "traer_Detalle_RecepcionDataGridView";
+            this.traer_Detalle_RecepcionDataGridView.ReadOnly = true;
             this.traer_Detalle_RecepcionDataGridView.RowHeadersVisible = false;
             this.traer_Detalle_RecepcionDataGridView.Size = new System.Drawing.Size(558, 152);
             this.traer_Detalle_RecepcionDataGridView.TabIndex = 20;
@@ -591,6 +631,7 @@
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Cod_Recepcion";
             this.dataGridViewTextBoxColumn1.HeaderText = "Cod_Recepcion";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             this.dataGridViewTextBoxColumn1.Visible = false;
             // 
             // dataGridViewTextBoxColumn2
@@ -598,6 +639,7 @@
             this.dataGridViewTextBoxColumn2.DataPropertyName = "Cod_Productor";
             this.dataGridViewTextBoxColumn2.HeaderText = "Cod_Productor";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             this.dataGridViewTextBoxColumn2.Visible = false;
             // 
             // dataGridViewTextBoxColumn3
@@ -605,6 +647,7 @@
             this.dataGridViewTextBoxColumn3.DataPropertyName = "Des_Productor";
             this.dataGridViewTextBoxColumn3.HeaderText = "Des_Productor";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             this.dataGridViewTextBoxColumn3.Visible = false;
             // 
             // dataGridViewTextBoxColumn4
@@ -612,6 +655,7 @@
             this.dataGridViewTextBoxColumn4.DataPropertyName = "Num_Guia";
             this.dataGridViewTextBoxColumn4.HeaderText = "Num_Guia";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             this.dataGridViewTextBoxColumn4.Visible = false;
             // 
             // dataGridViewTextBoxColumn5
@@ -619,12 +663,14 @@
             this.dataGridViewTextBoxColumn5.DataPropertyName = "Cantidad";
             this.dataGridViewTextBoxColumn5.HeaderText = "Cantidad";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "Cod_Envase";
             this.dataGridViewTextBoxColumn6.HeaderText = "Cod_Envase";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
             this.dataGridViewTextBoxColumn6.Visible = false;
             // 
             // dataGridViewTextBoxColumn7
@@ -632,6 +678,7 @@
             this.dataGridViewTextBoxColumn7.DataPropertyName = "Envase";
             this.dataGridViewTextBoxColumn7.HeaderText = "Envase";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
             this.dataGridViewTextBoxColumn7.Width = 300;
             // 
             // dataGridViewTextBoxColumn8
@@ -639,6 +686,7 @@
             this.dataGridViewTextBoxColumn8.DataPropertyName = "Cod_BasesPallet";
             this.dataGridViewTextBoxColumn8.HeaderText = "Cod_BasesPallet";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
             this.dataGridViewTextBoxColumn8.Visible = false;
             // 
             // dataGridViewTextBoxColumn9
@@ -646,6 +694,7 @@
             this.dataGridViewTextBoxColumn9.DataPropertyName = "Des_BasePallet";
             this.dataGridViewTextBoxColumn9.HeaderText = "Base Pallet";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
             this.dataGridViewTextBoxColumn9.Width = 150;
             // 
             // traer_Detalle_RecepcionBindingSource
@@ -879,10 +928,11 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Location = new System.Drawing.Point(12, 178);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(758, 378);
+            this.tabControl1.Size = new System.Drawing.Size(758, 388);
             this.tabControl1.TabIndex = 20;
             this.tabControl1.Visible = false;
             // 
@@ -929,7 +979,7 @@
             this.dataGridViewTextBoxColumn29,
             this.dataGridViewTextBoxColumn30});
             this.humedad_RecepcionDataGridView.DataSource = this.humedad_RecepcionBindingSource;
-            this.humedad_RecepcionDataGridView.Location = new System.Drawing.Point(4, 102);
+            this.humedad_RecepcionDataGridView.Location = new System.Drawing.Point(3, 224);
             this.humedad_RecepcionDataGridView.Name = "humedad_RecepcionDataGridView";
             this.humedad_RecepcionDataGridView.Size = new System.Drawing.Size(47, 26);
             this.humedad_RecepcionDataGridView.TabIndex = 26;
@@ -1349,14 +1399,14 @@
             // 
             this.traer_Resumen_RecepcionDataGridView.AllowUserToAddRows = false;
             this.traer_Resumen_RecepcionDataGridView.AutoGenerateColumns = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.traer_Resumen_RecepcionDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle39.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle39.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle39.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.traer_Resumen_RecepcionDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle39;
             this.traer_Resumen_RecepcionDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.traer_Resumen_RecepcionDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn11,
@@ -1375,28 +1425,29 @@
             this.dataGridViewTextBoxColumn24,
             this.BotonEnvase});
             this.traer_Resumen_RecepcionDataGridView.DataSource = this.traer_Resumen_RecepcionBindingSource;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightYellow;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.traer_Resumen_RecepcionDataGridView.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle42.BackColor = System.Drawing.Color.LightYellow;
+            dataGridViewCellStyle42.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle42.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle42.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.traer_Resumen_RecepcionDataGridView.DefaultCellStyle = dataGridViewCellStyle42;
             this.traer_Resumen_RecepcionDataGridView.Location = new System.Drawing.Point(3, 31);
             this.traer_Resumen_RecepcionDataGridView.Name = "traer_Resumen_RecepcionDataGridView";
             this.traer_Resumen_RecepcionDataGridView.RowHeadersVisible = false;
-            this.traer_Resumen_RecepcionDataGridView.Size = new System.Drawing.Size(48, 49);
+            this.traer_Resumen_RecepcionDataGridView.Size = new System.Drawing.Size(58, 137);
             this.traer_Resumen_RecepcionDataGridView.TabIndex = 0;
+            this.traer_Resumen_RecepcionDataGridView.Visible = false;
             this.traer_Resumen_RecepcionDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.traer_Resumen_RecepcionDataGridView_CellClick);
             // 
             // dataGridViewTextBoxColumn11
             // 
             this.dataGridViewTextBoxColumn11.DataPropertyName = "Cod_Recepcion";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.Format = "d";
-            dataGridViewCellStyle2.NullValue = null;
-            this.dataGridViewTextBoxColumn11.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle40.Format = "d";
+            dataGridViewCellStyle40.NullValue = null;
+            this.dataGridViewTextBoxColumn11.DefaultCellStyle = dataGridViewCellStyle40;
             this.dataGridViewTextBoxColumn11.HeaderText = "Recepcion";
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             this.dataGridViewTextBoxColumn11.ReadOnly = true;
@@ -1467,10 +1518,10 @@
             // dataGridViewTextBoxColumn21
             // 
             this.dataGridViewTextBoxColumn21.DataPropertyName = "Bultos";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Format = "N0";
-            dataGridViewCellStyle3.NullValue = null;
-            this.dataGridViewTextBoxColumn21.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle41.Format = "N0";
+            dataGridViewCellStyle41.NullValue = null;
+            this.dataGridViewTextBoxColumn21.DefaultCellStyle = dataGridViewCellStyle41;
             this.dataGridViewTextBoxColumn21.HeaderText = "Bultos";
             this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
             this.dataGridViewTextBoxColumn21.Width = 80;
@@ -1659,6 +1710,7 @@
             this.button10.TabIndex = 8;
             this.button10.Text = "Imprimir";
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button9
             // 
@@ -1674,6 +1726,72 @@
             this.button9.Text = "Formalizar";
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.BackColor = System.Drawing.Color.Silver;
+            this.tabPage5.Controls.Add(this.label23);
+            this.tabPage5.Controls.Add(this.informe_Recepcion_CuerpoDataGridView);
+            this.tabPage5.Controls.Add(this.Lbl_Peso_Bruto);
+            this.tabPage5.Controls.Add(this.Lbl_Peso_Final);
+            this.tabPage5.Controls.Add(this.Lbl_Peso_Neto);
+            this.tabPage5.Location = new System.Drawing.Point(4, 23);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(750, 361);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Tarjas";
+            // 
+            // informe_Recepcion_CuerpoDataGridView
+            // 
+            this.informe_Recepcion_CuerpoDataGridView.AllowUserToAddRows = false;
+            this.informe_Recepcion_CuerpoDataGridView.AutoGenerateColumns = false;
+            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle36.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle36.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle36.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.informe_Recepcion_CuerpoDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle36;
+            this.informe_Recepcion_CuerpoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.informe_Recepcion_CuerpoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn45,
+            this.dataGridViewTextBoxColumn37,
+            this.dataGridViewTextBoxColumn38,
+            this.dataGridViewTextBoxColumn39,
+            this.dataGridViewTextBoxColumn40,
+            this.dataGridViewTextBoxColumn41,
+            this.dataGridViewTextBoxColumn42,
+            this.dataGridViewTextBoxColumn43,
+            this.dataGridViewTextBoxColumn44});
+            this.informe_Recepcion_CuerpoDataGridView.DataSource = this.informe_Recepcion_CuerpoBindingSource;
+            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle37.BackColor = System.Drawing.Color.LightYellow;
+            dataGridViewCellStyle37.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle37.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle37.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle37.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.informe_Recepcion_CuerpoDataGridView.DefaultCellStyle = dataGridViewCellStyle37;
+            this.informe_Recepcion_CuerpoDataGridView.Location = new System.Drawing.Point(6, 6);
+            this.informe_Recepcion_CuerpoDataGridView.Name = "informe_Recepcion_CuerpoDataGridView";
+            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle38.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle38.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle38.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.informe_Recepcion_CuerpoDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle38;
+            this.informe_Recepcion_CuerpoDataGridView.RowHeadersVisible = false;
+            this.informe_Recepcion_CuerpoDataGridView.Size = new System.Drawing.Size(738, 312);
+            this.informe_Recepcion_CuerpoDataGridView.TabIndex = 0;
+            // 
+            // informe_Recepcion_CuerpoBindingSource
+            // 
+            this.informe_Recepcion_CuerpoBindingSource.DataMember = "Informe_Recepcion_Cuerpo";
+            this.informe_Recepcion_CuerpoBindingSource.DataSource = this.genesisDataSet;
             // 
             // estadosTableAdapter
             // 
@@ -1766,12 +1884,208 @@
             // 
             this.romana_SecaTableAdapter.ClearBeforeFill = true;
             // 
+            // informe_RomanaBindingSource
+            // 
+            this.informe_RomanaBindingSource.DataMember = "Informe_Romana";
+            this.informe_RomanaBindingSource.DataSource = this.genesisDataSet;
+            // 
+            // informe_RomanaTableAdapter
+            // 
+            this.informe_RomanaTableAdapter.ClearBeforeFill = true;
+            // 
+            // informe_RomanaDataGridView
+            // 
+            this.informe_RomanaDataGridView.AllowUserToAddRows = false;
+            this.informe_RomanaDataGridView.AutoGenerateColumns = false;
+            this.informe_RomanaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.informe_RomanaDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn31,
+            this.dataGridViewTextBoxColumn32,
+            this.dataGridViewTextBoxColumn33});
+            this.informe_RomanaDataGridView.DataSource = this.informe_RomanaBindingSource;
+            this.informe_RomanaDataGridView.Location = new System.Drawing.Point(750, 61);
+            this.informe_RomanaDataGridView.Name = "informe_RomanaDataGridView";
+            this.informe_RomanaDataGridView.Size = new System.Drawing.Size(20, 73);
+            this.informe_RomanaDataGridView.TabIndex = 21;
+            this.informe_RomanaDataGridView.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn31
+            // 
+            this.dataGridViewTextBoxColumn31.DataPropertyName = "Peso_Con_Carga";
+            this.dataGridViewTextBoxColumn31.HeaderText = "Peso_Con_Carga";
+            this.dataGridViewTextBoxColumn31.Name = "dataGridViewTextBoxColumn31";
+            this.dataGridViewTextBoxColumn31.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn32
+            // 
+            this.dataGridViewTextBoxColumn32.DataPropertyName = "Peso_Sin_Carga";
+            this.dataGridViewTextBoxColumn32.HeaderText = "Peso_Sin_Carga";
+            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
+            this.dataGridViewTextBoxColumn32.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn33
+            // 
+            this.dataGridViewTextBoxColumn33.DataPropertyName = "Peso_Bruto";
+            this.dataGridViewTextBoxColumn33.HeaderText = "Peso_Bruto";
+            this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
+            this.dataGridViewTextBoxColumn33.ReadOnly = true;
+            // 
+            // informe_Romana_SecaBindingSource
+            // 
+            this.informe_Romana_SecaBindingSource.DataMember = "Informe_Romana_Seca";
+            this.informe_Romana_SecaBindingSource.DataSource = this.genesisDataSet;
+            // 
+            // informe_Romana_SecaTableAdapter
+            // 
+            this.informe_Romana_SecaTableAdapter.ClearBeforeFill = true;
+            // 
+            // informe_Romana_SecaDataGridView
+            // 
+            this.informe_Romana_SecaDataGridView.AllowUserToAddRows = false;
+            this.informe_Romana_SecaDataGridView.AutoGenerateColumns = false;
+            this.informe_Romana_SecaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.informe_Romana_SecaDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn34,
+            this.dataGridViewTextBoxColumn35,
+            this.dataGridViewTextBoxColumn36});
+            this.informe_Romana_SecaDataGridView.DataSource = this.informe_Romana_SecaBindingSource;
+            this.informe_Romana_SecaDataGridView.Location = new System.Drawing.Point(750, 140);
+            this.informe_Romana_SecaDataGridView.Name = "informe_Romana_SecaDataGridView";
+            this.informe_Romana_SecaDataGridView.Size = new System.Drawing.Size(10, 54);
+            this.informe_Romana_SecaDataGridView.TabIndex = 27;
+            this.informe_Romana_SecaDataGridView.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn34
+            // 
+            this.dataGridViewTextBoxColumn34.DataPropertyName = "Peso_Con_Carga";
+            this.dataGridViewTextBoxColumn34.HeaderText = "Peso_Con_Carga";
+            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
+            // 
+            // dataGridViewTextBoxColumn35
+            // 
+            this.dataGridViewTextBoxColumn35.DataPropertyName = "Peso_Sin_Carga";
+            this.dataGridViewTextBoxColumn35.HeaderText = "Peso_Sin_Carga";
+            this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
+            this.dataGridViewTextBoxColumn35.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn36
+            // 
+            this.dataGridViewTextBoxColumn36.DataPropertyName = "Peso_Bruto";
+            this.dataGridViewTextBoxColumn36.HeaderText = "Peso_Bruto";
+            this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
+            this.dataGridViewTextBoxColumn36.ReadOnly = true;
+            // 
+            // informe_Recepcion_CuerpoTableAdapter
+            // 
+            this.informe_Recepcion_CuerpoTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridViewTextBoxColumn45
+            // 
+            this.dataGridViewTextBoxColumn45.DataPropertyName = "Tarja";
+            this.dataGridViewTextBoxColumn45.HeaderText = "Tarja";
+            this.dataGridViewTextBoxColumn45.Name = "dataGridViewTextBoxColumn45";
+            // 
+            // dataGridViewTextBoxColumn37
+            // 
+            this.dataGridViewTextBoxColumn37.DataPropertyName = "Envase";
+            this.dataGridViewTextBoxColumn37.HeaderText = "Envase";
+            this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
+            // 
+            // dataGridViewTextBoxColumn38
+            // 
+            this.dataGridViewTextBoxColumn38.DataPropertyName = "Tara_Envase";
+            this.dataGridViewTextBoxColumn38.HeaderText = "Tara Envase";
+            this.dataGridViewTextBoxColumn38.Name = "dataGridViewTextBoxColumn38";
+            // 
+            // dataGridViewTextBoxColumn39
+            // 
+            this.dataGridViewTextBoxColumn39.DataPropertyName = "Num_Envase";
+            this.dataGridViewTextBoxColumn39.HeaderText = "Num_Envase";
+            this.dataGridViewTextBoxColumn39.Name = "dataGridViewTextBoxColumn39";
+            this.dataGridViewTextBoxColumn39.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn40
+            // 
+            this.dataGridViewTextBoxColumn40.DataPropertyName = "Des_BasePallet";
+            this.dataGridViewTextBoxColumn40.HeaderText = "Base Pallet";
+            this.dataGridViewTextBoxColumn40.Name = "dataGridViewTextBoxColumn40";
+            this.dataGridViewTextBoxColumn40.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn41
+            // 
+            this.dataGridViewTextBoxColumn41.DataPropertyName = "Tara_BasePallet";
+            this.dataGridViewTextBoxColumn41.HeaderText = "Tara Base";
+            this.dataGridViewTextBoxColumn41.Name = "dataGridViewTextBoxColumn41";
+            // 
+            // dataGridViewTextBoxColumn42
+            // 
+            this.dataGridViewTextBoxColumn42.DataPropertyName = "Peso_Bruto";
+            this.dataGridViewTextBoxColumn42.HeaderText = "Peso Bruto";
+            this.dataGridViewTextBoxColumn42.Name = "dataGridViewTextBoxColumn42";
+            // 
+            // dataGridViewTextBoxColumn43
+            // 
+            this.dataGridViewTextBoxColumn43.DataPropertyName = "Peso_Neto";
+            this.dataGridViewTextBoxColumn43.HeaderText = "Peso Neto";
+            this.dataGridViewTextBoxColumn43.Name = "dataGridViewTextBoxColumn43";
+            // 
+            // dataGridViewTextBoxColumn44
+            // 
+            this.dataGridViewTextBoxColumn44.DataPropertyName = "Peso_Neto_Final";
+            this.dataGridViewTextBoxColumn44.HeaderText = "Peso Final";
+            this.dataGridViewTextBoxColumn44.Name = "dataGridViewTextBoxColumn44";
+            // 
+            // Lbl_Peso_Final
+            // 
+            this.Lbl_Peso_Final.AutoSize = true;
+            this.Lbl_Peso_Final.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Peso_Final.ForeColor = System.Drawing.Color.Maroon;
+            this.Lbl_Peso_Final.Location = new System.Drawing.Point(640, 333);
+            this.Lbl_Peso_Final.Name = "Lbl_Peso_Final";
+            this.Lbl_Peso_Final.Size = new System.Drawing.Size(44, 14);
+            this.Lbl_Peso_Final.TabIndex = 28;
+            this.Lbl_Peso_Final.Text = "label23";
+            // 
+            // Lbl_Peso_Neto
+            // 
+            this.Lbl_Peso_Neto.AutoSize = true;
+            this.Lbl_Peso_Neto.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Peso_Neto.ForeColor = System.Drawing.Color.Maroon;
+            this.Lbl_Peso_Neto.Location = new System.Drawing.Point(545, 333);
+            this.Lbl_Peso_Neto.Name = "Lbl_Peso_Neto";
+            this.Lbl_Peso_Neto.Size = new System.Drawing.Size(44, 14);
+            this.Lbl_Peso_Neto.TabIndex = 29;
+            this.Lbl_Peso_Neto.Text = "label23";
+            // 
+            // Lbl_Peso_Bruto
+            // 
+            this.Lbl_Peso_Bruto.AutoSize = true;
+            this.Lbl_Peso_Bruto.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Peso_Bruto.ForeColor = System.Drawing.Color.Maroon;
+            this.Lbl_Peso_Bruto.Location = new System.Drawing.Point(440, 333);
+            this.Lbl_Peso_Bruto.Name = "Lbl_Peso_Bruto";
+            this.Lbl_Peso_Bruto.Size = new System.Drawing.Size(44, 14);
+            this.Lbl_Peso_Bruto.TabIndex = 30;
+            this.Lbl_Peso_Bruto.Text = "label23";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(370, 333);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(44, 14);
+            this.label23.TabIndex = 31;
+            this.label23.Text = "Totales";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(784, 578);
+            this.ClientSize = new System.Drawing.Size(786, 578);
+            this.Controls.Add(this.informe_Romana_SecaDataGridView);
+            this.Controls.Add(this.informe_RomanaDataGridView);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
@@ -1824,32 +2138,31 @@
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.romana_SecaDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.romana_SecaBindingSource)).EndInit();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.informe_Recepcion_CuerpoDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.informe_Recepcion_CuerpoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.detalleRecepcionesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.romanaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tarja_RecepcionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.informe_RomanaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.informe_RomanaDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.informe_Romana_SecaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.informe_Romana_SecaDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label Lbl_Recepcion;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox Txt_NumGuia;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox TxtBultos;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox cod_ProductorTextBox;
-        private System.Windows.Forms.ComboBox nom_ProductorComboBox;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ComboBox CmbEnvase;
         private System.Windows.Forms.Label label9;
@@ -1888,7 +2201,6 @@
         private System.Windows.Forms.BindingSource productoresBindingSource;
         private GenesisDataSetTableAdapters.ProductoresTableAdapter productoresTableAdapter;
         private System.Windows.Forms.BindingSource productoresBindingSource1;
-        private System.Windows.Forms.ComboBox productosComboBox;
         private System.Windows.Forms.BindingSource productoBindingSource1;
         private GenesisDataSetTableAdapters.RecepcionesTableAdapter recepcionesTableAdapter1;
         private GenesisDataSet genesisDataSet1;
@@ -1989,6 +2301,44 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
         private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Label Lbl_Recepcion;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.ComboBox comboBox3;
+        public System.Windows.Forms.ComboBox comboBox2;
+        public System.Windows.Forms.TextBox Txt_NumGuia;
+        public System.Windows.Forms.TextBox TxtBultos;
+        public System.Windows.Forms.TextBox cod_ProductorTextBox;
+        public System.Windows.Forms.ComboBox nom_ProductorComboBox;
+        public System.Windows.Forms.ComboBox productosComboBox;
+        private System.Windows.Forms.BindingSource informe_RomanaBindingSource;
+        private GenesisDataSetTableAdapters.Informe_RomanaTableAdapter informe_RomanaTableAdapter;
+        private System.Windows.Forms.DataGridView informe_RomanaDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn31;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
+        private System.Windows.Forms.BindingSource informe_Romana_SecaBindingSource;
+        private GenesisDataSetTableAdapters.Informe_Romana_SecaTableAdapter informe_Romana_SecaTableAdapter;
+        private System.Windows.Forms.DataGridView informe_Romana_SecaDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn34;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn35;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn36;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.BindingSource informe_Recepcion_CuerpoBindingSource;
+        private GenesisDataSetTableAdapters.Informe_Recepcion_CuerpoTableAdapter informe_Recepcion_CuerpoTableAdapter;
+        private System.Windows.Forms.DataGridView informe_Recepcion_CuerpoDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn45;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn37;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn38;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn39;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn40;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn41;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn42;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn43;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn44;
+        private System.Windows.Forms.Label Lbl_Peso_Final;
+        private System.Windows.Forms.Label Lbl_Peso_Neto;
+        private System.Windows.Forms.Label Lbl_Peso_Bruto;
+        private System.Windows.Forms.Label label23;
     }
 }
 

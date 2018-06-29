@@ -51,18 +51,20 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.productosComboBox = new System.Windows.Forms.ComboBox();
+            this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label16 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
             this.nom_ProductorComboBox = new System.Windows.Forms.ComboBox();
+            this.productoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.genesisDataSet1 = new FormularioRomana.GenesisDataSet();
             this.cod_ProductorTextBox = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.CmbVariedad = new System.Windows.Forms.ComboBox();
+            this.variedadBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.traer_Resumen_Recepcion_FiltroDataGridView = new System.Windows.Forms.DataGridView();
-            this.label4 = new System.Windows.Forms.Label();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,27 +81,34 @@
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.traer_Resumen_Recepcion_FiltroBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.variedadBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label4 = new System.Windows.Forms.Label();
             this.traer_Resumen_RecepcionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableAdapterManager = new FormularioRomana.GenesisDataSetTableAdapters.TableAdapterManager();
             this.variedadTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.VariedadTableAdapter();
             this.productoTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.ProductoTableAdapter();
             this.productoresTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.ProductoresTableAdapter();
             this.traer_Resumen_Recepcion_FiltroTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.Traer_Resumen_Recepcion_FiltroTableAdapter();
+            this.traer_Cantidad_RecepcionesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.traer_Cantidad_RecepcionesTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.Traer_Cantidad_RecepcionesTableAdapter();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.traer_Cantidad_RecepcionesDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.genesisDataSet)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productoresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.genesisDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.variedadBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.traer_Resumen_Recepcion_FiltroDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.traer_Resumen_Recepcion_FiltroBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productoresBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.variedadBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.traer_Resumen_RecepcionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.traer_Cantidad_RecepcionesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.traer_Cantidad_RecepcionesDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // genesisDataSet
@@ -112,7 +121,7 @@
             this.panel1.BackColor = System.Drawing.Color.DarkGray;
             this.panel1.Location = new System.Drawing.Point(0, 518);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(934, 10);
+            this.panel1.Size = new System.Drawing.Size(946, 10);
             this.panel1.TabIndex = 18;
             // 
             // button4
@@ -121,7 +130,7 @@
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(762, 534);
+            this.button4.Location = new System.Drawing.Point(777, 542);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(5);
             this.button4.Size = new System.Drawing.Size(77, 28);
@@ -134,13 +143,14 @@
             this.button3.BackColor = System.Drawing.Color.Firebrick;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(845, 534);
+            this.button3.Location = new System.Drawing.Point(860, 542);
             this.button3.Name = "button3";
             this.button3.Padding = new System.Windows.Forms.Padding(5);
             this.button3.Size = new System.Drawing.Size(76, 28);
             this.button3.TabIndex = 20;
             this.button3.Text = "ELIMINAR";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button1
             // 
@@ -148,7 +158,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(679, 534);
+            this.button1.Location = new System.Drawing.Point(694, 542);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(5);
             this.button1.Size = new System.Drawing.Size(77, 28);
@@ -184,7 +194,7 @@
             this.groupBox3.Controls.Add(this.radioButton5);
             this.groupBox3.Controls.Add(this.radioButton6);
             this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Location = new System.Drawing.Point(411, 59);
+            this.groupBox3.Location = new System.Drawing.Point(411, 56);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(250, 31);
             this.groupBox3.TabIndex = 24;
@@ -300,6 +310,11 @@
             this.productosComboBox.TabIndex = 22;
             this.productosComboBox.ValueMember = "Cod_Productos";
             // 
+            // productoBindingSource
+            // 
+            this.productoBindingSource.DataMember = "Producto";
+            this.productoBindingSource.DataSource = this.genesisDataSet;
+            // 
             // label16
             // 
             this.label16.AutoSize = true;
@@ -341,6 +356,11 @@
             this.nom_ProductorComboBox.TabIndex = 19;
             this.nom_ProductorComboBox.ValueMember = "Cod_Productor";
             this.nom_ProductorComboBox.SelectedIndexChanged += new System.EventHandler(this.nom_ProductorComboBox_SelectedIndexChanged);
+            // 
+            // productoresBindingSource
+            // 
+            this.productoresBindingSource.DataMember = "Productores";
+            this.productoresBindingSource.DataSource = this.genesisDataSet1;
             // 
             // genesisDataSet1
             // 
@@ -391,6 +411,11 @@
             this.CmbVariedad.TabIndex = 9;
             this.CmbVariedad.ValueMember = "Cod_Variedad";
             // 
+            // variedadBindingSource
+            // 
+            this.variedadBindingSource.DataMember = "Variedad";
+            this.variedadBindingSource.DataSource = this.genesisDataSet;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -406,7 +431,7 @@
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(934, 54);
+            this.pictureBox2.Size = new System.Drawing.Size(948, 54);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 23;
             this.pictureBox2.TabStop = false;
@@ -441,7 +466,7 @@
             this.dataGridViewTextBoxColumn14,
             this.dataGridViewTextBoxColumn15});
             this.traer_Resumen_Recepcion_FiltroDataGridView.DataSource = this.traer_Resumen_Recepcion_FiltroBindingSource;
-            this.traer_Resumen_Recepcion_FiltroDataGridView.Location = new System.Drawing.Point(12, 214);
+            this.traer_Resumen_Recepcion_FiltroDataGridView.Location = new System.Drawing.Point(11, 201);
             this.traer_Resumen_Recepcion_FiltroDataGridView.Name = "traer_Resumen_Recepcion_FiltroDataGridView";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
@@ -454,19 +479,11 @@
             this.traer_Resumen_Recepcion_FiltroDataGridView.RowHeadersVisible = false;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.traer_Resumen_Recepcion_FiltroDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.traer_Resumen_Recepcion_FiltroDataGridView.Size = new System.Drawing.Size(909, 285);
+            this.traer_Resumen_Recepcion_FiltroDataGridView.Size = new System.Drawing.Size(925, 311);
             this.traer_Resumen_Recepcion_FiltroDataGridView.TabIndex = 24;
+            this.traer_Resumen_Recepcion_FiltroDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.traer_Resumen_Recepcion_FiltroDataGridView_CellClick);
+            this.traer_Resumen_Recepcion_FiltroDataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.traer_Resumen_Recepcion_FiltroDataGridView_CellDoubleClick);
             this.traer_Resumen_Recepcion_FiltroDataGridView.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.traer_Resumen_Recepcion_FiltroDataGridView_CellFormatting);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 540);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "N/A = No Aplica";
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -474,6 +491,7 @@
             dataGridViewCellStyle2.Format = "d";
             dataGridViewCellStyle2.NullValue = null;
             this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewTextBoxColumn1.Frozen = true;
             this.dataGridViewTextBoxColumn1.HeaderText = "Fecha";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.Width = 80;
@@ -481,6 +499,7 @@
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "Cod_Recepcion";
+            this.dataGridViewTextBoxColumn2.Frozen = true;
             this.dataGridViewTextBoxColumn2.HeaderText = "Recepcion";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
@@ -496,6 +515,7 @@
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "Productor";
+            this.dataGridViewTextBoxColumn4.Frozen = true;
             this.dataGridViewTextBoxColumn4.HeaderText = "Productor";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.Width = 150;
@@ -510,6 +530,7 @@
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "Des_Variedad";
+            this.dataGridViewTextBoxColumn6.Frozen = true;
             this.dataGridViewTextBoxColumn6.HeaderText = "Variedad";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
@@ -538,6 +559,7 @@
             // dataGridViewTextBoxColumn10
             // 
             this.dataGridViewTextBoxColumn10.DataPropertyName = "Productos";
+            this.dataGridViewTextBoxColumn10.Frozen = true;
             this.dataGridViewTextBoxColumn10.HeaderText = "Productos";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             this.dataGridViewTextBoxColumn10.Width = 150;
@@ -545,6 +567,7 @@
             // dataGridViewTextBoxColumn11
             // 
             this.dataGridViewTextBoxColumn11.DataPropertyName = "Num_Guia";
+            this.dataGridViewTextBoxColumn11.Frozen = true;
             this.dataGridViewTextBoxColumn11.HeaderText = "Guia";
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             this.dataGridViewTextBoxColumn11.Width = 80;
@@ -552,6 +575,7 @@
             // dataGridViewTextBoxColumn12
             // 
             this.dataGridViewTextBoxColumn12.DataPropertyName = "Bultos";
+            this.dataGridViewTextBoxColumn12.Frozen = true;
             this.dataGridViewTextBoxColumn12.HeaderText = "Bultos";
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             this.dataGridViewTextBoxColumn12.Width = 80;
@@ -566,6 +590,7 @@
             // dataGridViewTextBoxColumn14
             // 
             this.dataGridViewTextBoxColumn14.DataPropertyName = "Humedad";
+            this.dataGridViewTextBoxColumn14.Frozen = true;
             this.dataGridViewTextBoxColumn14.HeaderText = "Humedad";
             this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
             this.dataGridViewTextBoxColumn14.ReadOnly = true;
@@ -574,6 +599,7 @@
             // dataGridViewTextBoxColumn15
             // 
             this.dataGridViewTextBoxColumn15.DataPropertyName = "Formalizada ";
+            this.dataGridViewTextBoxColumn15.Frozen = true;
             this.dataGridViewTextBoxColumn15.HeaderText = "Formalizada ";
             this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
             this.dataGridViewTextBoxColumn15.ReadOnly = true;
@@ -584,20 +610,15 @@
             this.traer_Resumen_Recepcion_FiltroBindingSource.DataMember = "Traer_Resumen_Recepcion_Filtro";
             this.traer_Resumen_Recepcion_FiltroBindingSource.DataSource = this.genesisDataSet;
             // 
-            // productoBindingSource
+            // label4
             // 
-            this.productoBindingSource.DataMember = "Producto";
-            this.productoBindingSource.DataSource = this.genesisDataSet;
-            // 
-            // productoresBindingSource
-            // 
-            this.productoresBindingSource.DataMember = "Productores";
-            this.productoresBindingSource.DataSource = this.genesisDataSet1;
-            // 
-            // variedadBindingSource
-            // 
-            this.variedadBindingSource.DataMember = "Variedad";
-            this.variedadBindingSource.DataSource = this.genesisDataSet;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(12, 540);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(100, 13);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "N/A = No Aplica";
             // 
             // traer_Resumen_RecepcionBindingSource
             // 
@@ -618,6 +639,7 @@
             this.tableAdapterManager.ProductoresTableAdapter = null;
             this.tableAdapterManager.ProductoTableAdapter = null;
             this.tableAdapterManager.RecepcionesTableAdapter = null;
+            this.tableAdapterManager.Romana_SecaTableAdapter = null;
             this.tableAdapterManager.RomanaTableAdapter = null;
             this.tableAdapterManager.Tarja_RecepcionTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = FormularioRomana.GenesisDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -639,12 +661,63 @@
             // 
             this.traer_Resumen_Recepcion_FiltroTableAdapter.ClearBeforeFill = true;
             // 
+            // traer_Cantidad_RecepcionesBindingSource
+            // 
+            this.traer_Cantidad_RecepcionesBindingSource.DataMember = "Traer_Cantidad_Recepciones";
+            this.traer_Cantidad_RecepcionesBindingSource.DataSource = this.genesisDataSet;
+            // 
+            // traer_Cantidad_RecepcionesTableAdapter
+            // 
+            this.traer_Cantidad_RecepcionesTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "Numero";
+            this.dataGridViewTextBoxColumn16.HeaderText = "Numero";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            // 
+            // traer_Cantidad_RecepcionesDataGridView
+            // 
+            this.traer_Cantidad_RecepcionesDataGridView.AllowUserToAddRows = false;
+            this.traer_Cantidad_RecepcionesDataGridView.AutoGenerateColumns = false;
+            this.traer_Cantidad_RecepcionesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.traer_Cantidad_RecepcionesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn18});
+            this.traer_Cantidad_RecepcionesDataGridView.DataSource = this.traer_Cantidad_RecepcionesBindingSource;
+            this.traer_Cantidad_RecepcionesDataGridView.Location = new System.Drawing.Point(886, 70);
+            this.traer_Cantidad_RecepcionesDataGridView.Name = "traer_Cantidad_RecepcionesDataGridView";
+            this.traer_Cantidad_RecepcionesDataGridView.RowHeadersVisible = false;
+            this.traer_Cantidad_RecepcionesDataGridView.Size = new System.Drawing.Size(50, 106);
+            this.traer_Cantidad_RecepcionesDataGridView.TabIndex = 24;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "Numero";
+            this.dataGridViewTextBoxColumn17.HeaderText = "Numero";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "Bultos";
+            this.dataGridViewTextBoxColumn18.HeaderText = "Bultos";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.ReadOnly = true;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 10000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // FormRecepciónes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(933, 567);
+            this.ClientSize = new System.Drawing.Size(948, 582);
+            this.Controls.Add(this.traer_Cantidad_RecepcionesDataGridView);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.traer_Resumen_Recepcion_FiltroDataGridView);
             this.Controls.Add(this.pictureBox2);
@@ -664,14 +737,16 @@
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productoresBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.genesisDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.variedadBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.traer_Resumen_Recepcion_FiltroDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.traer_Resumen_Recepcion_FiltroBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productoresBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.variedadBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.traer_Resumen_RecepcionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.traer_Cantidad_RecepcionesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.traer_Cantidad_RecepcionesDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -707,6 +782,23 @@
         private System.Windows.Forms.BindingSource traer_Resumen_Recepcion_FiltroBindingSource;
         private GenesisDataSetTableAdapters.Traer_Resumen_Recepcion_FiltroTableAdapter traer_Resumen_Recepcion_FiltroTableAdapter;
         private System.Windows.Forms.DataGridView traer_Resumen_Recepcion_FiltroDataGridView;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton radioButton5;
+        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.BindingSource traer_Cantidad_RecepcionesBindingSource;
+        private GenesisDataSetTableAdapters.Traer_Cantidad_RecepcionesTableAdapter traer_Cantidad_RecepcionesTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridView traer_Cantidad_RecepcionesDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -722,16 +814,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Timer timer1;
     }
 }
