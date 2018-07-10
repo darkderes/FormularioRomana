@@ -86,6 +86,14 @@ namespace FormularioRomana {
         
         private Traer_Tarjas_Vaciados_SecadoDataTable tableTraer_Tarjas_Vaciados_Secado;
         
+        private Traer_Tara_Envases_BaseDataTable tableTraer_Tara_Envases_Base;
+        
+        private Tarja_SecadoDataTable tableTarja_Secado;
+        
+        private Traer_Tarjas_SecasDataTable tableTraer_Tarjas_Secas;
+        
+        private Informe_Tarja_SecadoDataTable tableInforme_Tarja_Secado;
+        
         private global::System.Data.DataRelation relationFK_DetalleRecepciones_BasesPallet;
         
         private global::System.Data.DataRelation relationFK_DetalleRecepciones_Envases;
@@ -222,6 +230,18 @@ namespace FormularioRomana {
                 }
                 if ((ds.Tables["Traer_Tarjas_Vaciados_Secado"] != null)) {
                     base.Tables.Add(new Traer_Tarjas_Vaciados_SecadoDataTable(ds.Tables["Traer_Tarjas_Vaciados_Secado"]));
+                }
+                if ((ds.Tables["Traer_Tara_Envases_Base"] != null)) {
+                    base.Tables.Add(new Traer_Tara_Envases_BaseDataTable(ds.Tables["Traer_Tara_Envases_Base"]));
+                }
+                if ((ds.Tables["Tarja_Secado"] != null)) {
+                    base.Tables.Add(new Tarja_SecadoDataTable(ds.Tables["Tarja_Secado"]));
+                }
+                if ((ds.Tables["Traer_Tarjas_Secas"] != null)) {
+                    base.Tables.Add(new Traer_Tarjas_SecasDataTable(ds.Tables["Traer_Tarjas_Secas"]));
+                }
+                if ((ds.Tables["Informe_Tarja_Secado"] != null)) {
+                    base.Tables.Add(new Informe_Tarja_SecadoDataTable(ds.Tables["Informe_Tarja_Secado"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -553,6 +573,46 @@ namespace FormularioRomana {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public Traer_Tara_Envases_BaseDataTable Traer_Tara_Envases_Base {
+            get {
+                return this.tableTraer_Tara_Envases_Base;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public Tarja_SecadoDataTable Tarja_Secado {
+            get {
+                return this.tableTarja_Secado;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public Traer_Tarjas_SecasDataTable Traer_Tarjas_Secas {
+            get {
+                return this.tableTraer_Tarjas_Secas;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public Informe_Tarja_SecadoDataTable Informe_Tarja_Secado {
+            get {
+                return this.tableInforme_Tarja_Secado;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -710,6 +770,18 @@ namespace FormularioRomana {
                 }
                 if ((ds.Tables["Traer_Tarjas_Vaciados_Secado"] != null)) {
                     base.Tables.Add(new Traer_Tarjas_Vaciados_SecadoDataTable(ds.Tables["Traer_Tarjas_Vaciados_Secado"]));
+                }
+                if ((ds.Tables["Traer_Tara_Envases_Base"] != null)) {
+                    base.Tables.Add(new Traer_Tara_Envases_BaseDataTable(ds.Tables["Traer_Tara_Envases_Base"]));
+                }
+                if ((ds.Tables["Tarja_Secado"] != null)) {
+                    base.Tables.Add(new Tarja_SecadoDataTable(ds.Tables["Tarja_Secado"]));
+                }
+                if ((ds.Tables["Traer_Tarjas_Secas"] != null)) {
+                    base.Tables.Add(new Traer_Tarjas_SecasDataTable(ds.Tables["Traer_Tarjas_Secas"]));
+                }
+                if ((ds.Tables["Informe_Tarja_Secado"] != null)) {
+                    base.Tables.Add(new Informe_Tarja_SecadoDataTable(ds.Tables["Informe_Tarja_Secado"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -930,6 +1002,30 @@ namespace FormularioRomana {
                     this.tableTraer_Tarjas_Vaciados_Secado.InitVars();
                 }
             }
+            this.tableTraer_Tara_Envases_Base = ((Traer_Tara_Envases_BaseDataTable)(base.Tables["Traer_Tara_Envases_Base"]));
+            if ((initTable == true)) {
+                if ((this.tableTraer_Tara_Envases_Base != null)) {
+                    this.tableTraer_Tara_Envases_Base.InitVars();
+                }
+            }
+            this.tableTarja_Secado = ((Tarja_SecadoDataTable)(base.Tables["Tarja_Secado"]));
+            if ((initTable == true)) {
+                if ((this.tableTarja_Secado != null)) {
+                    this.tableTarja_Secado.InitVars();
+                }
+            }
+            this.tableTraer_Tarjas_Secas = ((Traer_Tarjas_SecasDataTable)(base.Tables["Traer_Tarjas_Secas"]));
+            if ((initTable == true)) {
+                if ((this.tableTraer_Tarjas_Secas != null)) {
+                    this.tableTraer_Tarjas_Secas.InitVars();
+                }
+            }
+            this.tableInforme_Tarja_Secado = ((Informe_Tarja_SecadoDataTable)(base.Tables["Informe_Tarja_Secado"]));
+            if ((initTable == true)) {
+                if ((this.tableInforme_Tarja_Secado != null)) {
+                    this.tableInforme_Tarja_Secado.InitVars();
+                }
+            }
             this.relationFK_DetalleRecepciones_BasesPallet = this.Relations["FK_DetalleRecepciones_BasesPallet"];
             this.relationFK_DetalleRecepciones_Envases = this.Relations["FK_DetalleRecepciones_Envases"];
             this.relationFK_DetalleRecepciones_Productores = this.Relations["FK_DetalleRecepciones_Productores"];
@@ -1010,6 +1106,14 @@ namespace FormularioRomana {
             base.Tables.Add(this.tableVerificar_Proceso_Secado);
             this.tableTraer_Tarjas_Vaciados_Secado = new Traer_Tarjas_Vaciados_SecadoDataTable();
             base.Tables.Add(this.tableTraer_Tarjas_Vaciados_Secado);
+            this.tableTraer_Tara_Envases_Base = new Traer_Tara_Envases_BaseDataTable();
+            base.Tables.Add(this.tableTraer_Tara_Envases_Base);
+            this.tableTarja_Secado = new Tarja_SecadoDataTable();
+            base.Tables.Add(this.tableTarja_Secado);
+            this.tableTraer_Tarjas_Secas = new Traer_Tarjas_SecasDataTable();
+            base.Tables.Add(this.tableTraer_Tarjas_Secas);
+            this.tableInforme_Tarja_Secado = new Informe_Tarja_SecadoDataTable();
+            base.Tables.Add(this.tableInforme_Tarja_Secado);
             this.relationFK_DetalleRecepciones_BasesPallet = new global::System.Data.DataRelation("FK_DetalleRecepciones_BasesPallet", new global::System.Data.DataColumn[] {
                         this.tableBasesPallet.Cod_BasesPalletColumn}, new global::System.Data.DataColumn[] {
                         this.tableDetalleRecepciones.Cod_BasesPalletColumn}, false);
@@ -1232,6 +1336,30 @@ namespace FormularioRomana {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeTraer_Tara_Envases_Base() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeTarja_Secado() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeTraer_Tarjas_Secas() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeInforme_Tarja_Secado() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
             if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
                 this.InitVars();
@@ -1377,6 +1505,18 @@ namespace FormularioRomana {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void Traer_Tarjas_Vaciados_SecadoRowChangeEventHandler(object sender, Traer_Tarjas_Vaciados_SecadoRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void Traer_Tara_Envases_BaseRowChangeEventHandler(object sender, Traer_Tara_Envases_BaseRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void Tarja_SecadoRowChangeEventHandler(object sender, Tarja_SecadoRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void Traer_Tarjas_SecasRowChangeEventHandler(object sender, Traer_Tarjas_SecasRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void Informe_Tarja_SecadoRowChangeEventHandler(object sender, Informe_Tarja_SecadoRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -11188,6 +11328,8 @@ namespace FormularioRomana {
             
             private global::System.Data.DataColumn columnVariedad;
             
+            private global::System.Data.DataColumn columnPeso_Neto_Final;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public Traer_Tarjas_Vaciados_SecadoDataTable() {
@@ -11247,6 +11389,14 @@ namespace FormularioRomana {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Peso_Neto_FinalColumn {
+                get {
+                    return this.columnPeso_Neto_Final;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -11282,12 +11432,13 @@ namespace FormularioRomana {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Traer_Tarjas_Vaciados_SecadoRow AddTraer_Tarjas_Vaciados_SecadoRow(string Tarja, int Lote, string Variedad) {
+            public Traer_Tarjas_Vaciados_SecadoRow AddTraer_Tarjas_Vaciados_SecadoRow(string Tarja, int Lote, string Variedad, decimal Peso_Neto_Final) {
                 Traer_Tarjas_Vaciados_SecadoRow rowTraer_Tarjas_Vaciados_SecadoRow = ((Traer_Tarjas_Vaciados_SecadoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Tarja,
                         Lote,
-                        Variedad};
+                        Variedad,
+                        Peso_Neto_Final};
                 rowTraer_Tarjas_Vaciados_SecadoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTraer_Tarjas_Vaciados_SecadoRow);
                 return rowTraer_Tarjas_Vaciados_SecadoRow;
@@ -11313,6 +11464,7 @@ namespace FormularioRomana {
                 this.columnTarja = base.Columns["Tarja"];
                 this.columnLote = base.Columns["Lote"];
                 this.columnVariedad = base.Columns["Variedad"];
+                this.columnPeso_Neto_Final = base.Columns["Peso_Neto_Final"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11324,6 +11476,8 @@ namespace FormularioRomana {
                 base.Columns.Add(this.columnLote);
                 this.columnVariedad = new global::System.Data.DataColumn("Variedad", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnVariedad);
+                this.columnPeso_Neto_Final = new global::System.Data.DataColumn("Peso_Neto_Final", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPeso_Neto_Final);
                 this.columnTarja.AllowDBNull = false;
                 this.columnTarja.MaxLength = 10;
                 this.columnLote.AllowDBNull = false;
@@ -11414,6 +11568,1709 @@ namespace FormularioRomana {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "Traer_Tarjas_Vaciados_SecadoDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class Traer_Tara_Envases_BaseDataTable : global::System.Data.TypedTableBase<Traer_Tara_Envases_BaseRow> {
+            
+            private global::System.Data.DataColumn columnTara_Envase;
+            
+            private global::System.Data.DataColumn columnBase;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Traer_Tara_Envases_BaseDataTable() {
+                this.TableName = "Traer_Tara_Envases_Base";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal Traer_Tara_Envases_BaseDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected Traer_Tara_Envases_BaseDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Tara_EnvaseColumn {
+                get {
+                    return this.columnTara_Envase;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn BaseColumn {
+                get {
+                    return this.columnBase;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Traer_Tara_Envases_BaseRow this[int index] {
+                get {
+                    return ((Traer_Tara_Envases_BaseRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Traer_Tara_Envases_BaseRowChangeEventHandler Traer_Tara_Envases_BaseRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Traer_Tara_Envases_BaseRowChangeEventHandler Traer_Tara_Envases_BaseRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Traer_Tara_Envases_BaseRowChangeEventHandler Traer_Tara_Envases_BaseRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Traer_Tara_Envases_BaseRowChangeEventHandler Traer_Tara_Envases_BaseRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddTraer_Tara_Envases_BaseRow(Traer_Tara_Envases_BaseRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Traer_Tara_Envases_BaseRow AddTraer_Tara_Envases_BaseRow(double Tara_Envase, double Base) {
+                Traer_Tara_Envases_BaseRow rowTraer_Tara_Envases_BaseRow = ((Traer_Tara_Envases_BaseRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Tara_Envase,
+                        Base};
+                rowTraer_Tara_Envases_BaseRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTraer_Tara_Envases_BaseRow);
+                return rowTraer_Tara_Envases_BaseRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                Traer_Tara_Envases_BaseDataTable cln = ((Traer_Tara_Envases_BaseDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new Traer_Tara_Envases_BaseDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnTara_Envase = base.Columns["Tara_Envase"];
+                this.columnBase = base.Columns["Base"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnTara_Envase = new global::System.Data.DataColumn("Tara_Envase", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTara_Envase);
+                this.columnBase = new global::System.Data.DataColumn("Base", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBase);
+                this.columnBase.ReadOnly = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Traer_Tara_Envases_BaseRow NewTraer_Tara_Envases_BaseRow() {
+                return ((Traer_Tara_Envases_BaseRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new Traer_Tara_Envases_BaseRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(Traer_Tara_Envases_BaseRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.Traer_Tara_Envases_BaseRowChanged != null)) {
+                    this.Traer_Tara_Envases_BaseRowChanged(this, new Traer_Tara_Envases_BaseRowChangeEvent(((Traer_Tara_Envases_BaseRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.Traer_Tara_Envases_BaseRowChanging != null)) {
+                    this.Traer_Tara_Envases_BaseRowChanging(this, new Traer_Tara_Envases_BaseRowChangeEvent(((Traer_Tara_Envases_BaseRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.Traer_Tara_Envases_BaseRowDeleted != null)) {
+                    this.Traer_Tara_Envases_BaseRowDeleted(this, new Traer_Tara_Envases_BaseRowChangeEvent(((Traer_Tara_Envases_BaseRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.Traer_Tara_Envases_BaseRowDeleting != null)) {
+                    this.Traer_Tara_Envases_BaseRowDeleting(this, new Traer_Tara_Envases_BaseRowChangeEvent(((Traer_Tara_Envases_BaseRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveTraer_Tara_Envases_BaseRow(Traer_Tara_Envases_BaseRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                GenesisDataSet ds = new GenesisDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "Traer_Tara_Envases_BaseDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class Tarja_SecadoDataTable : global::System.Data.TypedTableBase<Tarja_SecadoRow> {
+            
+            private global::System.Data.DataColumn columnId_Tarja;
+            
+            private global::System.Data.DataColumn columnFecha_Tarja;
+            
+            private global::System.Data.DataColumn columnTarja;
+            
+            private global::System.Data.DataColumn columnNum_Proceso;
+            
+            private global::System.Data.DataColumn columnCod_Productor;
+            
+            private global::System.Data.DataColumn columnCod_Variedad;
+            
+            private global::System.Data.DataColumn columnCod_Estado;
+            
+            private global::System.Data.DataColumn columnCod_Productos;
+            
+            private global::System.Data.DataColumn columnCod_Envase;
+            
+            private global::System.Data.DataColumn columnNum_Envase;
+            
+            private global::System.Data.DataColumn columnTara_Envase;
+            
+            private global::System.Data.DataColumn columnCod_BasesPallet;
+            
+            private global::System.Data.DataColumn columnTara_BasePallet;
+            
+            private global::System.Data.DataColumn columnPeso_Bruto;
+            
+            private global::System.Data.DataColumn columnPeso_Neto;
+            
+            private global::System.Data.DataColumn columnTipo_Proceso_Fnal;
+            
+            private global::System.Data.DataColumn columnNum_Proceso_Final;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Tarja_SecadoDataTable() {
+                this.TableName = "Tarja_Secado";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal Tarja_SecadoDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected Tarja_SecadoDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Id_TarjaColumn {
+                get {
+                    return this.columnId_Tarja;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Fecha_TarjaColumn {
+                get {
+                    return this.columnFecha_Tarja;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TarjaColumn {
+                get {
+                    return this.columnTarja;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Num_ProcesoColumn {
+                get {
+                    return this.columnNum_Proceso;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Cod_ProductorColumn {
+                get {
+                    return this.columnCod_Productor;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Cod_VariedadColumn {
+                get {
+                    return this.columnCod_Variedad;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Cod_EstadoColumn {
+                get {
+                    return this.columnCod_Estado;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Cod_ProductosColumn {
+                get {
+                    return this.columnCod_Productos;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Cod_EnvaseColumn {
+                get {
+                    return this.columnCod_Envase;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Num_EnvaseColumn {
+                get {
+                    return this.columnNum_Envase;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Tara_EnvaseColumn {
+                get {
+                    return this.columnTara_Envase;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Cod_BasesPalletColumn {
+                get {
+                    return this.columnCod_BasesPallet;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Tara_BasePalletColumn {
+                get {
+                    return this.columnTara_BasePallet;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Peso_BrutoColumn {
+                get {
+                    return this.columnPeso_Bruto;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Peso_NetoColumn {
+                get {
+                    return this.columnPeso_Neto;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Tipo_Proceso_FnalColumn {
+                get {
+                    return this.columnTipo_Proceso_Fnal;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Num_Proceso_FinalColumn {
+                get {
+                    return this.columnNum_Proceso_Final;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Tarja_SecadoRow this[int index] {
+                get {
+                    return ((Tarja_SecadoRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Tarja_SecadoRowChangeEventHandler Tarja_SecadoRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Tarja_SecadoRowChangeEventHandler Tarja_SecadoRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Tarja_SecadoRowChangeEventHandler Tarja_SecadoRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Tarja_SecadoRowChangeEventHandler Tarja_SecadoRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddTarja_SecadoRow(Tarja_SecadoRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Tarja_SecadoRow AddTarja_SecadoRow(
+                        System.DateTime Fecha_Tarja, 
+                        string Tarja, 
+                        int Num_Proceso, 
+                        short Cod_Productor, 
+                        short Cod_Variedad, 
+                        short Cod_Estado, 
+                        short Cod_Productos, 
+                        short Cod_Envase, 
+                        short Num_Envase, 
+                        double Tara_Envase, 
+                        short Cod_BasesPallet, 
+                        double Tara_BasePallet, 
+                        decimal Peso_Bruto, 
+                        decimal Peso_Neto, 
+                        string Tipo_Proceso_Fnal, 
+                        int Num_Proceso_Final) {
+                Tarja_SecadoRow rowTarja_SecadoRow = ((Tarja_SecadoRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        Fecha_Tarja,
+                        Tarja,
+                        Num_Proceso,
+                        Cod_Productor,
+                        Cod_Variedad,
+                        Cod_Estado,
+                        Cod_Productos,
+                        Cod_Envase,
+                        Num_Envase,
+                        Tara_Envase,
+                        Cod_BasesPallet,
+                        Tara_BasePallet,
+                        Peso_Bruto,
+                        Peso_Neto,
+                        Tipo_Proceso_Fnal,
+                        Num_Proceso_Final};
+                rowTarja_SecadoRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTarja_SecadoRow);
+                return rowTarja_SecadoRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Tarja_SecadoRow FindById_Tarja(int Id_Tarja) {
+                return ((Tarja_SecadoRow)(this.Rows.Find(new object[] {
+                            Id_Tarja})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                Tarja_SecadoDataTable cln = ((Tarja_SecadoDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new Tarja_SecadoDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnId_Tarja = base.Columns["Id_Tarja"];
+                this.columnFecha_Tarja = base.Columns["Fecha_Tarja"];
+                this.columnTarja = base.Columns["Tarja"];
+                this.columnNum_Proceso = base.Columns["Num_Proceso"];
+                this.columnCod_Productor = base.Columns["Cod_Productor"];
+                this.columnCod_Variedad = base.Columns["Cod_Variedad"];
+                this.columnCod_Estado = base.Columns["Cod_Estado"];
+                this.columnCod_Productos = base.Columns["Cod_Productos"];
+                this.columnCod_Envase = base.Columns["Cod_Envase"];
+                this.columnNum_Envase = base.Columns["Num_Envase"];
+                this.columnTara_Envase = base.Columns["Tara_Envase"];
+                this.columnCod_BasesPallet = base.Columns["Cod_BasesPallet"];
+                this.columnTara_BasePallet = base.Columns["Tara_BasePallet"];
+                this.columnPeso_Bruto = base.Columns["Peso_Bruto"];
+                this.columnPeso_Neto = base.Columns["Peso_Neto"];
+                this.columnTipo_Proceso_Fnal = base.Columns["Tipo_Proceso_Fnal"];
+                this.columnNum_Proceso_Final = base.Columns["Num_Proceso_Final"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnId_Tarja = new global::System.Data.DataColumn("Id_Tarja", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId_Tarja);
+                this.columnFecha_Tarja = new global::System.Data.DataColumn("Fecha_Tarja", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFecha_Tarja);
+                this.columnTarja = new global::System.Data.DataColumn("Tarja", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTarja);
+                this.columnNum_Proceso = new global::System.Data.DataColumn("Num_Proceso", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNum_Proceso);
+                this.columnCod_Productor = new global::System.Data.DataColumn("Cod_Productor", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCod_Productor);
+                this.columnCod_Variedad = new global::System.Data.DataColumn("Cod_Variedad", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCod_Variedad);
+                this.columnCod_Estado = new global::System.Data.DataColumn("Cod_Estado", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCod_Estado);
+                this.columnCod_Productos = new global::System.Data.DataColumn("Cod_Productos", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCod_Productos);
+                this.columnCod_Envase = new global::System.Data.DataColumn("Cod_Envase", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCod_Envase);
+                this.columnNum_Envase = new global::System.Data.DataColumn("Num_Envase", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNum_Envase);
+                this.columnTara_Envase = new global::System.Data.DataColumn("Tara_Envase", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTara_Envase);
+                this.columnCod_BasesPallet = new global::System.Data.DataColumn("Cod_BasesPallet", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCod_BasesPallet);
+                this.columnTara_BasePallet = new global::System.Data.DataColumn("Tara_BasePallet", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTara_BasePallet);
+                this.columnPeso_Bruto = new global::System.Data.DataColumn("Peso_Bruto", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPeso_Bruto);
+                this.columnPeso_Neto = new global::System.Data.DataColumn("Peso_Neto", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPeso_Neto);
+                this.columnTipo_Proceso_Fnal = new global::System.Data.DataColumn("Tipo_Proceso_Fnal", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTipo_Proceso_Fnal);
+                this.columnNum_Proceso_Final = new global::System.Data.DataColumn("Num_Proceso_Final", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNum_Proceso_Final);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnId_Tarja}, true));
+                this.columnId_Tarja.AutoIncrement = true;
+                this.columnId_Tarja.AutoIncrementSeed = -1;
+                this.columnId_Tarja.AutoIncrementStep = -1;
+                this.columnId_Tarja.AllowDBNull = false;
+                this.columnId_Tarja.ReadOnly = true;
+                this.columnId_Tarja.Unique = true;
+                this.columnFecha_Tarja.AllowDBNull = false;
+                this.columnTarja.AllowDBNull = false;
+                this.columnTarja.MaxLength = 10;
+                this.columnNum_Proceso.AllowDBNull = false;
+                this.columnCod_Productor.AllowDBNull = false;
+                this.columnCod_Variedad.AllowDBNull = false;
+                this.columnCod_Estado.AllowDBNull = false;
+                this.columnCod_Productos.AllowDBNull = false;
+                this.columnCod_Envase.AllowDBNull = false;
+                this.columnCod_BasesPallet.AllowDBNull = false;
+                this.columnTipo_Proceso_Fnal.MaxLength = 3;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Tarja_SecadoRow NewTarja_SecadoRow() {
+                return ((Tarja_SecadoRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new Tarja_SecadoRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(Tarja_SecadoRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.Tarja_SecadoRowChanged != null)) {
+                    this.Tarja_SecadoRowChanged(this, new Tarja_SecadoRowChangeEvent(((Tarja_SecadoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.Tarja_SecadoRowChanging != null)) {
+                    this.Tarja_SecadoRowChanging(this, new Tarja_SecadoRowChangeEvent(((Tarja_SecadoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.Tarja_SecadoRowDeleted != null)) {
+                    this.Tarja_SecadoRowDeleted(this, new Tarja_SecadoRowChangeEvent(((Tarja_SecadoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.Tarja_SecadoRowDeleting != null)) {
+                    this.Tarja_SecadoRowDeleting(this, new Tarja_SecadoRowChangeEvent(((Tarja_SecadoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveTarja_SecadoRow(Tarja_SecadoRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                GenesisDataSet ds = new GenesisDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "Tarja_SecadoDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class Traer_Tarjas_SecasDataTable : global::System.Data.TypedTableBase<Traer_Tarjas_SecasRow> {
+            
+            private global::System.Data.DataColumn columnId_Tarja;
+            
+            private global::System.Data.DataColumn columnFecha_Tarja;
+            
+            private global::System.Data.DataColumn columnTarja;
+            
+            private global::System.Data.DataColumn columnNum_Proceso;
+            
+            private global::System.Data.DataColumn columnCod_Productor;
+            
+            private global::System.Data.DataColumn columnDes_Productor;
+            
+            private global::System.Data.DataColumn columnCod_Variedad;
+            
+            private global::System.Data.DataColumn columnDes_Variedad;
+            
+            private global::System.Data.DataColumn columnCod_Estado;
+            
+            private global::System.Data.DataColumn columnCod_Productos;
+            
+            private global::System.Data.DataColumn columnProductos;
+            
+            private global::System.Data.DataColumn columnCod_Envase;
+            
+            private global::System.Data.DataColumn columnEnvase;
+            
+            private global::System.Data.DataColumn columnNum_Envase;
+            
+            private global::System.Data.DataColumn columnTara_Envase;
+            
+            private global::System.Data.DataColumn columnCod_BasesPallet;
+            
+            private global::System.Data.DataColumn columnTara_BasePallet;
+            
+            private global::System.Data.DataColumn columnPeso_Bruto;
+            
+            private global::System.Data.DataColumn columnPeso_Neto;
+            
+            private global::System.Data.DataColumn columnTipo_Proceso_Fnal;
+            
+            private global::System.Data.DataColumn columnNum_Proceso_Final;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Traer_Tarjas_SecasDataTable() {
+                this.TableName = "Traer_Tarjas_Secas";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal Traer_Tarjas_SecasDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected Traer_Tarjas_SecasDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Id_TarjaColumn {
+                get {
+                    return this.columnId_Tarja;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Fecha_TarjaColumn {
+                get {
+                    return this.columnFecha_Tarja;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TarjaColumn {
+                get {
+                    return this.columnTarja;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Num_ProcesoColumn {
+                get {
+                    return this.columnNum_Proceso;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Cod_ProductorColumn {
+                get {
+                    return this.columnCod_Productor;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Des_ProductorColumn {
+                get {
+                    return this.columnDes_Productor;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Cod_VariedadColumn {
+                get {
+                    return this.columnCod_Variedad;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Des_VariedadColumn {
+                get {
+                    return this.columnDes_Variedad;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Cod_EstadoColumn {
+                get {
+                    return this.columnCod_Estado;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Cod_ProductosColumn {
+                get {
+                    return this.columnCod_Productos;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ProductosColumn {
+                get {
+                    return this.columnProductos;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Cod_EnvaseColumn {
+                get {
+                    return this.columnCod_Envase;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn EnvaseColumn {
+                get {
+                    return this.columnEnvase;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Num_EnvaseColumn {
+                get {
+                    return this.columnNum_Envase;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Tara_EnvaseColumn {
+                get {
+                    return this.columnTara_Envase;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Cod_BasesPalletColumn {
+                get {
+                    return this.columnCod_BasesPallet;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Tara_BasePalletColumn {
+                get {
+                    return this.columnTara_BasePallet;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Peso_BrutoColumn {
+                get {
+                    return this.columnPeso_Bruto;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Peso_NetoColumn {
+                get {
+                    return this.columnPeso_Neto;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Tipo_Proceso_FnalColumn {
+                get {
+                    return this.columnTipo_Proceso_Fnal;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Num_Proceso_FinalColumn {
+                get {
+                    return this.columnNum_Proceso_Final;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Traer_Tarjas_SecasRow this[int index] {
+                get {
+                    return ((Traer_Tarjas_SecasRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Traer_Tarjas_SecasRowChangeEventHandler Traer_Tarjas_SecasRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Traer_Tarjas_SecasRowChangeEventHandler Traer_Tarjas_SecasRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Traer_Tarjas_SecasRowChangeEventHandler Traer_Tarjas_SecasRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Traer_Tarjas_SecasRowChangeEventHandler Traer_Tarjas_SecasRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddTraer_Tarjas_SecasRow(Traer_Tarjas_SecasRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Traer_Tarjas_SecasRow AddTraer_Tarjas_SecasRow(
+                        System.DateTime Fecha_Tarja, 
+                        string Tarja, 
+                        int Num_Proceso, 
+                        short Cod_Productor, 
+                        string Des_Productor, 
+                        short Cod_Variedad, 
+                        string Des_Variedad, 
+                        short Cod_Estado, 
+                        short Cod_Productos, 
+                        string Productos, 
+                        short Cod_Envase, 
+                        string Envase, 
+                        short Num_Envase, 
+                        double Tara_Envase, 
+                        short Cod_BasesPallet, 
+                        double Tara_BasePallet, 
+                        decimal Peso_Bruto, 
+                        decimal Peso_Neto, 
+                        string Tipo_Proceso_Fnal, 
+                        int Num_Proceso_Final) {
+                Traer_Tarjas_SecasRow rowTraer_Tarjas_SecasRow = ((Traer_Tarjas_SecasRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        Fecha_Tarja,
+                        Tarja,
+                        Num_Proceso,
+                        Cod_Productor,
+                        Des_Productor,
+                        Cod_Variedad,
+                        Des_Variedad,
+                        Cod_Estado,
+                        Cod_Productos,
+                        Productos,
+                        Cod_Envase,
+                        Envase,
+                        Num_Envase,
+                        Tara_Envase,
+                        Cod_BasesPallet,
+                        Tara_BasePallet,
+                        Peso_Bruto,
+                        Peso_Neto,
+                        Tipo_Proceso_Fnal,
+                        Num_Proceso_Final};
+                rowTraer_Tarjas_SecasRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTraer_Tarjas_SecasRow);
+                return rowTraer_Tarjas_SecasRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Traer_Tarjas_SecasRow FindById_Tarja(int Id_Tarja) {
+                return ((Traer_Tarjas_SecasRow)(this.Rows.Find(new object[] {
+                            Id_Tarja})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                Traer_Tarjas_SecasDataTable cln = ((Traer_Tarjas_SecasDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new Traer_Tarjas_SecasDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnId_Tarja = base.Columns["Id_Tarja"];
+                this.columnFecha_Tarja = base.Columns["Fecha_Tarja"];
+                this.columnTarja = base.Columns["Tarja"];
+                this.columnNum_Proceso = base.Columns["Num_Proceso"];
+                this.columnCod_Productor = base.Columns["Cod_Productor"];
+                this.columnDes_Productor = base.Columns["Des_Productor"];
+                this.columnCod_Variedad = base.Columns["Cod_Variedad"];
+                this.columnDes_Variedad = base.Columns["Des_Variedad"];
+                this.columnCod_Estado = base.Columns["Cod_Estado"];
+                this.columnCod_Productos = base.Columns["Cod_Productos"];
+                this.columnProductos = base.Columns["Productos"];
+                this.columnCod_Envase = base.Columns["Cod_Envase"];
+                this.columnEnvase = base.Columns["Envase"];
+                this.columnNum_Envase = base.Columns["Num_Envase"];
+                this.columnTara_Envase = base.Columns["Tara_Envase"];
+                this.columnCod_BasesPallet = base.Columns["Cod_BasesPallet"];
+                this.columnTara_BasePallet = base.Columns["Tara_BasePallet"];
+                this.columnPeso_Bruto = base.Columns["Peso_Bruto"];
+                this.columnPeso_Neto = base.Columns["Peso_Neto"];
+                this.columnTipo_Proceso_Fnal = base.Columns["Tipo_Proceso_Fnal"];
+                this.columnNum_Proceso_Final = base.Columns["Num_Proceso_Final"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnId_Tarja = new global::System.Data.DataColumn("Id_Tarja", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId_Tarja);
+                this.columnFecha_Tarja = new global::System.Data.DataColumn("Fecha_Tarja", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFecha_Tarja);
+                this.columnTarja = new global::System.Data.DataColumn("Tarja", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTarja);
+                this.columnNum_Proceso = new global::System.Data.DataColumn("Num_Proceso", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNum_Proceso);
+                this.columnCod_Productor = new global::System.Data.DataColumn("Cod_Productor", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCod_Productor);
+                this.columnDes_Productor = new global::System.Data.DataColumn("Des_Productor", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDes_Productor);
+                this.columnCod_Variedad = new global::System.Data.DataColumn("Cod_Variedad", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCod_Variedad);
+                this.columnDes_Variedad = new global::System.Data.DataColumn("Des_Variedad", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDes_Variedad);
+                this.columnCod_Estado = new global::System.Data.DataColumn("Cod_Estado", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCod_Estado);
+                this.columnCod_Productos = new global::System.Data.DataColumn("Cod_Productos", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCod_Productos);
+                this.columnProductos = new global::System.Data.DataColumn("Productos", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnProductos);
+                this.columnCod_Envase = new global::System.Data.DataColumn("Cod_Envase", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCod_Envase);
+                this.columnEnvase = new global::System.Data.DataColumn("Envase", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEnvase);
+                this.columnNum_Envase = new global::System.Data.DataColumn("Num_Envase", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNum_Envase);
+                this.columnTara_Envase = new global::System.Data.DataColumn("Tara_Envase", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTara_Envase);
+                this.columnCod_BasesPallet = new global::System.Data.DataColumn("Cod_BasesPallet", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCod_BasesPallet);
+                this.columnTara_BasePallet = new global::System.Data.DataColumn("Tara_BasePallet", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTara_BasePallet);
+                this.columnPeso_Bruto = new global::System.Data.DataColumn("Peso_Bruto", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPeso_Bruto);
+                this.columnPeso_Neto = new global::System.Data.DataColumn("Peso_Neto", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPeso_Neto);
+                this.columnTipo_Proceso_Fnal = new global::System.Data.DataColumn("Tipo_Proceso_Fnal", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTipo_Proceso_Fnal);
+                this.columnNum_Proceso_Final = new global::System.Data.DataColumn("Num_Proceso_Final", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNum_Proceso_Final);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnId_Tarja}, true));
+                this.columnId_Tarja.AutoIncrement = true;
+                this.columnId_Tarja.AllowDBNull = false;
+                this.columnId_Tarja.ReadOnly = true;
+                this.columnId_Tarja.Unique = true;
+                this.columnFecha_Tarja.AllowDBNull = false;
+                this.columnTarja.AllowDBNull = false;
+                this.columnTarja.MaxLength = 10;
+                this.columnNum_Proceso.AllowDBNull = false;
+                this.columnCod_Productor.AllowDBNull = false;
+                this.columnDes_Productor.MaxLength = 25;
+                this.columnCod_Variedad.AllowDBNull = false;
+                this.columnDes_Variedad.MaxLength = 10;
+                this.columnCod_Estado.AllowDBNull = false;
+                this.columnCod_Productos.AllowDBNull = false;
+                this.columnProductos.MaxLength = 25;
+                this.columnCod_Envase.AllowDBNull = false;
+                this.columnEnvase.MaxLength = 50;
+                this.columnCod_BasesPallet.AllowDBNull = false;
+                this.columnTipo_Proceso_Fnal.MaxLength = 3;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Traer_Tarjas_SecasRow NewTraer_Tarjas_SecasRow() {
+                return ((Traer_Tarjas_SecasRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new Traer_Tarjas_SecasRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(Traer_Tarjas_SecasRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.Traer_Tarjas_SecasRowChanged != null)) {
+                    this.Traer_Tarjas_SecasRowChanged(this, new Traer_Tarjas_SecasRowChangeEvent(((Traer_Tarjas_SecasRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.Traer_Tarjas_SecasRowChanging != null)) {
+                    this.Traer_Tarjas_SecasRowChanging(this, new Traer_Tarjas_SecasRowChangeEvent(((Traer_Tarjas_SecasRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.Traer_Tarjas_SecasRowDeleted != null)) {
+                    this.Traer_Tarjas_SecasRowDeleted(this, new Traer_Tarjas_SecasRowChangeEvent(((Traer_Tarjas_SecasRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.Traer_Tarjas_SecasRowDeleting != null)) {
+                    this.Traer_Tarjas_SecasRowDeleting(this, new Traer_Tarjas_SecasRowChangeEvent(((Traer_Tarjas_SecasRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveTraer_Tarjas_SecasRow(Traer_Tarjas_SecasRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                GenesisDataSet ds = new GenesisDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "Traer_Tarjas_SecasDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class Informe_Tarja_SecadoDataTable : global::System.Data.TypedTableBase<Informe_Tarja_SecadoRow> {
+            
+            private global::System.Data.DataColumn columnFecha_Tarja;
+            
+            private global::System.Data.DataColumn columnTarja;
+            
+            private global::System.Data.DataColumn columnNum_Proceso;
+            
+            private global::System.Data.DataColumn columnCod_Productor;
+            
+            private global::System.Data.DataColumn columnProductos;
+            
+            private global::System.Data.DataColumn columnPeso_neto;
+            
+            private global::System.Data.DataColumn columnCodigoBarra;
+            
+            private global::System.Data.DataColumn columnVariedad;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Informe_Tarja_SecadoDataTable() {
+                this.TableName = "Informe_Tarja_Secado";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal Informe_Tarja_SecadoDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected Informe_Tarja_SecadoDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Fecha_TarjaColumn {
+                get {
+                    return this.columnFecha_Tarja;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TarjaColumn {
+                get {
+                    return this.columnTarja;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Num_ProcesoColumn {
+                get {
+                    return this.columnNum_Proceso;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Cod_ProductorColumn {
+                get {
+                    return this.columnCod_Productor;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ProductosColumn {
+                get {
+                    return this.columnProductos;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Peso_netoColumn {
+                get {
+                    return this.columnPeso_neto;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CodigoBarraColumn {
+                get {
+                    return this.columnCodigoBarra;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn VariedadColumn {
+                get {
+                    return this.columnVariedad;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Informe_Tarja_SecadoRow this[int index] {
+                get {
+                    return ((Informe_Tarja_SecadoRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Informe_Tarja_SecadoRowChangeEventHandler Informe_Tarja_SecadoRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Informe_Tarja_SecadoRowChangeEventHandler Informe_Tarja_SecadoRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Informe_Tarja_SecadoRowChangeEventHandler Informe_Tarja_SecadoRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Informe_Tarja_SecadoRowChangeEventHandler Informe_Tarja_SecadoRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddInforme_Tarja_SecadoRow(Informe_Tarja_SecadoRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Informe_Tarja_SecadoRow AddInforme_Tarja_SecadoRow(System.DateTime Fecha_Tarja, string Tarja, int Num_Proceso, short Cod_Productor, string Productos, decimal Peso_neto, byte[] CodigoBarra, string Variedad) {
+                Informe_Tarja_SecadoRow rowInforme_Tarja_SecadoRow = ((Informe_Tarja_SecadoRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Fecha_Tarja,
+                        Tarja,
+                        Num_Proceso,
+                        Cod_Productor,
+                        Productos,
+                        Peso_neto,
+                        CodigoBarra,
+                        Variedad};
+                rowInforme_Tarja_SecadoRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowInforme_Tarja_SecadoRow);
+                return rowInforme_Tarja_SecadoRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                Informe_Tarja_SecadoDataTable cln = ((Informe_Tarja_SecadoDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new Informe_Tarja_SecadoDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnFecha_Tarja = base.Columns["Fecha_Tarja"];
+                this.columnTarja = base.Columns["Tarja"];
+                this.columnNum_Proceso = base.Columns["Num_Proceso"];
+                this.columnCod_Productor = base.Columns["Cod_Productor"];
+                this.columnProductos = base.Columns["Productos"];
+                this.columnPeso_neto = base.Columns["Peso_neto"];
+                this.columnCodigoBarra = base.Columns["CodigoBarra"];
+                this.columnVariedad = base.Columns["Variedad"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnFecha_Tarja = new global::System.Data.DataColumn("Fecha_Tarja", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFecha_Tarja);
+                this.columnTarja = new global::System.Data.DataColumn("Tarja", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTarja);
+                this.columnNum_Proceso = new global::System.Data.DataColumn("Num_Proceso", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNum_Proceso);
+                this.columnCod_Productor = new global::System.Data.DataColumn("Cod_Productor", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCod_Productor);
+                this.columnProductos = new global::System.Data.DataColumn("Productos", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnProductos);
+                this.columnPeso_neto = new global::System.Data.DataColumn("Peso_neto", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPeso_neto);
+                this.columnCodigoBarra = new global::System.Data.DataColumn("CodigoBarra", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCodigoBarra);
+                this.columnVariedad = new global::System.Data.DataColumn("Variedad", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVariedad);
+                this.columnFecha_Tarja.AllowDBNull = false;
+                this.columnTarja.AllowDBNull = false;
+                this.columnTarja.MaxLength = 10;
+                this.columnNum_Proceso.AllowDBNull = false;
+                this.columnCod_Productor.AllowDBNull = false;
+                this.columnProductos.MaxLength = 25;
+                this.columnCodigoBarra.ReadOnly = true;
+                this.columnVariedad.MaxLength = 25;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Informe_Tarja_SecadoRow NewInforme_Tarja_SecadoRow() {
+                return ((Informe_Tarja_SecadoRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new Informe_Tarja_SecadoRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(Informe_Tarja_SecadoRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.Informe_Tarja_SecadoRowChanged != null)) {
+                    this.Informe_Tarja_SecadoRowChanged(this, new Informe_Tarja_SecadoRowChangeEvent(((Informe_Tarja_SecadoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.Informe_Tarja_SecadoRowChanging != null)) {
+                    this.Informe_Tarja_SecadoRowChanging(this, new Informe_Tarja_SecadoRowChangeEvent(((Informe_Tarja_SecadoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.Informe_Tarja_SecadoRowDeleted != null)) {
+                    this.Informe_Tarja_SecadoRowDeleted(this, new Informe_Tarja_SecadoRowChangeEvent(((Informe_Tarja_SecadoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.Informe_Tarja_SecadoRowDeleting != null)) {
+                    this.Informe_Tarja_SecadoRowDeleting(this, new Informe_Tarja_SecadoRowChangeEvent(((Informe_Tarja_SecadoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveInforme_Tarja_SecadoRow(Informe_Tarja_SecadoRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                GenesisDataSet ds = new GenesisDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "Informe_Tarja_SecadoDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -16213,6 +18070,23 @@ namespace FormularioRomana {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal Peso_Neto_Final {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableTraer_Tarjas_Vaciados_Secado.Peso_Neto_FinalColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Peso_Neto_Final\' de la tabla \'Traer_Tarjas_Vaciados_Secad" +
+                                "o\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTraer_Tarjas_Vaciados_Secado.Peso_Neto_FinalColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsVariedadNull() {
                 return this.IsNull(this.tableTraer_Tarjas_Vaciados_Secado.VariedadColumn);
             }
@@ -16221,6 +18095,1021 @@ namespace FormularioRomana {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetVariedadNull() {
                 this[this.tableTraer_Tarjas_Vaciados_Secado.VariedadColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPeso_Neto_FinalNull() {
+                return this.IsNull(this.tableTraer_Tarjas_Vaciados_Secado.Peso_Neto_FinalColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPeso_Neto_FinalNull() {
+                this[this.tableTraer_Tarjas_Vaciados_Secado.Peso_Neto_FinalColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class Traer_Tara_Envases_BaseRow : global::System.Data.DataRow {
+            
+            private Traer_Tara_Envases_BaseDataTable tableTraer_Tara_Envases_Base;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal Traer_Tara_Envases_BaseRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableTraer_Tara_Envases_Base = ((Traer_Tara_Envases_BaseDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double Tara_Envase {
+                get {
+                    try {
+                        return ((double)(this[this.tableTraer_Tara_Envases_Base.Tara_EnvaseColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Tara_Envase\' de la tabla \'Traer_Tara_Envases_Base\' es DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTraer_Tara_Envases_Base.Tara_EnvaseColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double Base {
+                get {
+                    try {
+                        return ((double)(this[this.tableTraer_Tara_Envases_Base.BaseColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Base\' de la tabla \'Traer_Tara_Envases_Base\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTraer_Tara_Envases_Base.BaseColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTara_EnvaseNull() {
+                return this.IsNull(this.tableTraer_Tara_Envases_Base.Tara_EnvaseColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTara_EnvaseNull() {
+                this[this.tableTraer_Tara_Envases_Base.Tara_EnvaseColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsBaseNull() {
+                return this.IsNull(this.tableTraer_Tara_Envases_Base.BaseColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetBaseNull() {
+                this[this.tableTraer_Tara_Envases_Base.BaseColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class Tarja_SecadoRow : global::System.Data.DataRow {
+            
+            private Tarja_SecadoDataTable tableTarja_Secado;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal Tarja_SecadoRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableTarja_Secado = ((Tarja_SecadoDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Id_Tarja {
+                get {
+                    return ((int)(this[this.tableTarja_Secado.Id_TarjaColumn]));
+                }
+                set {
+                    this[this.tableTarja_Secado.Id_TarjaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime Fecha_Tarja {
+                get {
+                    return ((global::System.DateTime)(this[this.tableTarja_Secado.Fecha_TarjaColumn]));
+                }
+                set {
+                    this[this.tableTarja_Secado.Fecha_TarjaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Tarja {
+                get {
+                    return ((string)(this[this.tableTarja_Secado.TarjaColumn]));
+                }
+                set {
+                    this[this.tableTarja_Secado.TarjaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Num_Proceso {
+                get {
+                    return ((int)(this[this.tableTarja_Secado.Num_ProcesoColumn]));
+                }
+                set {
+                    this[this.tableTarja_Secado.Num_ProcesoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public short Cod_Productor {
+                get {
+                    return ((short)(this[this.tableTarja_Secado.Cod_ProductorColumn]));
+                }
+                set {
+                    this[this.tableTarja_Secado.Cod_ProductorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public short Cod_Variedad {
+                get {
+                    return ((short)(this[this.tableTarja_Secado.Cod_VariedadColumn]));
+                }
+                set {
+                    this[this.tableTarja_Secado.Cod_VariedadColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public short Cod_Estado {
+                get {
+                    return ((short)(this[this.tableTarja_Secado.Cod_EstadoColumn]));
+                }
+                set {
+                    this[this.tableTarja_Secado.Cod_EstadoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public short Cod_Productos {
+                get {
+                    return ((short)(this[this.tableTarja_Secado.Cod_ProductosColumn]));
+                }
+                set {
+                    this[this.tableTarja_Secado.Cod_ProductosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public short Cod_Envase {
+                get {
+                    return ((short)(this[this.tableTarja_Secado.Cod_EnvaseColumn]));
+                }
+                set {
+                    this[this.tableTarja_Secado.Cod_EnvaseColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public short Num_Envase {
+                get {
+                    try {
+                        return ((short)(this[this.tableTarja_Secado.Num_EnvaseColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Num_Envase\' de la tabla \'Tarja_Secado\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTarja_Secado.Num_EnvaseColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double Tara_Envase {
+                get {
+                    try {
+                        return ((double)(this[this.tableTarja_Secado.Tara_EnvaseColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Tara_Envase\' de la tabla \'Tarja_Secado\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTarja_Secado.Tara_EnvaseColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public short Cod_BasesPallet {
+                get {
+                    return ((short)(this[this.tableTarja_Secado.Cod_BasesPalletColumn]));
+                }
+                set {
+                    this[this.tableTarja_Secado.Cod_BasesPalletColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double Tara_BasePallet {
+                get {
+                    try {
+                        return ((double)(this[this.tableTarja_Secado.Tara_BasePalletColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Tara_BasePallet\' de la tabla \'Tarja_Secado\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTarja_Secado.Tara_BasePalletColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal Peso_Bruto {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableTarja_Secado.Peso_BrutoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Peso_Bruto\' de la tabla \'Tarja_Secado\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTarja_Secado.Peso_BrutoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal Peso_Neto {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableTarja_Secado.Peso_NetoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Peso_Neto\' de la tabla \'Tarja_Secado\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTarja_Secado.Peso_NetoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Tipo_Proceso_Fnal {
+                get {
+                    try {
+                        return ((string)(this[this.tableTarja_Secado.Tipo_Proceso_FnalColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Tipo_Proceso_Fnal\' de la tabla \'Tarja_Secado\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTarja_Secado.Tipo_Proceso_FnalColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Num_Proceso_Final {
+                get {
+                    try {
+                        return ((int)(this[this.tableTarja_Secado.Num_Proceso_FinalColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Num_Proceso_Final\' de la tabla \'Tarja_Secado\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTarja_Secado.Num_Proceso_FinalColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNum_EnvaseNull() {
+                return this.IsNull(this.tableTarja_Secado.Num_EnvaseColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNum_EnvaseNull() {
+                this[this.tableTarja_Secado.Num_EnvaseColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTara_EnvaseNull() {
+                return this.IsNull(this.tableTarja_Secado.Tara_EnvaseColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTara_EnvaseNull() {
+                this[this.tableTarja_Secado.Tara_EnvaseColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTara_BasePalletNull() {
+                return this.IsNull(this.tableTarja_Secado.Tara_BasePalletColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTara_BasePalletNull() {
+                this[this.tableTarja_Secado.Tara_BasePalletColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPeso_BrutoNull() {
+                return this.IsNull(this.tableTarja_Secado.Peso_BrutoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPeso_BrutoNull() {
+                this[this.tableTarja_Secado.Peso_BrutoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPeso_NetoNull() {
+                return this.IsNull(this.tableTarja_Secado.Peso_NetoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPeso_NetoNull() {
+                this[this.tableTarja_Secado.Peso_NetoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTipo_Proceso_FnalNull() {
+                return this.IsNull(this.tableTarja_Secado.Tipo_Proceso_FnalColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTipo_Proceso_FnalNull() {
+                this[this.tableTarja_Secado.Tipo_Proceso_FnalColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNum_Proceso_FinalNull() {
+                return this.IsNull(this.tableTarja_Secado.Num_Proceso_FinalColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNum_Proceso_FinalNull() {
+                this[this.tableTarja_Secado.Num_Proceso_FinalColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class Traer_Tarjas_SecasRow : global::System.Data.DataRow {
+            
+            private Traer_Tarjas_SecasDataTable tableTraer_Tarjas_Secas;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal Traer_Tarjas_SecasRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableTraer_Tarjas_Secas = ((Traer_Tarjas_SecasDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Id_Tarja {
+                get {
+                    return ((int)(this[this.tableTraer_Tarjas_Secas.Id_TarjaColumn]));
+                }
+                set {
+                    this[this.tableTraer_Tarjas_Secas.Id_TarjaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime Fecha_Tarja {
+                get {
+                    return ((global::System.DateTime)(this[this.tableTraer_Tarjas_Secas.Fecha_TarjaColumn]));
+                }
+                set {
+                    this[this.tableTraer_Tarjas_Secas.Fecha_TarjaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Tarja {
+                get {
+                    return ((string)(this[this.tableTraer_Tarjas_Secas.TarjaColumn]));
+                }
+                set {
+                    this[this.tableTraer_Tarjas_Secas.TarjaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Num_Proceso {
+                get {
+                    return ((int)(this[this.tableTraer_Tarjas_Secas.Num_ProcesoColumn]));
+                }
+                set {
+                    this[this.tableTraer_Tarjas_Secas.Num_ProcesoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public short Cod_Productor {
+                get {
+                    return ((short)(this[this.tableTraer_Tarjas_Secas.Cod_ProductorColumn]));
+                }
+                set {
+                    this[this.tableTraer_Tarjas_Secas.Cod_ProductorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Des_Productor {
+                get {
+                    try {
+                        return ((string)(this[this.tableTraer_Tarjas_Secas.Des_ProductorColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Des_Productor\' de la tabla \'Traer_Tarjas_Secas\' es DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableTraer_Tarjas_Secas.Des_ProductorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public short Cod_Variedad {
+                get {
+                    return ((short)(this[this.tableTraer_Tarjas_Secas.Cod_VariedadColumn]));
+                }
+                set {
+                    this[this.tableTraer_Tarjas_Secas.Cod_VariedadColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Des_Variedad {
+                get {
+                    try {
+                        return ((string)(this[this.tableTraer_Tarjas_Secas.Des_VariedadColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Des_Variedad\' de la tabla \'Traer_Tarjas_Secas\' es DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableTraer_Tarjas_Secas.Des_VariedadColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public short Cod_Estado {
+                get {
+                    return ((short)(this[this.tableTraer_Tarjas_Secas.Cod_EstadoColumn]));
+                }
+                set {
+                    this[this.tableTraer_Tarjas_Secas.Cod_EstadoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public short Cod_Productos {
+                get {
+                    return ((short)(this[this.tableTraer_Tarjas_Secas.Cod_ProductosColumn]));
+                }
+                set {
+                    this[this.tableTraer_Tarjas_Secas.Cod_ProductosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Productos {
+                get {
+                    try {
+                        return ((string)(this[this.tableTraer_Tarjas_Secas.ProductosColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Productos\' de la tabla \'Traer_Tarjas_Secas\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTraer_Tarjas_Secas.ProductosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public short Cod_Envase {
+                get {
+                    return ((short)(this[this.tableTraer_Tarjas_Secas.Cod_EnvaseColumn]));
+                }
+                set {
+                    this[this.tableTraer_Tarjas_Secas.Cod_EnvaseColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Envase {
+                get {
+                    try {
+                        return ((string)(this[this.tableTraer_Tarjas_Secas.EnvaseColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Envase\' de la tabla \'Traer_Tarjas_Secas\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTraer_Tarjas_Secas.EnvaseColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public short Num_Envase {
+                get {
+                    try {
+                        return ((short)(this[this.tableTraer_Tarjas_Secas.Num_EnvaseColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Num_Envase\' de la tabla \'Traer_Tarjas_Secas\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTraer_Tarjas_Secas.Num_EnvaseColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double Tara_Envase {
+                get {
+                    try {
+                        return ((double)(this[this.tableTraer_Tarjas_Secas.Tara_EnvaseColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Tara_Envase\' de la tabla \'Traer_Tarjas_Secas\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTraer_Tarjas_Secas.Tara_EnvaseColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public short Cod_BasesPallet {
+                get {
+                    return ((short)(this[this.tableTraer_Tarjas_Secas.Cod_BasesPalletColumn]));
+                }
+                set {
+                    this[this.tableTraer_Tarjas_Secas.Cod_BasesPalletColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double Tara_BasePallet {
+                get {
+                    try {
+                        return ((double)(this[this.tableTraer_Tarjas_Secas.Tara_BasePalletColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Tara_BasePallet\' de la tabla \'Traer_Tarjas_Secas\' es DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableTraer_Tarjas_Secas.Tara_BasePalletColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal Peso_Bruto {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableTraer_Tarjas_Secas.Peso_BrutoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Peso_Bruto\' de la tabla \'Traer_Tarjas_Secas\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTraer_Tarjas_Secas.Peso_BrutoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal Peso_Neto {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableTraer_Tarjas_Secas.Peso_NetoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Peso_Neto\' de la tabla \'Traer_Tarjas_Secas\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTraer_Tarjas_Secas.Peso_NetoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Tipo_Proceso_Fnal {
+                get {
+                    try {
+                        return ((string)(this[this.tableTraer_Tarjas_Secas.Tipo_Proceso_FnalColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Tipo_Proceso_Fnal\' de la tabla \'Traer_Tarjas_Secas\' es DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tableTraer_Tarjas_Secas.Tipo_Proceso_FnalColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Num_Proceso_Final {
+                get {
+                    try {
+                        return ((int)(this[this.tableTraer_Tarjas_Secas.Num_Proceso_FinalColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Num_Proceso_Final\' de la tabla \'Traer_Tarjas_Secas\' es DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tableTraer_Tarjas_Secas.Num_Proceso_FinalColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDes_ProductorNull() {
+                return this.IsNull(this.tableTraer_Tarjas_Secas.Des_ProductorColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDes_ProductorNull() {
+                this[this.tableTraer_Tarjas_Secas.Des_ProductorColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDes_VariedadNull() {
+                return this.IsNull(this.tableTraer_Tarjas_Secas.Des_VariedadColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDes_VariedadNull() {
+                this[this.tableTraer_Tarjas_Secas.Des_VariedadColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsProductosNull() {
+                return this.IsNull(this.tableTraer_Tarjas_Secas.ProductosColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetProductosNull() {
+                this[this.tableTraer_Tarjas_Secas.ProductosColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsEnvaseNull() {
+                return this.IsNull(this.tableTraer_Tarjas_Secas.EnvaseColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetEnvaseNull() {
+                this[this.tableTraer_Tarjas_Secas.EnvaseColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNum_EnvaseNull() {
+                return this.IsNull(this.tableTraer_Tarjas_Secas.Num_EnvaseColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNum_EnvaseNull() {
+                this[this.tableTraer_Tarjas_Secas.Num_EnvaseColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTara_EnvaseNull() {
+                return this.IsNull(this.tableTraer_Tarjas_Secas.Tara_EnvaseColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTara_EnvaseNull() {
+                this[this.tableTraer_Tarjas_Secas.Tara_EnvaseColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTara_BasePalletNull() {
+                return this.IsNull(this.tableTraer_Tarjas_Secas.Tara_BasePalletColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTara_BasePalletNull() {
+                this[this.tableTraer_Tarjas_Secas.Tara_BasePalletColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPeso_BrutoNull() {
+                return this.IsNull(this.tableTraer_Tarjas_Secas.Peso_BrutoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPeso_BrutoNull() {
+                this[this.tableTraer_Tarjas_Secas.Peso_BrutoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPeso_NetoNull() {
+                return this.IsNull(this.tableTraer_Tarjas_Secas.Peso_NetoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPeso_NetoNull() {
+                this[this.tableTraer_Tarjas_Secas.Peso_NetoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTipo_Proceso_FnalNull() {
+                return this.IsNull(this.tableTraer_Tarjas_Secas.Tipo_Proceso_FnalColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTipo_Proceso_FnalNull() {
+                this[this.tableTraer_Tarjas_Secas.Tipo_Proceso_FnalColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNum_Proceso_FinalNull() {
+                return this.IsNull(this.tableTraer_Tarjas_Secas.Num_Proceso_FinalColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNum_Proceso_FinalNull() {
+                this[this.tableTraer_Tarjas_Secas.Num_Proceso_FinalColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class Informe_Tarja_SecadoRow : global::System.Data.DataRow {
+            
+            private Informe_Tarja_SecadoDataTable tableInforme_Tarja_Secado;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal Informe_Tarja_SecadoRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableInforme_Tarja_Secado = ((Informe_Tarja_SecadoDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime Fecha_Tarja {
+                get {
+                    return ((global::System.DateTime)(this[this.tableInforme_Tarja_Secado.Fecha_TarjaColumn]));
+                }
+                set {
+                    this[this.tableInforme_Tarja_Secado.Fecha_TarjaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Tarja {
+                get {
+                    return ((string)(this[this.tableInforme_Tarja_Secado.TarjaColumn]));
+                }
+                set {
+                    this[this.tableInforme_Tarja_Secado.TarjaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Num_Proceso {
+                get {
+                    return ((int)(this[this.tableInforme_Tarja_Secado.Num_ProcesoColumn]));
+                }
+                set {
+                    this[this.tableInforme_Tarja_Secado.Num_ProcesoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public short Cod_Productor {
+                get {
+                    return ((short)(this[this.tableInforme_Tarja_Secado.Cod_ProductorColumn]));
+                }
+                set {
+                    this[this.tableInforme_Tarja_Secado.Cod_ProductorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Productos {
+                get {
+                    try {
+                        return ((string)(this[this.tableInforme_Tarja_Secado.ProductosColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Productos\' de la tabla \'Informe_Tarja_Secado\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableInforme_Tarja_Secado.ProductosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal Peso_neto {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableInforme_Tarja_Secado.Peso_netoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Peso_neto\' de la tabla \'Informe_Tarja_Secado\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableInforme_Tarja_Secado.Peso_netoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public byte[] CodigoBarra {
+                get {
+                    try {
+                        return ((byte[])(this[this.tableInforme_Tarja_Secado.CodigoBarraColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'CodigoBarra\' de la tabla \'Informe_Tarja_Secado\' es DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableInforme_Tarja_Secado.CodigoBarraColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Variedad {
+                get {
+                    try {
+                        return ((string)(this[this.tableInforme_Tarja_Secado.VariedadColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Variedad\' de la tabla \'Informe_Tarja_Secado\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableInforme_Tarja_Secado.VariedadColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsProductosNull() {
+                return this.IsNull(this.tableInforme_Tarja_Secado.ProductosColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetProductosNull() {
+                this[this.tableInforme_Tarja_Secado.ProductosColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPeso_netoNull() {
+                return this.IsNull(this.tableInforme_Tarja_Secado.Peso_netoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPeso_netoNull() {
+                this[this.tableInforme_Tarja_Secado.Peso_netoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCodigoBarraNull() {
+                return this.IsNull(this.tableInforme_Tarja_Secado.CodigoBarraColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCodigoBarraNull() {
+                this[this.tableInforme_Tarja_Secado.CodigoBarraColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsVariedadNull() {
+                return this.IsNull(this.tableInforme_Tarja_Secado.VariedadColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetVariedadNull() {
+                this[this.tableInforme_Tarja_Secado.VariedadColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -17264,6 +20153,142 @@ namespace FormularioRomana {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public Traer_Tarjas_Vaciados_SecadoRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class Traer_Tara_Envases_BaseRowChangeEvent : global::System.EventArgs {
+            
+            private Traer_Tara_Envases_BaseRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Traer_Tara_Envases_BaseRowChangeEvent(Traer_Tara_Envases_BaseRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Traer_Tara_Envases_BaseRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class Tarja_SecadoRowChangeEvent : global::System.EventArgs {
+            
+            private Tarja_SecadoRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Tarja_SecadoRowChangeEvent(Tarja_SecadoRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Tarja_SecadoRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class Traer_Tarjas_SecasRowChangeEvent : global::System.EventArgs {
+            
+            private Traer_Tarjas_SecasRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Traer_Tarjas_SecasRowChangeEvent(Traer_Tarjas_SecasRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Traer_Tarjas_SecasRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class Informe_Tarja_SecadoRowChangeEvent : global::System.EventArgs {
+            
+            private Informe_Tarja_SecadoRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Informe_Tarja_SecadoRowChangeEvent(Informe_Tarja_SecadoRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Informe_Tarja_SecadoRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -27143,6 +30168,7 @@ SELECT Cod_Secado, Cod_Productor, Cod_Variedad, Cod_Estado, Cod_productos, Fecha
             tableMapping.ColumnMappings.Add("Tarja", "Tarja");
             tableMapping.ColumnMappings.Add("Lote", "Lote");
             tableMapping.ColumnMappings.Add("Variedad", "Variedad");
+            tableMapping.ColumnMappings.Add("Peso_Neto_Final", "Peso_Neto_Final");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -27197,6 +30223,1492 @@ SELECT Cod_Secado, Cod_Productor, Cod_Variedad, Cod_Estado, Cod_productos, Fecha
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             GenesisDataSet.Traer_Tarjas_Vaciados_SecadoDataTable dataTable = new GenesisDataSet.Traer_Tarjas_Vaciados_SecadoDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class Traer_Tara_Envases_BaseTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public Traer_Tara_Envases_BaseTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Traer_Tara_Envases_Base";
+            tableMapping.ColumnMappings.Add("Tara_Envase", "Tara_Envase");
+            tableMapping.ColumnMappings.Add("Base", "Base");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::FormularioRomana.Properties.Settings.Default.GenesisConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.Traer_Tara_Envases_Base";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Envase", global::System.Data.SqlDbType.SmallInt, 2, global::System.Data.ParameterDirection.Input, 5, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Base", global::System.Data.SqlDbType.SmallInt, 2, global::System.Data.ParameterDirection.Input, 5, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(GenesisDataSet.Traer_Tara_Envases_BaseDataTable dataTable, global::System.Nullable<short> Envase, global::System.Nullable<short> Base) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((Envase.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((short)(Envase.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((Base.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((short)(Base.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual GenesisDataSet.Traer_Tara_Envases_BaseDataTable GetData(global::System.Nullable<short> Envase, global::System.Nullable<short> Base) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((Envase.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((short)(Envase.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((Base.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((short)(Base.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            GenesisDataSet.Traer_Tara_Envases_BaseDataTable dataTable = new GenesisDataSet.Traer_Tara_Envases_BaseDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class Tarja_SecadoTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public Tarja_SecadoTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Tarja_Secado";
+            tableMapping.ColumnMappings.Add("Id_Tarja", "Id_Tarja");
+            tableMapping.ColumnMappings.Add("Fecha_Tarja", "Fecha_Tarja");
+            tableMapping.ColumnMappings.Add("Tarja", "Tarja");
+            tableMapping.ColumnMappings.Add("Num_Proceso", "Num_Proceso");
+            tableMapping.ColumnMappings.Add("Cod_Productor", "Cod_Productor");
+            tableMapping.ColumnMappings.Add("Cod_Variedad", "Cod_Variedad");
+            tableMapping.ColumnMappings.Add("Cod_Estado", "Cod_Estado");
+            tableMapping.ColumnMappings.Add("Cod_Productos", "Cod_Productos");
+            tableMapping.ColumnMappings.Add("Cod_Envase", "Cod_Envase");
+            tableMapping.ColumnMappings.Add("Num_Envase", "Num_Envase");
+            tableMapping.ColumnMappings.Add("Tara_Envase", "Tara_Envase");
+            tableMapping.ColumnMappings.Add("Cod_BasesPallet", "Cod_BasesPallet");
+            tableMapping.ColumnMappings.Add("Tara_BasePallet", "Tara_BasePallet");
+            tableMapping.ColumnMappings.Add("Peso_Bruto", "Peso_Bruto");
+            tableMapping.ColumnMappings.Add("Peso_Neto", "Peso_Neto");
+            tableMapping.ColumnMappings.Add("Tipo_Proceso_Fnal", "Tipo_Proceso_Fnal");
+            tableMapping.ColumnMappings.Add("Num_Proceso_Final", "Num_Proceso_Final");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Tarja_Secado] WHERE (([Id_Tarja] = @Original_Id_Tarja) AND ([Fecha_Tarja] = @Original_Fecha_Tarja) AND ([Tarja] = @Original_Tarja) AND ([Num_Proceso] = @Original_Num_Proceso) AND ([Cod_Productor] = @Original_Cod_Productor) AND ([Cod_Variedad] = @Original_Cod_Variedad) AND ([Cod_Estado] = @Original_Cod_Estado) AND ([Cod_Productos] = @Original_Cod_Productos) AND ([Cod_Envase] = @Original_Cod_Envase) AND ((@IsNull_Num_Envase = 1 AND [Num_Envase] IS NULL) OR ([Num_Envase] = @Original_Num_Envase)) AND ((@IsNull_Tara_Envase = 1 AND [Tara_Envase] IS NULL) OR ([Tara_Envase] = @Original_Tara_Envase)) AND ([Cod_BasesPallet] = @Original_Cod_BasesPallet) AND ((@IsNull_Tara_BasePallet = 1 AND [Tara_BasePallet] IS NULL) OR ([Tara_BasePallet] = @Original_Tara_BasePallet)) AND ((@IsNull_Peso_Bruto = 1 AND [Peso_Bruto] IS NULL) OR ([Peso_Bruto] = @Original_Peso_Bruto)) AND ((@IsNull_Peso_Neto = 1 AND [Peso_Neto] IS NULL) OR ([Peso_Neto] = @Original_Peso_Neto)) AND ((@IsNull_Tipo_Proceso_Fnal = 1 AND [Tipo_Proceso_Fnal] IS NULL) OR ([Tipo_Proceso_Fnal] = @Original_Tipo_Proceso_Fnal)) AND ((@IsNull_Num_Proceso_Final = 1 AND [Num_Proceso_Final] IS NULL) OR ([Num_Proceso_Final] = @Original_Num_Proceso_Final)))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_Tarja", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Tarja", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Fecha_Tarja", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha_Tarja", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Tarja", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tarja", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Num_Proceso", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Num_Proceso", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cod_Productor", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Productor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cod_Variedad", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Variedad", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cod_Estado", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Estado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cod_Productos", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Productos", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cod_Envase", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Envase", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Num_Envase", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Num_Envase", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Num_Envase", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Num_Envase", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Tara_Envase", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tara_Envase", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Tara_Envase", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tara_Envase", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cod_BasesPallet", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_BasesPallet", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Tara_BasePallet", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tara_BasePallet", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Tara_BasePallet", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tara_BasePallet", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Peso_Bruto", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Peso_Bruto", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Peso_Bruto", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 7, 1, "Peso_Bruto", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Peso_Neto", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Peso_Neto", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Peso_Neto", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 7, 1, "Peso_Neto", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Tipo_Proceso_Fnal", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tipo_Proceso_Fnal", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Tipo_Proceso_Fnal", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tipo_Proceso_Fnal", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Num_Proceso_Final", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Num_Proceso_Final", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Num_Proceso_Final", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Num_Proceso_Final", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Tarja_Secado] ([Fecha_Tarja], [Tarja], [Num_Proceso], [Cod_Productor], [Cod_Variedad], [Cod_Estado], [Cod_Productos], [Cod_Envase], [Num_Envase], [Tara_Envase], [Cod_BasesPallet], [Tara_BasePallet], [Peso_Bruto], [Peso_Neto], [Tipo_Proceso_Fnal], [Num_Proceso_Final]) VALUES (@Fecha_Tarja, @Tarja, @Num_Proceso, @Cod_Productor, @Cod_Variedad, @Cod_Estado, @Cod_Productos, @Cod_Envase, @Num_Envase, @Tara_Envase, @Cod_BasesPallet, @Tara_BasePallet, @Peso_Bruto, @Peso_Neto, @Tipo_Proceso_Fnal, @Num_Proceso_Final);
+SELECT Id_Tarja, Fecha_Tarja, Tarja, Num_Proceso, Cod_Productor, Cod_Variedad, Cod_Estado, Cod_Productos, Cod_Envase, Num_Envase, Tara_Envase, Cod_BasesPallet, Tara_BasePallet, Peso_Bruto, Peso_Neto, Tipo_Proceso_Fnal, Num_Proceso_Final FROM Tarja_Secado WHERE (Id_Tarja = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fecha_Tarja", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha_Tarja", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tarja", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tarja", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Num_Proceso", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Num_Proceso", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cod_Productor", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Productor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cod_Variedad", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Variedad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cod_Estado", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Estado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cod_Productos", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Productos", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cod_Envase", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Envase", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Num_Envase", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Num_Envase", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tara_Envase", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tara_Envase", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cod_BasesPallet", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_BasesPallet", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tara_BasePallet", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tara_BasePallet", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Peso_Bruto", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 7, 1, "Peso_Bruto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Peso_Neto", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 7, 1, "Peso_Neto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tipo_Proceso_Fnal", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tipo_Proceso_Fnal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Num_Proceso_Final", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Num_Proceso_Final", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Tarja_Secado] SET [Fecha_Tarja] = @Fecha_Tarja, [Tarja] = @Tarja, [" +
+                "Num_Proceso] = @Num_Proceso, [Cod_Productor] = @Cod_Productor, [Cod_Variedad] = " +
+                "@Cod_Variedad, [Cod_Estado] = @Cod_Estado, [Cod_Productos] = @Cod_Productos, [Co" +
+                "d_Envase] = @Cod_Envase, [Num_Envase] = @Num_Envase, [Tara_Envase] = @Tara_Envas" +
+                "e, [Cod_BasesPallet] = @Cod_BasesPallet, [Tara_BasePallet] = @Tara_BasePallet, [" +
+                "Peso_Bruto] = @Peso_Bruto, [Peso_Neto] = @Peso_Neto, [Tipo_Proceso_Fnal] = @Tipo" +
+                "_Proceso_Fnal, [Num_Proceso_Final] = @Num_Proceso_Final WHERE (([Id_Tarja] = @Or" +
+                "iginal_Id_Tarja) AND ([Fecha_Tarja] = @Original_Fecha_Tarja) AND ([Tarja] = @Ori" +
+                "ginal_Tarja) AND ([Num_Proceso] = @Original_Num_Proceso) AND ([Cod_Productor] = " +
+                "@Original_Cod_Productor) AND ([Cod_Variedad] = @Original_Cod_Variedad) AND ([Cod" +
+                "_Estado] = @Original_Cod_Estado) AND ([Cod_Productos] = @Original_Cod_Productos)" +
+                " AND ([Cod_Envase] = @Original_Cod_Envase) AND ((@IsNull_Num_Envase = 1 AND [Num" +
+                "_Envase] IS NULL) OR ([Num_Envase] = @Original_Num_Envase)) AND ((@IsNull_Tara_E" +
+                "nvase = 1 AND [Tara_Envase] IS NULL) OR ([Tara_Envase] = @Original_Tara_Envase))" +
+                " AND ([Cod_BasesPallet] = @Original_Cod_BasesPallet) AND ((@IsNull_Tara_BasePall" +
+                "et = 1 AND [Tara_BasePallet] IS NULL) OR ([Tara_BasePallet] = @Original_Tara_Bas" +
+                "ePallet)) AND ((@IsNull_Peso_Bruto = 1 AND [Peso_Bruto] IS NULL) OR ([Peso_Bruto" +
+                "] = @Original_Peso_Bruto)) AND ((@IsNull_Peso_Neto = 1 AND [Peso_Neto] IS NULL) " +
+                "OR ([Peso_Neto] = @Original_Peso_Neto)) AND ((@IsNull_Tipo_Proceso_Fnal = 1 AND " +
+                "[Tipo_Proceso_Fnal] IS NULL) OR ([Tipo_Proceso_Fnal] = @Original_Tipo_Proceso_Fn" +
+                "al)) AND ((@IsNull_Num_Proceso_Final = 1 AND [Num_Proceso_Final] IS NULL) OR ([N" +
+                "um_Proceso_Final] = @Original_Num_Proceso_Final)));\r\nSELECT Id_Tarja, Fecha_Tarj" +
+                "a, Tarja, Num_Proceso, Cod_Productor, Cod_Variedad, Cod_Estado, Cod_Productos, C" +
+                "od_Envase, Num_Envase, Tara_Envase, Cod_BasesPallet, Tara_BasePallet, Peso_Bruto" +
+                ", Peso_Neto, Tipo_Proceso_Fnal, Num_Proceso_Final FROM Tarja_Secado WHERE (Id_Ta" +
+                "rja = @Id_Tarja)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fecha_Tarja", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha_Tarja", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tarja", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tarja", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Num_Proceso", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Num_Proceso", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cod_Productor", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Productor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cod_Variedad", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Variedad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cod_Estado", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Estado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cod_Productos", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Productos", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cod_Envase", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Envase", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Num_Envase", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Num_Envase", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tara_Envase", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tara_Envase", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cod_BasesPallet", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_BasesPallet", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tara_BasePallet", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tara_BasePallet", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Peso_Bruto", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 7, 1, "Peso_Bruto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Peso_Neto", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 7, 1, "Peso_Neto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tipo_Proceso_Fnal", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tipo_Proceso_Fnal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Num_Proceso_Final", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Num_Proceso_Final", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_Tarja", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Tarja", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Fecha_Tarja", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha_Tarja", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Tarja", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tarja", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Num_Proceso", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Num_Proceso", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cod_Productor", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Productor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cod_Variedad", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Variedad", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cod_Estado", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Estado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cod_Productos", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Productos", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cod_Envase", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Envase", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Num_Envase", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Num_Envase", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Num_Envase", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Num_Envase", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Tara_Envase", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tara_Envase", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Tara_Envase", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tara_Envase", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cod_BasesPallet", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_BasesPallet", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Tara_BasePallet", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tara_BasePallet", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Tara_BasePallet", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tara_BasePallet", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Peso_Bruto", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Peso_Bruto", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Peso_Bruto", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 7, 1, "Peso_Bruto", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Peso_Neto", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Peso_Neto", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Peso_Neto", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 7, 1, "Peso_Neto", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Tipo_Proceso_Fnal", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tipo_Proceso_Fnal", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Tipo_Proceso_Fnal", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tipo_Proceso_Fnal", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Num_Proceso_Final", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Num_Proceso_Final", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Num_Proceso_Final", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Num_Proceso_Final", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Tarja", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Tarja", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::FormularioRomana.Properties.Settings.Default.GenesisConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT Id_Tarja, Fecha_Tarja, Tarja, Num_Proceso, Cod_Productor, Cod_Variedad, Cod_Estado, Cod_Productos, Cod_Envase, Num_Envase, Tara_Envase, Cod_BasesPallet, Tara_BasePallet, Peso_Bruto, Peso_Neto, Tipo_Proceso_Fnal, Num_Proceso_Final FROM dbo.Tarja_Secado";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "dbo.Insertar_Tarja_Secado";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Num_Proceso", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cod_Productor", global::System.Data.SqlDbType.SmallInt, 2, global::System.Data.ParameterDirection.Input, 5, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cod_Variedad", global::System.Data.SqlDbType.SmallInt, 2, global::System.Data.ParameterDirection.Input, 5, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cod_Estado", global::System.Data.SqlDbType.SmallInt, 2, global::System.Data.ParameterDirection.Input, 5, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cod_Productos", global::System.Data.SqlDbType.SmallInt, 2, global::System.Data.ParameterDirection.Input, 5, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cod_Envase", global::System.Data.SqlDbType.SmallInt, 2, global::System.Data.ParameterDirection.Input, 5, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Num_Envase", global::System.Data.SqlDbType.SmallInt, 2, global::System.Data.ParameterDirection.Input, 5, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tara_Envase", global::System.Data.SqlDbType.Float, 8, global::System.Data.ParameterDirection.Input, 53, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cod_BasesPallet", global::System.Data.SqlDbType.SmallInt, 2, global::System.Data.ParameterDirection.Input, 5, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tara_BasePallet", global::System.Data.SqlDbType.Float, 8, global::System.Data.ParameterDirection.Input, 53, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Peso_Bruto", global::System.Data.SqlDbType.Decimal, 5, global::System.Data.ParameterDirection.Input, 7, 1, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Peso_Neto", global::System.Data.SqlDbType.Decimal, 5, global::System.Data.ParameterDirection.Input, 7, 1, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tipo_Proceso_Fnal", global::System.Data.SqlDbType.Char, 3, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Num_Proceso_Final", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(GenesisDataSet.Tarja_SecadoDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual GenesisDataSet.Tarja_SecadoDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            GenesisDataSet.Tarja_SecadoDataTable dataTable = new GenesisDataSet.Tarja_SecadoDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(GenesisDataSet.Tarja_SecadoDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(GenesisDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "Tarja_Secado");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(
+                    int Original_Id_Tarja, 
+                    System.DateTime Original_Fecha_Tarja, 
+                    string Original_Tarja, 
+                    int Original_Num_Proceso, 
+                    short Original_Cod_Productor, 
+                    short Original_Cod_Variedad, 
+                    short Original_Cod_Estado, 
+                    short Original_Cod_Productos, 
+                    short Original_Cod_Envase, 
+                    global::System.Nullable<short> Original_Num_Envase, 
+                    global::System.Nullable<double> Original_Tara_Envase, 
+                    short Original_Cod_BasesPallet, 
+                    global::System.Nullable<double> Original_Tara_BasePallet, 
+                    global::System.Nullable<decimal> Original_Peso_Bruto, 
+                    global::System.Nullable<decimal> Original_Peso_Neto, 
+                    string Original_Tipo_Proceso_Fnal, 
+                    global::System.Nullable<int> Original_Num_Proceso_Final) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id_Tarja));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((System.DateTime)(Original_Fecha_Tarja));
+            if ((Original_Tarja == null)) {
+                throw new global::System.ArgumentNullException("Original_Tarja");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Tarja));
+            }
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_Num_Proceso));
+            this.Adapter.DeleteCommand.Parameters[4].Value = ((short)(Original_Cod_Productor));
+            this.Adapter.DeleteCommand.Parameters[5].Value = ((short)(Original_Cod_Variedad));
+            this.Adapter.DeleteCommand.Parameters[6].Value = ((short)(Original_Cod_Estado));
+            this.Adapter.DeleteCommand.Parameters[7].Value = ((short)(Original_Cod_Productos));
+            this.Adapter.DeleteCommand.Parameters[8].Value = ((short)(Original_Cod_Envase));
+            if ((Original_Num_Envase.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((short)(Original_Num_Envase.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Tara_Envase.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((double)(Original_Tara_Envase.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.DeleteCommand.Parameters[13].Value = ((short)(Original_Cod_BasesPallet));
+            if ((Original_Tara_BasePallet.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((double)(Original_Tara_BasePallet.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Peso_Bruto.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((decimal)(Original_Peso_Bruto.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Peso_Neto.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((decimal)(Original_Peso_Neto.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Tipo_Proceso_Fnal == null)) {
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((string)(Original_Tipo_Proceso_Fnal));
+            }
+            if ((Original_Num_Proceso_Final.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[23].Value = ((int)(Original_Num_Proceso_Final.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[23].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(
+                    System.DateTime Fecha_Tarja, 
+                    string Tarja, 
+                    int Num_Proceso, 
+                    short Cod_Productor, 
+                    short Cod_Variedad, 
+                    short Cod_Estado, 
+                    short Cod_Productos, 
+                    short Cod_Envase, 
+                    global::System.Nullable<short> Num_Envase, 
+                    global::System.Nullable<double> Tara_Envase, 
+                    short Cod_BasesPallet, 
+                    global::System.Nullable<double> Tara_BasePallet, 
+                    global::System.Nullable<decimal> Peso_Bruto, 
+                    global::System.Nullable<decimal> Peso_Neto, 
+                    string Tipo_Proceso_Fnal, 
+                    global::System.Nullable<int> Num_Proceso_Final) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(Fecha_Tarja));
+            if ((Tarja == null)) {
+                throw new global::System.ArgumentNullException("Tarja");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Tarja));
+            }
+            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(Num_Proceso));
+            this.Adapter.InsertCommand.Parameters[3].Value = ((short)(Cod_Productor));
+            this.Adapter.InsertCommand.Parameters[4].Value = ((short)(Cod_Variedad));
+            this.Adapter.InsertCommand.Parameters[5].Value = ((short)(Cod_Estado));
+            this.Adapter.InsertCommand.Parameters[6].Value = ((short)(Cod_Productos));
+            this.Adapter.InsertCommand.Parameters[7].Value = ((short)(Cod_Envase));
+            if ((Num_Envase.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((short)(Num_Envase.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((Tara_Envase.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((double)(Tara_Envase.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.InsertCommand.Parameters[10].Value = ((short)(Cod_BasesPallet));
+            if ((Tara_BasePallet.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((double)(Tara_BasePallet.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((Peso_Bruto.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((decimal)(Peso_Bruto.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((Peso_Neto.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[13].Value = ((decimal)(Peso_Neto.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            if ((Tipo_Proceso_Fnal == null)) {
+                this.Adapter.InsertCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[14].Value = ((string)(Tipo_Proceso_Fnal));
+            }
+            if ((Num_Proceso_Final.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[15].Value = ((int)(Num_Proceso_Final.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    System.DateTime Fecha_Tarja, 
+                    string Tarja, 
+                    int Num_Proceso, 
+                    short Cod_Productor, 
+                    short Cod_Variedad, 
+                    short Cod_Estado, 
+                    short Cod_Productos, 
+                    short Cod_Envase, 
+                    global::System.Nullable<short> Num_Envase, 
+                    global::System.Nullable<double> Tara_Envase, 
+                    short Cod_BasesPallet, 
+                    global::System.Nullable<double> Tara_BasePallet, 
+                    global::System.Nullable<decimal> Peso_Bruto, 
+                    global::System.Nullable<decimal> Peso_Neto, 
+                    string Tipo_Proceso_Fnal, 
+                    global::System.Nullable<int> Num_Proceso_Final, 
+                    int Original_Id_Tarja, 
+                    System.DateTime Original_Fecha_Tarja, 
+                    string Original_Tarja, 
+                    int Original_Num_Proceso, 
+                    short Original_Cod_Productor, 
+                    short Original_Cod_Variedad, 
+                    short Original_Cod_Estado, 
+                    short Original_Cod_Productos, 
+                    short Original_Cod_Envase, 
+                    global::System.Nullable<short> Original_Num_Envase, 
+                    global::System.Nullable<double> Original_Tara_Envase, 
+                    short Original_Cod_BasesPallet, 
+                    global::System.Nullable<double> Original_Tara_BasePallet, 
+                    global::System.Nullable<decimal> Original_Peso_Bruto, 
+                    global::System.Nullable<decimal> Original_Peso_Neto, 
+                    string Original_Tipo_Proceso_Fnal, 
+                    global::System.Nullable<int> Original_Num_Proceso_Final, 
+                    int Id_Tarja) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(Fecha_Tarja));
+            if ((Tarja == null)) {
+                throw new global::System.ArgumentNullException("Tarja");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Tarja));
+            }
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Num_Proceso));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((short)(Cod_Productor));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((short)(Cod_Variedad));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((short)(Cod_Estado));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((short)(Cod_Productos));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((short)(Cod_Envase));
+            if ((Num_Envase.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((short)(Num_Envase.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((Tara_Envase.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((double)(Tara_Envase.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((short)(Cod_BasesPallet));
+            if ((Tara_BasePallet.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((double)(Tara_BasePallet.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((Peso_Bruto.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((decimal)(Peso_Bruto.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((Peso_Neto.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((decimal)(Peso_Neto.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            if ((Tipo_Proceso_Fnal == null)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Tipo_Proceso_Fnal));
+            }
+            if ((Num_Proceso_Final.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Num_Proceso_Final.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_Id_Tarja));
+            this.Adapter.UpdateCommand.Parameters[17].Value = ((System.DateTime)(Original_Fecha_Tarja));
+            if ((Original_Tarja == null)) {
+                throw new global::System.ArgumentNullException("Original_Tarja");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_Tarja));
+            }
+            this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_Num_Proceso));
+            this.Adapter.UpdateCommand.Parameters[20].Value = ((short)(Original_Cod_Productor));
+            this.Adapter.UpdateCommand.Parameters[21].Value = ((short)(Original_Cod_Variedad));
+            this.Adapter.UpdateCommand.Parameters[22].Value = ((short)(Original_Cod_Estado));
+            this.Adapter.UpdateCommand.Parameters[23].Value = ((short)(Original_Cod_Productos));
+            this.Adapter.UpdateCommand.Parameters[24].Value = ((short)(Original_Cod_Envase));
+            if ((Original_Num_Envase.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((short)(Original_Num_Envase.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Tara_Envase.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((double)(Original_Tara_Envase.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[29].Value = ((short)(Original_Cod_BasesPallet));
+            if ((Original_Tara_BasePallet.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((double)(Original_Tara_BasePallet.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Peso_Bruto.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((decimal)(Original_Peso_Bruto.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Peso_Neto.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((decimal)(Original_Peso_Neto.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Tipo_Proceso_Fnal == null)) {
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[37].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((string)(Original_Tipo_Proceso_Fnal));
+            }
+            if ((Original_Num_Proceso_Final.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((int)(Original_Num_Proceso_Final.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[39].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[40].Value = ((int)(Id_Tarja));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    System.DateTime Fecha_Tarja, 
+                    string Tarja, 
+                    int Num_Proceso, 
+                    short Cod_Productor, 
+                    short Cod_Variedad, 
+                    short Cod_Estado, 
+                    short Cod_Productos, 
+                    short Cod_Envase, 
+                    global::System.Nullable<short> Num_Envase, 
+                    global::System.Nullable<double> Tara_Envase, 
+                    short Cod_BasesPallet, 
+                    global::System.Nullable<double> Tara_BasePallet, 
+                    global::System.Nullable<decimal> Peso_Bruto, 
+                    global::System.Nullable<decimal> Peso_Neto, 
+                    string Tipo_Proceso_Fnal, 
+                    global::System.Nullable<int> Num_Proceso_Final, 
+                    int Original_Id_Tarja, 
+                    System.DateTime Original_Fecha_Tarja, 
+                    string Original_Tarja, 
+                    int Original_Num_Proceso, 
+                    short Original_Cod_Productor, 
+                    short Original_Cod_Variedad, 
+                    short Original_Cod_Estado, 
+                    short Original_Cod_Productos, 
+                    short Original_Cod_Envase, 
+                    global::System.Nullable<short> Original_Num_Envase, 
+                    global::System.Nullable<double> Original_Tara_Envase, 
+                    short Original_Cod_BasesPallet, 
+                    global::System.Nullable<double> Original_Tara_BasePallet, 
+                    global::System.Nullable<decimal> Original_Peso_Bruto, 
+                    global::System.Nullable<decimal> Original_Peso_Neto, 
+                    string Original_Tipo_Proceso_Fnal, 
+                    global::System.Nullable<int> Original_Num_Proceso_Final) {
+            return this.Update(Fecha_Tarja, Tarja, Num_Proceso, Cod_Productor, Cod_Variedad, Cod_Estado, Cod_Productos, Cod_Envase, Num_Envase, Tara_Envase, Cod_BasesPallet, Tara_BasePallet, Peso_Bruto, Peso_Neto, Tipo_Proceso_Fnal, Num_Proceso_Final, Original_Id_Tarja, Original_Fecha_Tarja, Original_Tarja, Original_Num_Proceso, Original_Cod_Productor, Original_Cod_Variedad, Original_Cod_Estado, Original_Cod_Productos, Original_Cod_Envase, Original_Num_Envase, Original_Tara_Envase, Original_Cod_BasesPallet, Original_Tara_BasePallet, Original_Peso_Bruto, Original_Peso_Neto, Original_Tipo_Proceso_Fnal, Original_Num_Proceso_Final, Original_Id_Tarja);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
+        public virtual object Insertar_Tarja_Secado(global::System.Nullable<int> Num_Proceso, global::System.Nullable<short> Cod_Productor, global::System.Nullable<short> Cod_Variedad, global::System.Nullable<short> Cod_Estado, global::System.Nullable<short> Cod_Productos, global::System.Nullable<short> Cod_Envase, global::System.Nullable<short> Num_Envase, global::System.Nullable<double> Tara_Envase, global::System.Nullable<short> Cod_BasesPallet, global::System.Nullable<double> Tara_BasePallet, global::System.Nullable<decimal> Peso_Bruto, global::System.Nullable<decimal> Peso_Neto, string Tipo_Proceso_Fnal, global::System.Nullable<int> Num_Proceso_Final) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            if ((Num_Proceso.HasValue == true)) {
+                command.Parameters[1].Value = ((int)(Num_Proceso.Value));
+            }
+            else {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((Cod_Productor.HasValue == true)) {
+                command.Parameters[2].Value = ((short)(Cod_Productor.Value));
+            }
+            else {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Cod_Variedad.HasValue == true)) {
+                command.Parameters[3].Value = ((short)(Cod_Variedad.Value));
+            }
+            else {
+                command.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((Cod_Estado.HasValue == true)) {
+                command.Parameters[4].Value = ((short)(Cod_Estado.Value));
+            }
+            else {
+                command.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((Cod_Productos.HasValue == true)) {
+                command.Parameters[5].Value = ((short)(Cod_Productos.Value));
+            }
+            else {
+                command.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((Cod_Envase.HasValue == true)) {
+                command.Parameters[6].Value = ((short)(Cod_Envase.Value));
+            }
+            else {
+                command.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((Num_Envase.HasValue == true)) {
+                command.Parameters[7].Value = ((short)(Num_Envase.Value));
+            }
+            else {
+                command.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((Tara_Envase.HasValue == true)) {
+                command.Parameters[8].Value = ((double)(Tara_Envase.Value));
+            }
+            else {
+                command.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((Cod_BasesPallet.HasValue == true)) {
+                command.Parameters[9].Value = ((short)(Cod_BasesPallet.Value));
+            }
+            else {
+                command.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            if ((Tara_BasePallet.HasValue == true)) {
+                command.Parameters[10].Value = ((double)(Tara_BasePallet.Value));
+            }
+            else {
+                command.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((Peso_Bruto.HasValue == true)) {
+                command.Parameters[11].Value = ((decimal)(Peso_Bruto.Value));
+            }
+            else {
+                command.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((Peso_Neto.HasValue == true)) {
+                command.Parameters[12].Value = ((decimal)(Peso_Neto.Value));
+            }
+            else {
+                command.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((Tipo_Proceso_Fnal == null)) {
+                command.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[13].Value = ((string)(Tipo_Proceso_Fnal));
+            }
+            if ((Num_Proceso_Final.HasValue == true)) {
+                command.Parameters[14].Value = ((int)(Num_Proceso_Final.Value));
+            }
+            else {
+                command.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return null;
+            }
+            else {
+                return ((object)(returnValue));
+            }
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class Traer_Tarjas_SecasTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public Traer_Tarjas_SecasTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Traer_Tarjas_Secas";
+            tableMapping.ColumnMappings.Add("Id_Tarja", "Id_Tarja");
+            tableMapping.ColumnMappings.Add("Fecha_Tarja", "Fecha_Tarja");
+            tableMapping.ColumnMappings.Add("Tarja", "Tarja");
+            tableMapping.ColumnMappings.Add("Num_Proceso", "Num_Proceso");
+            tableMapping.ColumnMappings.Add("Cod_Productor", "Cod_Productor");
+            tableMapping.ColumnMappings.Add("Des_Productor", "Des_Productor");
+            tableMapping.ColumnMappings.Add("Cod_Variedad", "Cod_Variedad");
+            tableMapping.ColumnMappings.Add("Des_Variedad", "Des_Variedad");
+            tableMapping.ColumnMappings.Add("Cod_Estado", "Cod_Estado");
+            tableMapping.ColumnMappings.Add("Cod_Productos", "Cod_Productos");
+            tableMapping.ColumnMappings.Add("Productos", "Productos");
+            tableMapping.ColumnMappings.Add("Cod_Envase", "Cod_Envase");
+            tableMapping.ColumnMappings.Add("Envase", "Envase");
+            tableMapping.ColumnMappings.Add("Num_Envase", "Num_Envase");
+            tableMapping.ColumnMappings.Add("Tara_Envase", "Tara_Envase");
+            tableMapping.ColumnMappings.Add("Cod_BasesPallet", "Cod_BasesPallet");
+            tableMapping.ColumnMappings.Add("Tara_BasePallet", "Tara_BasePallet");
+            tableMapping.ColumnMappings.Add("Peso_Bruto", "Peso_Bruto");
+            tableMapping.ColumnMappings.Add("Peso_Neto", "Peso_Neto");
+            tableMapping.ColumnMappings.Add("Tipo_Proceso_Fnal", "Tipo_Proceso_Fnal");
+            tableMapping.ColumnMappings.Add("Num_Proceso_Final", "Num_Proceso_Final");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::FormularioRomana.Properties.Settings.Default.GenesisConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.Traer_Tarjas_Secas";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Proceso", global::System.Data.SqlDbType.SmallInt, 2, global::System.Data.ParameterDirection.Input, 5, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(GenesisDataSet.Traer_Tarjas_SecasDataTable dataTable, global::System.Nullable<short> Proceso) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((Proceso.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((short)(Proceso.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual GenesisDataSet.Traer_Tarjas_SecasDataTable GetData(global::System.Nullable<short> Proceso) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((Proceso.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((short)(Proceso.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            GenesisDataSet.Traer_Tarjas_SecasDataTable dataTable = new GenesisDataSet.Traer_Tarjas_SecasDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class Informe_Tarja_SecadoTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public Informe_Tarja_SecadoTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Informe_Tarja_Secado";
+            tableMapping.ColumnMappings.Add("Fecha_Tarja", "Fecha_Tarja");
+            tableMapping.ColumnMappings.Add("Tarja", "Tarja");
+            tableMapping.ColumnMappings.Add("Num_Proceso", "Num_Proceso");
+            tableMapping.ColumnMappings.Add("Cod_Productor", "Cod_Productor");
+            tableMapping.ColumnMappings.Add("Productos", "Productos");
+            tableMapping.ColumnMappings.Add("Peso_neto", "Peso_neto");
+            tableMapping.ColumnMappings.Add("CodigoBarra", "CodigoBarra");
+            tableMapping.ColumnMappings.Add("Variedad", "Variedad");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::FormularioRomana.Properties.Settings.Default.GenesisConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.Informe_Tarja_Secado";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tarja", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodigoBarra", global::System.Data.SqlDbType.Image, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(GenesisDataSet.Informe_Tarja_SecadoDataTable dataTable, string Tarja, byte[] CodigoBarra) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((Tarja == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(Tarja));
+            }
+            if ((CodigoBarra == null)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((byte[])(CodigoBarra));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual GenesisDataSet.Informe_Tarja_SecadoDataTable GetData(string Tarja, byte[] CodigoBarra) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((Tarja == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(Tarja));
+            }
+            if ((CodigoBarra == null)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((byte[])(CodigoBarra));
+            }
+            GenesisDataSet.Informe_Tarja_SecadoDataTable dataTable = new GenesisDataSet.Informe_Tarja_SecadoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -27418,6 +31930,8 @@ SELECT Cod_Secado, Cod_Productor, Cod_Variedad, Cod_Estado, Cod_productos, Fecha
         private Romana_SecaTableAdapter _romana_SecaTableAdapter;
         
         private SecadoTableAdapter _secadoTableAdapter;
+        
+        private Tarja_SecadoTableAdapter _tarja_SecadoTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -27646,6 +32160,20 @@ SELECT Cod_Secado, Cod_Productor, Cod_Variedad, Cod_Estado, Cod_productos, Fecha
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public Tarja_SecadoTableAdapter Tarja_SecadoTableAdapter {
+            get {
+                return this._tarja_SecadoTableAdapter;
+            }
+            set {
+                this._tarja_SecadoTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public bool BackupDataSetBeforeUpdate {
             get {
                 return this._backupDataSetBeforeUpdate;
@@ -27723,6 +32251,10 @@ SELECT Cod_Secado, Cod_Productor, Cod_Variedad, Cod_Estado, Cod_productos, Fecha
                             && (this._secadoTableAdapter.Connection != null))) {
                     return this._secadoTableAdapter.Connection;
                 }
+                if (((this._tarja_SecadoTableAdapter != null) 
+                            && (this._tarja_SecadoTableAdapter.Connection != null))) {
+                    return this._tarja_SecadoTableAdapter.Connection;
+                }
                 return null;
             }
             set {
@@ -27781,6 +32313,9 @@ SELECT Cod_Secado, Cod_Productor, Cod_Variedad, Cod_Estado, Cod_productos, Fecha
                 if ((this._secadoTableAdapter != null)) {
                     count = (count + 1);
                 }
+                if ((this._tarja_SecadoTableAdapter != null)) {
+                    count = (count + 1);
+                }
                 return count;
             }
         }
@@ -27801,30 +32336,12 @@ SELECT Cod_Secado, Cod_Productor, Cod_Variedad, Cod_Estado, Cod_productos, Fecha
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._basesPalletTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.BasesPallet.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._procesosTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Procesos.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._basesPalletTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._productoresTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Productores.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._productoresTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._envasesTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Envases.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._envasesTableAdapter.Update(updatedRows));
+                    result = (result + this._procesosTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -27837,15 +32354,6 @@ SELECT Cod_Secado, Cod_Productor, Cod_Variedad, Cod_Estado, Cod_productos, Fecha
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._procesosTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Procesos.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._procesosTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._variedadTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Variedad.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -27855,12 +32363,48 @@ SELECT Cod_Secado, Cod_Productor, Cod_Variedad, Cod_Estado, Cod_productos, Fecha
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._productoresTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Productores.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._productoresTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._basesPalletTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.BasesPallet.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._basesPalletTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._envasesTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Envases.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._envasesTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._secadoTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Secado.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._secadoTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._tarja_SecadoTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Tarja_Secado.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._tarja_SecadoTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -27945,27 +32489,11 @@ SELECT Cod_Secado, Cod_Productor, Cod_Variedad, Cod_Estado, Cod_productos, Fecha
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._basesPalletTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.BasesPallet.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._procesosTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Procesos.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._basesPalletTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._productoresTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Productores.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._productoresTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._envasesTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Envases.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._envasesTableAdapter.Update(addedRows));
+                    result = (result + this._procesosTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -27977,14 +32505,6 @@ SELECT Cod_Secado, Cod_Productor, Cod_Variedad, Cod_Estado, Cod_productos, Fecha
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._procesosTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Procesos.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._procesosTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._variedadTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Variedad.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -27993,11 +32513,43 @@ SELECT Cod_Secado, Cod_Productor, Cod_Variedad, Cod_Estado, Cod_productos, Fecha
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._productoresTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Productores.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._productoresTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._basesPalletTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.BasesPallet.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._basesPalletTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._envasesTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Envases.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._envasesTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._secadoTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Secado.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._secadoTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._tarja_SecadoTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Tarja_Secado.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._tarja_SecadoTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -28123,35 +32675,19 @@ SELECT Cod_Secado, Cod_Productor, Cod_Variedad, Cod_Estado, Cod_productos, Fecha
                     allChangedRows.AddRange(deletedRows);
                 }
             }
+            if ((this._tarja_SecadoTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Tarja_Secado.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._tarja_SecadoTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._secadoTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Secado.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._secadoTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._variedadTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Variedad.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._variedadTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._procesosTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Procesos.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._procesosTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._productoTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Producto.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._productoTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -28163,6 +32699,14 @@ SELECT Cod_Secado, Cod_Productor, Cod_Variedad, Cod_Estado, Cod_productos, Fecha
                     allChangedRows.AddRange(deletedRows);
                 }
             }
+            if ((this._basesPalletTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.BasesPallet.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._basesPalletTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._productoresTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Productores.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -28171,11 +32715,27 @@ SELECT Cod_Secado, Cod_Productor, Cod_Variedad, Cod_Estado, Cod_productos, Fecha
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._basesPalletTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.BasesPallet.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._variedadTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Variedad.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._basesPalletTableAdapter.Update(deletedRows));
+                    result = (result + this._variedadTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._productoTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Producto.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._productoTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._procesosTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Procesos.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._procesosTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -28298,6 +32858,11 @@ SELECT Cod_Secado, Cod_Productor, Cod_Variedad, Cod_Estado, Cod_productos, Fecha
             }
             if (((this._secadoTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._secadoTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi" +
+                        "sma cadena de conexión.");
+            }
+            if (((this._tarja_SecadoTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._tarja_SecadoTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi" +
                         "sma cadena de conexión.");
             }
@@ -28468,6 +33033,15 @@ SELECT Cod_Secado, Cod_Productor, Cod_Variedad, Cod_Estado, Cod_productos, Fecha
                         adaptersWithAcceptChangesDuringUpdate.Add(this._secadoTableAdapter.Adapter);
                     }
                 }
+                if ((this._tarja_SecadoTableAdapter != null)) {
+                    revertConnections.Add(this._tarja_SecadoTableAdapter, this._tarja_SecadoTableAdapter.Connection);
+                    this._tarja_SecadoTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._tarja_SecadoTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._tarja_SecadoTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._tarja_SecadoTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._tarja_SecadoTableAdapter.Adapter);
+                    }
+                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -28585,6 +33159,10 @@ SELECT Cod_Secado, Cod_Productor, Cod_Variedad, Cod_Estado, Cod_productos, Fecha
                 if ((this._secadoTableAdapter != null)) {
                     this._secadoTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._secadoTableAdapter]));
                     this._secadoTableAdapter.Transaction = null;
+                }
+                if ((this._tarja_SecadoTableAdapter != null)) {
+                    this._tarja_SecadoTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tarja_SecadoTableAdapter]));
+                    this._tarja_SecadoTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

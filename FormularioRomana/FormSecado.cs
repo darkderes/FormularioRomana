@@ -14,6 +14,10 @@ namespace FormularioRomana
     {
         int acum_celda  = 0;
         int Esta_Proceso_Secado = 0;
+        double acum__neto_Vaciado = 0;
+        double tara_envase = 0;
+        double tara_base = 0;
+        double acum_neto_Tarjado = 0;
         public FormSecado()
         {
             InitializeComponent();
@@ -39,8 +43,16 @@ namespace FormularioRomana
         }
         private void FormSecado_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'genesisDataSet1.Producto' Puede moverla o quitarla según sea necesario.
+            this.productoTableAdapter.FillProductosByProceso(this.genesisDataSet1.Producto,2);
+            // TODO: esta línea de código carga datos en la tabla 'genesisDataSet2.BasesPallet' Puede moverla o quitarla según sea necesario.
+            this.basesPalletTableAdapter.Fill(this.genesisDataSet2.BasesPallet);
             this.productoresTableAdapter.Fill(this.genesisDataSet.Productores);
             cod_ProductorTextBox.Text = "1";
+            traer_Envases_ProcesoTableAdapter.Fill(genesisDataSet2.Traer_Envases_Proceso, Convert.ToInt16(2));
+            CmbBaseBins.SelectedIndex = 2;
+            productosComboBox.SelectedIndex = 1;
+            
         }
         private void nom_ProductorComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -71,6 +83,7 @@ namespace FormularioRomana
         }
         private void button8_Click(object sender, EventArgs e)
         {
+            acum__neto_Vaciado = 0;
             try
             {
                 this.verificar_Proceso_SecadoTableAdapter.Fill(this.genesisDataSet.Verificar_Proceso_Secado, new System.Nullable<short>(((short)(System.Convert.ChangeType(cod_ProductorTextBox.Text, typeof(short))))), new System.Nullable<short>(((short)(System.Convert.ChangeType(CmbVariedad.SelectedValue.ToString(), typeof(short))))), new System.Nullable<int>(((int)(System.Convert.ChangeType(comboBox1.Text, typeof(int))))));
@@ -81,7 +94,34 @@ namespace FormularioRomana
                     label9.Visible = true;
                     Lbl_Recepcion.Visible = true;
                     Lbl_Recepcion.Text = verificar_Proceso_SecadoDataGridView.Rows[0].Cells[nameof(dataGridViewTextBoxColumn11)].Value.ToString();
-                    traer_Tarjas_Vaciados_SecadoTableAdapter.Fill(genesisDataSet1.Traer_Tarjas_Vaciados_Secado, Convert.ToInt16(Lbl_Recepcion.Text));               
+                    traer_Tarjas_Vaciados_SecadoTableAdapter.Fill(genesisDataSet1.Traer_Tarjas_Vaciados_Secado, Convert.ToInt16(Lbl_Recepcion.Text));
+                    if (dataGridView2.RowCount > 0)
+                    {
+                        foreach (DataGridViewRow row in dataGridView2.Rows)
+                        {
+                            acum__neto_Vaciado = acum__neto_Vaciado + Convert.ToDouble(row.Cells[nameof(Peso_Neto_Final)].Value.ToString());
+                        }
+                        Lbl_Kilos_Vaciados.Text = Math.Round(acum__neto_Vaciado,2).ToString();
+                        Lbl_Total_Vaciados.Text = Lbl_Kilos_Vaciados.Text;
+                    }
+                    try
+                    {
+                        this.traer_Tarjas_SecasTableAdapter.Fill(this.genesisDataSet.Traer_Tarjas_Secas, new System.Nullable<short>(((short)(System.Convert.ChangeType(Lbl_Recepcion.Text, typeof(short))))));
+                        foreach (DataGridViewRow row in traer_Tarjas_SecasDataGridView.Rows)
+                        {
+                            acum_neto_Tarjado = acum_neto_Tarjado + Convert.ToDouble(row.Cells[nameof(dataGridViewTextBoxColumn32)].Value.ToString());
+                        }
+
+                        Lbl_Neto_tarjado.Text = acum_neto_Tarjado.ToString();
+                        Lbl_Total_Secados.Text = Lbl_Neto_tarjado.Text;
+                        Porc_Rendimiento.Text = Math.Round(((Convert.ToDouble(Lbl_Total_Secados.Text) / Convert.ToDouble(Lbl_Total_Vaciados.Text)) * 100), 0).ToString();
+                        Porc_Merma.Text = (100 - Convert.ToDouble(Porc_Rendimiento.Text)).ToString();
+                        Lbl_Merma.Text = (Convert.ToDouble(Lbl_Total_Vaciados.Text) - Convert.ToDouble(Lbl_Total_Secados.Text)).ToString();
+                    }
+                    catch (System.Exception ex)
+                    {
+                        System.Windows.Forms.MessageBox.Show(ex.Message);
+                    }
                 }
                 else
                 {
@@ -221,6 +261,63 @@ namespace FormularioRomana
                     Lbl_Tarjas_Seleccionados.Text = "0";
                 }
             }
+        }
+
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+           try
+            {
+                this.traer_Tara_Envases_BaseTableAdapter.Fill(this.genesisDataSet.Traer_Tara_Envases_Base, new System.Nullable<short>(((short)(System.Convert.ChangeType(CmbEnvase.SelectedValue.ToString(), typeof(short))))), new System.Nullable<short>(((short)(System.Convert.ChangeType(CmbBaseBins.SelectedValue.ToString(), typeof(short))))));
+                tara_envase = Convert.ToDouble(traer_Tara_Envases_BaseDataGridView.Rows[0].Cells[nameof(dataGridViewTextBoxColumn12)].Value.ToString());
+                tara_base = Convert.ToDouble(traer_Tara_Envases_BaseDataGridView.Rows[0].Cells[nameof(dataGridViewTextBoxColumn13)].Value.ToString());
+                Kg_Neto.Text = (Convert.ToDouble(Kg_Bruto.Text.Replace('.',',')) - tara_envase - tara_base).ToString();
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            acum_neto_Tarjado = 0;
+            int tarja = 0;
+            // TODO: esta línea de código carga datos en la tabla 'genesisDataSet.Tarja_Secado' Puede moverla o quitarla según sea necesario.
+            try
+            {
+                tarja = Convert.ToInt32(this.tarja_SecadoTableAdapter.Insertar_Tarja_Secado(Convert.ToInt16(Lbl_Recepcion.Text), Convert.ToInt16(cod_ProductorTextBox.Text), Convert.ToInt16(CmbVariedad.SelectedValue.ToString()),5, Convert.ToInt16(productosComboBox.SelectedValue.ToString()), Convert.ToInt16(CmbEnvase.SelectedValue.ToString()), 1,tara_envase, Convert.ToInt16(CmbBaseBins.SelectedValue.ToString()),tara_base,Convert.ToDecimal(Kg_Bruto.Text.Replace('.',',')), Convert.ToDecimal(Kg_Neto.Text), null, null));
+                 this.traer_Tarjas_SecasTableAdapter.Fill(this.genesisDataSet.Traer_Tarjas_Secas, new System.Nullable<short>(((short)(System.Convert.ChangeType(Lbl_Recepcion.Text, typeof(short))))));
+
+                foreach (DataGridViewRow row in traer_Tarjas_SecasDataGridView.Rows)
+                {
+                    acum_neto_Tarjado = acum_neto_Tarjado + Convert.ToDouble(row.Cells[nameof(dataGridViewTextBoxColumn32)].Value.ToString());
+                }
+
+                Lbl_Neto_tarjado.Text = acum_neto_Tarjado.ToString();
+                if (MessageBox.Show("Tarja ingresado correctamente" + Environment.NewLine + "  Desea imprimir la tarja ??", "Anakena", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    InformeTarjaSecado S = new InformeTarjaSecado("SE"+tarja.ToString());
+                    S.ShowDialog();
+                }
+                else
+                { }
+            }
+            catch (System.Data.SqlClient.SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+           
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
