@@ -89,7 +89,7 @@ namespace FormularioRomana
                 this.verificar_Proceso_SecadoTableAdapter.Fill(this.genesisDataSet.Verificar_Proceso_Secado, new System.Nullable<short>(((short)(System.Convert.ChangeType(cod_ProductorTextBox.Text, typeof(short))))), new System.Nullable<short>(((short)(System.Convert.ChangeType(CmbVariedad.SelectedValue.ToString(), typeof(short))))), new System.Nullable<int>(((int)(System.Convert.ChangeType(comboBox1.Text, typeof(int))))));
                 if (verificar_Proceso_SecadoDataGridView.RowCount > 0)
                 {
-                    MessageBox.Show("Ya existe un proceso de secado vinculado a un lote", "Anakena", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Ya existe un proceso de secado vinculado n° lote", "Anakena", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Esta_Proceso_Secado = 1;
                     label9.Visible = true;
                     Lbl_Recepcion.Visible = true;
@@ -101,7 +101,7 @@ namespace FormularioRomana
                         {
                             acum__neto_Vaciado = acum__neto_Vaciado + Convert.ToDouble(row.Cells[nameof(Peso_Neto_Final)].Value.ToString());
                         }
-                        Lbl_Kilos_Vaciados.Text = Math.Round(acum__neto_Vaciado,2).ToString();
+                        Lbl_Kilos_Vaciados.Text = Math.Round(acum__neto_Vaciado, 2).ToString();
                         Lbl_Total_Vaciados.Text = Lbl_Kilos_Vaciados.Text;
                     }
                     try
@@ -117,6 +117,7 @@ namespace FormularioRomana
                         Porc_Rendimiento.Text = Math.Round(((Convert.ToDouble(Lbl_Total_Secados.Text) / Convert.ToDouble(Lbl_Total_Vaciados.Text)) * 100), 0).ToString();
                         Porc_Merma.Text = (100 - Convert.ToDouble(Porc_Rendimiento.Text)).ToString();
                         Lbl_Merma.Text = (Convert.ToDouble(Lbl_Total_Vaciados.Text) - Convert.ToDouble(Lbl_Total_Secados.Text)).ToString();
+                        Esta_Proceso_Secado = 1;
                     }
                     catch (System.Exception ex)
                     {
@@ -124,8 +125,14 @@ namespace FormularioRomana
                     }
                 }
                 else
+                if ((verificar_Proceso_SecadoDataGridView.RowCount > 0) && (Lbl_Recepcion.Visible == false))
                 {
                     Esta_Proceso_Secado = 0;
+                }
+                else
+                if ((verificar_Proceso_SecadoDataGridView.RowCount > 0) && (Lbl_Recepcion.Visible == true))
+                {
+                    Esta_Proceso_Secado = 2;
                 }
             }
             catch (System.Exception ex)
@@ -194,7 +201,7 @@ namespace FormularioRomana
                     }
                 }
                 traer_Tarjas_SecadoTableAdapter.Fill(genesisDataSet1.Traer_Tarjas_Secado, Convert.ToInt16(comboBox1.Text));
-                traer_Tarjas_Vaciados_SecadoTableAdapter.Fill(genesisDataSet1.Traer_Tarjas_Vaciados_Secado,Convert.ToInt16(id));
+                traer_Tarjas_Vaciados_SecadoTableAdapter.Fill(genesisDataSet1.Traer_Tarjas_Vaciados_Secado, Convert.ToInt16(id));
                 Lbl_Tarjas_Totales.Text = dataGridView1.RowCount.ToString();
                 label9.Visible = true;
                 Lbl_Recepcion.Visible = true;
@@ -206,12 +213,13 @@ namespace FormularioRomana
                 Esta_Proceso_Secado = 1;
             }
             else
+       if (Esta_Proceso_Secado == 1)
             {
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
                     if (Convert.ToBoolean(row.Cells[nameof(Tarjas_check)].Value) == true)
                     {
-                        recepcionesTableAdapter.Proceso_Final_Recepcion(row.Cells[1].Value.ToString(),Convert.ToInt16(Lbl_Recepcion.Text), "SE");
+                        recepcionesTableAdapter.Proceso_Final_Recepcion(row.Cells[1].Value.ToString(), Convert.ToInt16(Lbl_Recepcion.Text), "SE");
                     }
                 }
                 traer_Tarjas_SecadoTableAdapter.Fill(genesisDataSet1.Traer_Tarjas_Secado, Convert.ToInt16(comboBox1.Text));
@@ -224,7 +232,12 @@ namespace FormularioRomana
                 Lbl_Tarjas_Seleccionados.Text = "0";
                 acum_celda = 0;
                 Esta_Proceso_Secado = 1;
-            }       
+            }
+            else
+       if (Esta_Proceso_Secado == 2)
+            {
+                MessageBox.Show("Entra Ok");
+            }
         }
         private void button3_Click(object sender, EventArgs e)
         {
@@ -318,6 +331,28 @@ namespace FormularioRomana
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void CmbBaseBins_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Kg_Bruto.TextLength > 0)
+            {
+                this.traer_Tara_Envases_BaseTableAdapter.Fill(this.genesisDataSet.Traer_Tara_Envases_Base, new System.Nullable<short>(((short)(System.Convert.ChangeType(CmbEnvase.SelectedValue.ToString(), typeof(short))))), new System.Nullable<short>(((short)(System.Convert.ChangeType(CmbBaseBins.SelectedValue.ToString(), typeof(short))))));
+                tara_envase = Convert.ToDouble(traer_Tara_Envases_BaseDataGridView.Rows[0].Cells[nameof(dataGridViewTextBoxColumn12)].Value.ToString());
+                tara_base = Convert.ToDouble(traer_Tara_Envases_BaseDataGridView.Rows[0].Cells[nameof(dataGridViewTextBoxColumn13)].Value.ToString());
+                Kg_Neto.Text = (Convert.ToDouble(Kg_Bruto.Text.Replace('.', ',')) - tara_envase - tara_base).ToString();
+            }
+        }
+
+        private void CmbEnvase_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Kg_Bruto.TextLength > 0)
+            {
+                this.traer_Tara_Envases_BaseTableAdapter.Fill(this.genesisDataSet.Traer_Tara_Envases_Base, new System.Nullable<short>(((short)(System.Convert.ChangeType(CmbEnvase.SelectedValue.ToString(), typeof(short))))), new System.Nullable<short>(((short)(System.Convert.ChangeType(CmbBaseBins.SelectedValue.ToString(), typeof(short))))));
+                tara_envase = Convert.ToDouble(traer_Tara_Envases_BaseDataGridView.Rows[0].Cells[nameof(dataGridViewTextBoxColumn12)].Value.ToString());
+                tara_base = Convert.ToDouble(traer_Tara_Envases_BaseDataGridView.Rows[0].Cells[nameof(dataGridViewTextBoxColumn13)].Value.ToString());
+                Kg_Neto.Text = (Convert.ToDouble(Kg_Bruto.Text.Replace('.', ',')) - tara_envase - tara_base).ToString();
+            }
         }
     }
 }
