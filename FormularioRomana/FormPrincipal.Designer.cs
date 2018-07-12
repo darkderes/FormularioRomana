@@ -57,14 +57,14 @@
             // recepcionToolStripMenuItem
             // 
             this.recepcionToolStripMenuItem.Name = "recepcionToolStripMenuItem";
-            this.recepcionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.recepcionToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.recepcionToolStripMenuItem.Text = "Recepcion";
             this.recepcionToolStripMenuItem.Click += new System.EventHandler(this.recepcionToolStripMenuItem_Click);
             // 
             // secadoToolStripMenuItem
             // 
             this.secadoToolStripMenuItem.Name = "secadoToolStripMenuItem";
-            this.secadoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.secadoToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.secadoToolStripMenuItem.Text = "Secado";
             this.secadoToolStripMenuItem.Click += new System.EventHandler(this.secadoToolStripMenuItem_Click);
             // 
@@ -72,12 +72,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(842, 498);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormPrincipal";
+            this.TransparencyKey = System.Drawing.Color.DimGray;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

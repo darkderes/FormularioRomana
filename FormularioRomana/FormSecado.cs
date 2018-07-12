@@ -43,6 +43,8 @@ namespace FormularioRomana
         }
         private void FormSecado_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'genesisDataSet.Paso_Recepcion_Secado' Puede moverla o quitarla según sea necesario.
+            this.paso_Recepcion_SecadoTableAdapter.Fill(this.genesisDataSet.Paso_Recepcion_Secado);
             // TODO: esta línea de código carga datos en la tabla 'genesisDataSet1.Producto' Puede moverla o quitarla según sea necesario.
             this.productoTableAdapter.FillProductosByProceso(this.genesisDataSet1.Producto,2);
             // TODO: esta línea de código carga datos en la tabla 'genesisDataSet2.BasesPallet' Puede moverla o quitarla según sea necesario.
@@ -211,14 +213,17 @@ namespace FormularioRomana
                 Lbl_Tarjas_Seleccionados.Text = "0";
                 acum_celda = 0;
                 Esta_Proceso_Secado = 1;
+                // TODO: esta línea de código carga datos en la tabla 'genesisDataSet.Paso_Recepcion_Secado' Puede moverla o quitarla según sea necesario.
+                this.paso_Recepcion_SecadoTableAdapter.InsertPasoRecepcionSecado(id,Convert.ToInt32(comboBox1.Text));
             }
             else
-       if (Esta_Proceso_Secado == 1)
+             if (Esta_Proceso_Secado == 1)
             {
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
                     if (Convert.ToBoolean(row.Cells[nameof(Tarjas_check)].Value) == true)
                     {
+
                         recepcionesTableAdapter.Proceso_Final_Recepcion(row.Cells[1].Value.ToString(), Convert.ToInt16(Lbl_Recepcion.Text), "SE");
                     }
                 }
@@ -231,13 +236,14 @@ namespace FormularioRomana
                 Lbl_TarjasVaciadas.Text = dataGridView2.RowCount.ToString();
                 Lbl_Tarjas_Seleccionados.Text = "0";
                 acum_celda = 0;
-                Esta_Proceso_Secado = 1;
+                this.paso_Recepcion_SecadoTableAdapter.InsertPasoRecepcionSecado(Convert.ToInt32(Lbl_Recepcion.Text), Convert.ToInt32(comboBox1.Text));
+
             }
-            else
-       if (Esta_Proceso_Secado == 2)
-            {
-                MessageBox.Show("Entra Ok");
-            }
+       //     else
+       //if (Esta_Proceso_Secado == 2)
+       //     {
+       //         MessageBox.Show("Entra Ok");
+       //     }
         }
         private void button3_Click(object sender, EventArgs e)
         {
@@ -301,7 +307,7 @@ namespace FormularioRomana
         {
             acum_neto_Tarjado = 0;
             int tarja = 0;
-            // TODO: esta línea de código carga datos en la tabla 'genesisDataSet.Tarja_Secado' Puede moverla o quitarla según sea necesario.
+
             try
             {
                 tarja = Convert.ToInt32(this.tarja_SecadoTableAdapter.Insertar_Tarja_Secado(Convert.ToInt16(Lbl_Recepcion.Text), Convert.ToInt16(cod_ProductorTextBox.Text), Convert.ToInt16(CmbVariedad.SelectedValue.ToString()),5, Convert.ToInt16(productosComboBox.SelectedValue.ToString()), Convert.ToInt16(CmbEnvase.SelectedValue.ToString()), 1,tara_envase, Convert.ToInt16(CmbBaseBins.SelectedValue.ToString()),tara_base,Convert.ToDecimal(Kg_Bruto.Text.Replace('.',',')), Convert.ToDecimal(Kg_Neto.Text), null, null));
@@ -352,6 +358,39 @@ namespace FormularioRomana
                 tara_envase = Convert.ToDouble(traer_Tara_Envases_BaseDataGridView.Rows[0].Cells[nameof(dataGridViewTextBoxColumn12)].Value.ToString());
                 tara_base = Convert.ToDouble(traer_Tara_Envases_BaseDataGridView.Rows[0].Cells[nameof(dataGridViewTextBoxColumn13)].Value.ToString());
                 Kg_Neto.Text = (Convert.ToDouble(Kg_Bruto.Text.Replace('.', ',')) - tara_envase - tara_base).ToString();
+            }
+        }
+
+        private void traer_Tarjas_SecasDataGridView_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            if (e.RowIndex < 0)
+                return;
+
+            //I supposed your button column is at index 0
+            if (e.ColumnIndex == 20)
+            {
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+                var w =35;
+                var h =16;
+                var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2 ;
+                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
+                
+                e.Graphics.DrawImage(Properties.Resources.Print2, new Rectangle(x, y, w, h));
+                e.Handled = true;            
+            }
+        }
+
+        private void traer_Tarjas_SecasDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            int fila = e.RowIndex;
+            int columna = e.ColumnIndex;
+            if (e.RowIndex < 0)
+                return;
+            if (e.ColumnIndex == 20)
+            {
+                InformeTarjaSecado S = new InformeTarjaSecado(traer_Tarjas_SecasDataGridView.Rows[e.RowIndex].Cells[nameof(dataGridViewTextBoxColumn16)].Value.ToString());
+                S.ShowDialog();
             }
         }
     }

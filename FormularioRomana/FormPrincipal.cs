@@ -25,8 +25,15 @@ namespace FormularioRomana
 
         private void secadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var secado = new FormSecado();
-            secado.ShowDialog();
+            var admin_Secado = new FormAdmin_Secado();
+            admin_Secado.ShowDialog();
+            //var secado = new FormSecado();
+            //secado.ShowDialog();
+        }
+
+        private void FormPrincipal_Load(object sender, EventArgs e)
+        {
+           
         }
     }
 }

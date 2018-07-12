@@ -30,13 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.GenesisDataSet = new FormularioRomana.GenesisDataSet();
             this.Informe_Tarja_SecadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.GenesisDataSet = new FormularioRomana.GenesisDataSet();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.Informe_Tarja_SecadoTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.Informe_Tarja_SecadoTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.GenesisDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Informe_Tarja_SecadoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GenesisDataSet)).BeginInit();
             this.SuspendLayout();
+            // 
+            // Informe_Tarja_SecadoBindingSource
+            // 
+            this.Informe_Tarja_SecadoBindingSource.DataMember = "Informe_Tarja_Secado";
+            this.Informe_Tarja_SecadoBindingSource.DataSource = this.GenesisDataSet;
+            // 
+            // GenesisDataSet
+            // 
+            this.GenesisDataSet.DataSetName = "GenesisDataSet";
+            this.GenesisDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -47,18 +57,8 @@
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "FormularioRomana.InformeTarjaSecado.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(652, 524);
+            this.reportViewer1.Size = new System.Drawing.Size(862, 982);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // GenesisDataSet
-            // 
-            this.GenesisDataSet.DataSetName = "GenesisDataSet";
-            this.GenesisDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // Informe_Tarja_SecadoBindingSource
-            // 
-            this.Informe_Tarja_SecadoBindingSource.DataMember = "Informe_Tarja_Secado";
-            this.Informe_Tarja_SecadoBindingSource.DataSource = this.GenesisDataSet;
             // 
             // Informe_Tarja_SecadoTableAdapter
             // 
@@ -68,13 +68,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(652, 524);
+            this.ClientSize = new System.Drawing.Size(862, 982);
             this.Controls.Add(this.reportViewer1);
             this.Name = "InformeTarjaSecado";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InformeTarjaSecado";
             this.Load += new System.EventHandler(this.InformeTarjaSecado_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.GenesisDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Informe_Tarja_SecadoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GenesisDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }

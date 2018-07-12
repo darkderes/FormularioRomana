@@ -35,10 +35,6 @@ namespace FormularioRomana
                 this.variedadTableAdapter.TraerVariedad(this.genesisDataSet.Variedad);
                 this.productoTableAdapter.FillProductosByProceso(this.genesisDataSet.Producto, 1);
                 this.traer_Resumen_Recepcion_FiltroTableAdapter.Fill(genesisDataSet.Traer_Resumen_Recepcion_Filtro, null, null, null, formalizada, humedad);
-                //timer1.Tick += new EventHandler(timer1_Tick);
-                //timer1.Enabled = true;
-                //timer1.Start();
-
             }
             catch (Exception)
             {
