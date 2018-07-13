@@ -30,16 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSecado));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.verificar_Proceso_SecadoDataGridView = new System.Windows.Forms.DataGridView();
@@ -103,6 +103,8 @@
             this.Lbl_Tarjas_Seleccionados = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label8 = new System.Windows.Forms.Label();
+            this.Kilos_Vacias_entrada = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.Lbl_TarjasVaciadas = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -183,6 +185,15 @@
             this.traer_Tarjas_SecasTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.Traer_Tarjas_SecasTableAdapter();
             this.paso_Recepcion_SecadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.paso_Recepcion_SecadoTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.Paso_Recepcion_SecadoTableAdapter();
+            this.kilos_Secar_Por_ProcesosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.kilos_Secar_Por_ProcesosTableAdapter = new FormularioRomana.GenesisDataSetTableAdapters.Kilos_Secar_Por_ProcesosTableAdapter();
+            this.label22 = new System.Windows.Forms.Label();
+            this.Lbl_Kilos_a_Vaciar = new System.Windows.Forms.Label();
+            this.kilos_Secar_Por_ProcesosDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.Lbl_Diferencia = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.verificar_Proceso_SecadoDataGridView)).BeginInit();
@@ -216,6 +227,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.secadoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.traer_Tarjas_Vaciados_SecadoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paso_Recepcion_SecadoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kilos_Secar_Por_ProcesosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kilos_Secar_Por_ProcesosDataGridView)).BeginInit();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -561,14 +575,14 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Tarjas_check,
@@ -576,19 +590,19 @@
             this.loteDataGridViewTextBoxColumn,
             this.variedadDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.traerTarjasSecadoBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle22;
             this.dataGridView1.Location = new System.Drawing.Point(46, 72);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle23;
             this.dataGridView1.Size = new System.Drawing.Size(337, 353);
             this.dataGridView1.TabIndex = 24;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -653,14 +667,14 @@
             // 
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AutoGenerateColumns = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle24;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CheckTarjas,
@@ -672,9 +686,9 @@
             this.dataGridView2.Location = new System.Drawing.Point(445, 72);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersVisible = false;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Info;
-            this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Info;
+            this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle25;
             this.dataGridView2.Size = new System.Drawing.Size(337, 353);
             this.dataGridView2.TabIndex = 26;
             // 
@@ -810,16 +824,18 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(12, 167);
+            this.tabControl1.Location = new System.Drawing.Point(12, 200);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(855, 501);
+            this.tabControl1.Size = new System.Drawing.Size(855, 528);
             this.tabControl1.TabIndex = 36;
             // 
             // tabPage1
             // 
             this.tabPage1.AutoScroll = true;
             this.tabPage1.BackColor = System.Drawing.Color.Silver;
+            this.tabPage1.Controls.Add(this.groupBox4);
+            this.tabPage1.Controls.Add(this.kilos_Secar_Por_ProcesosDataGridView);
             this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.Lbl_TarjasVaciadas);
             this.tabPage1.Controls.Add(this.dataGridView1);
@@ -837,9 +853,29 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(847, 475);
+            this.tabPage1.Size = new System.Drawing.Size(847, 502);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Entrada";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(307, 16);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(114, 16);
+            this.label8.TabIndex = 39;
+            this.label8.Text = "Kilos vaciadas:";
+            // 
+            // Kilos_Vacias_entrada
+            // 
+            this.Kilos_Vacias_entrada.AutoSize = true;
+            this.Kilos_Vacias_entrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Kilos_Vacias_entrada.Location = new System.Drawing.Point(418, 16);
+            this.Kilos_Vacias_entrada.Name = "Kilos_Vacias_entrada";
+            this.Kilos_Vacias_entrada.Size = new System.Drawing.Size(16, 16);
+            this.Kilos_Vacias_entrada.TabIndex = 38;
+            this.Kilos_Vacias_entrada.Text = "0";
             // 
             // label10
             // 
@@ -874,7 +910,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(847, 475);
+            this.tabPage2.Size = new System.Drawing.Size(847, 506);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Salida";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
@@ -938,14 +974,14 @@
             // 
             this.traer_Tarjas_SecasDataGridView.AllowUserToAddRows = false;
             this.traer_Tarjas_SecasDataGridView.AutoGenerateColumns = false;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.traer_Tarjas_SecasDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.traer_Tarjas_SecasDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
             this.traer_Tarjas_SecasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.traer_Tarjas_SecasDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn16,
@@ -970,27 +1006,27 @@
             this.dataGridViewTextBoxColumn15,
             this.P});
             this.traer_Tarjas_SecasDataGridView.DataSource = this.traer_Tarjas_SecasBindingSource;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.traer_Tarjas_SecasDataGridView.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.traer_Tarjas_SecasDataGridView.DefaultCellStyle = dataGridViewCellStyle28;
             this.traer_Tarjas_SecasDataGridView.Location = new System.Drawing.Point(24, 122);
             this.traer_Tarjas_SecasDataGridView.Name = "traer_Tarjas_SecasDataGridView";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.traer_Tarjas_SecasDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.traer_Tarjas_SecasDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle29;
             this.traer_Tarjas_SecasDataGridView.RowHeadersVisible = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Info;
-            this.traer_Tarjas_SecasDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Info;
+            this.traer_Tarjas_SecasDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle30;
             this.traer_Tarjas_SecasDataGridView.Size = new System.Drawing.Size(807, 331);
             this.traer_Tarjas_SecasDataGridView.TabIndex = 34;
             this.traer_Tarjas_SecasDataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.traer_Tarjas_SecasDataGridView_CellDoubleClick);
@@ -1136,9 +1172,9 @@
             // 
             // P
             // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.P.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.White;
+            this.P.DefaultCellStyle = dataGridViewCellStyle27;
             this.P.HeaderText = "";
             this.P.Name = "P";
             this.P.Width = 40;
@@ -1354,7 +1390,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(847, 475);
+            this.tabPage3.Size = new System.Drawing.Size(847, 502);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Resumen Proceso";
             // 
@@ -1371,6 +1407,7 @@
             this.button9.TabIndex = 8;
             this.button9.Text = "Cerrar Proceso";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // groupBox3
             // 
@@ -1560,11 +1597,95 @@
             // 
             this.paso_Recepcion_SecadoTableAdapter.ClearBeforeFill = true;
             // 
+            // kilos_Secar_Por_ProcesosBindingSource
+            // 
+            this.kilos_Secar_Por_ProcesosBindingSource.DataMember = "Kilos_Secar_Por_Procesos";
+            this.kilos_Secar_Por_ProcesosBindingSource.DataSource = this.genesisDataSet;
+            // 
+            // kilos_Secar_Por_ProcesosTableAdapter
+            // 
+            this.kilos_Secar_Por_ProcesosTableAdapter.ClearBeforeFill = true;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(19, 16);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(136, 16);
+            this.label22.TabIndex = 41;
+            this.label22.Text = "Kilos recepciones:";
+            // 
+            // Lbl_Kilos_a_Vaciar
+            // 
+            this.Lbl_Kilos_a_Vaciar.AutoSize = true;
+            this.Lbl_Kilos_a_Vaciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Kilos_a_Vaciar.Location = new System.Drawing.Point(151, 16);
+            this.Lbl_Kilos_a_Vaciar.Name = "Lbl_Kilos_a_Vaciar";
+            this.Lbl_Kilos_a_Vaciar.Size = new System.Drawing.Size(16, 16);
+            this.Lbl_Kilos_a_Vaciar.TabIndex = 40;
+            this.Lbl_Kilos_a_Vaciar.Text = "0";
+            // 
+            // kilos_Secar_Por_ProcesosDataGridView
+            // 
+            this.kilos_Secar_Por_ProcesosDataGridView.AutoGenerateColumns = false;
+            this.kilos_Secar_Por_ProcesosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.kilos_Secar_Por_ProcesosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn14});
+            this.kilos_Secar_Por_ProcesosDataGridView.DataSource = this.kilos_Secar_Por_ProcesosBindingSource;
+            this.kilos_Secar_Por_ProcesosDataGridView.Location = new System.Drawing.Point(707, 6);
+            this.kilos_Secar_Por_ProcesosDataGridView.Name = "kilos_Secar_Por_ProcesosDataGridView";
+            this.kilos_Secar_Por_ProcesosDataGridView.Size = new System.Drawing.Size(106, 49);
+            this.kilos_Secar_Por_ProcesosDataGridView.TabIndex = 41;
+            this.kilos_Secar_Por_ProcesosDataGridView.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "Total";
+            this.dataGridViewTextBoxColumn14.HeaderText = "Total";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.label25);
+            this.groupBox4.Controls.Add(this.Lbl_Diferencia);
+            this.groupBox4.Controls.Add(this.label22);
+            this.groupBox4.Controls.Add(this.Lbl_Kilos_a_Vaciar);
+            this.groupBox4.Controls.Add(this.label8);
+            this.groupBox4.Controls.Add(this.Kilos_Vacias_entrada);
+            this.groupBox4.Location = new System.Drawing.Point(46, 457);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(736, 39);
+            this.groupBox4.TabIndex = 42;
+            this.groupBox4.TabStop = false;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(535, 16);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(83, 16);
+            this.label25.TabIndex = 43;
+            this.label25.Text = "Diferencia:";
+            // 
+            // Lbl_Diferencia
+            // 
+            this.Lbl_Diferencia.AutoSize = true;
+            this.Lbl_Diferencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Diferencia.ForeColor = System.Drawing.Color.Maroon;
+            this.Lbl_Diferencia.Location = new System.Drawing.Point(616, 16);
+            this.Lbl_Diferencia.Name = "Lbl_Diferencia";
+            this.Lbl_Diferencia.Size = new System.Drawing.Size(16, 16);
+            this.Lbl_Diferencia.TabIndex = 42;
+            this.Lbl_Diferencia.Text = "0";
+            // 
             // FormSecado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(880, 680);
+            this.ClientSize = new System.Drawing.Size(880, 730);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
@@ -1610,6 +1731,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.secadoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.traer_Tarjas_Vaciados_SecadoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.paso_Recepcion_SecadoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kilos_Secar_Por_ProcesosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kilos_Secar_Por_ProcesosDataGridView)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1759,5 +1884,16 @@
         private GenesisDataSetTableAdapters.Paso_Recepcion_SecadoTableAdapter paso_Recepcion_SecadoTableAdapter;
         public System.Windows.Forms.TextBox cod_ProductorTextBox;
         public System.Windows.Forms.ComboBox CmbVariedad;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label Kilos_Vacias_entrada;
+        private System.Windows.Forms.BindingSource kilos_Secar_Por_ProcesosBindingSource;
+        private GenesisDataSetTableAdapters.Kilos_Secar_Por_ProcesosTableAdapter kilos_Secar_Por_ProcesosTableAdapter;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label Lbl_Kilos_a_Vaciar;
+        private System.Windows.Forms.DataGridView kilos_Secar_Por_ProcesosDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label Lbl_Diferencia;
     }
 }
