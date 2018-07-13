@@ -13,14 +13,17 @@ namespace FormularioRomana
     public partial class FormSecado : Form
     {
         int acum_celda  = 0;
+        public int cod_Variedad = 0; // trae codigo de variedad desde Administracion de procesod e secado
         int Esta_Proceso_Secado = 0;
         double acum__neto_Vaciado = 0;
         double tara_envase = 0;
         double tara_base = 0;
         double acum_neto_Tarjado = 0;
-        public FormSecado()
+        int acceso = 0;
+        public FormSecado(int acc)
         {
             InitializeComponent();
+            acceso = acc;
         }
         private void cod_ProductorTextBox_TextChanged(object sender, EventArgs e)
         {
@@ -34,26 +37,55 @@ namespace FormularioRomana
                     traer_Variedad_SecadoTableAdapter.Fill(genesisDataSet.Traer_Variedad_Secado, productor);
                     if (CmbVariedad.Items.Count > 0)
                     {
-                        traer_Procesos_SecadoTableAdapter.Fill(genesisDataSet1.Traer_Procesos_Secado, Convert.ToInt16(cod_ProductorTextBox.Text), Convert.ToInt16(CmbVariedad.SelectedValue.ToString()));
+                        if (acceso == 1)
+                        { traer_Procesos_SecadoTableAdapter.Fill(genesisDataSet1.Traer_Procesos_Secado, Convert.ToInt16(cod_ProductorTextBox.Text), Convert.ToInt16(CmbVariedad.SelectedValue.ToString()),null, 1); }
+                        else
+                        { traer_Procesos_SecadoTableAdapter.Fill(genesisDataSet1.Traer_Procesos_Secado, Convert.ToInt16(cod_ProductorTextBox.Text),Convert.ToInt16(cod_Variedad),Convert.ToInt32(Lbl_Recepcion.Text), 2); }
+
                     }
-                }
+                      
+                    }
+                
             }
             catch (Exception)
             {  }      
         }
         private void FormSecado_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'genesisDataSet.Paso_Recepcion_Secado' Puede moverla o quitarla según sea necesario.
-            this.paso_Recepcion_SecadoTableAdapter.Fill(this.genesisDataSet.Paso_Recepcion_Secado);
-            // TODO: esta línea de código carga datos en la tabla 'genesisDataSet1.Producto' Puede moverla o quitarla según sea necesario.
-            this.productoTableAdapter.FillProductosByProceso(this.genesisDataSet1.Producto,2);
-            // TODO: esta línea de código carga datos en la tabla 'genesisDataSet2.BasesPallet' Puede moverla o quitarla según sea necesario.
-            this.basesPalletTableAdapter.Fill(this.genesisDataSet2.BasesPallet);
-            this.productoresTableAdapter.Fill(this.genesisDataSet.Productores);
-            cod_ProductorTextBox.Text = "1";
-            traer_Envases_ProcesoTableAdapter.Fill(genesisDataSet2.Traer_Envases_Proceso, Convert.ToInt16(2));
-            CmbBaseBins.SelectedIndex = 2;
-            productosComboBox.SelectedIndex = 1;
+            if (acceso == 1)//accede si viene del boton ingreso
+            {
+                // TODO: esta línea de código carga datos en la tabla 'genesisDataSet.Paso_Recepcion_Secado' Puede moverla o quitarla según sea necesario.
+                this.paso_Recepcion_SecadoTableAdapter.Fill(this.genesisDataSet.Paso_Recepcion_Secado);
+                // TODO: esta línea de código carga datos en la tabla 'genesisDataSet1.Producto' Puede moverla o quitarla según sea necesario.
+                this.productoTableAdapter.FillProductosByProceso(this.genesisDataSet1.Producto, 2);
+                // TODO: esta línea de código carga datos en la tabla 'genesisDataSet2.BasesPallet' Puede moverla o quitarla según sea necesario.
+                this.basesPalletTableAdapter.Fill(this.genesisDataSet2.BasesPallet);
+                this.productoresTableAdapter.Fill(this.genesisDataSet.Productores);
+                cod_ProductorTextBox.Text = "1";
+                traer_Envases_ProcesoTableAdapter.Fill(genesisDataSet2.Traer_Envases_Proceso, Convert.ToInt16(2));
+                CmbBaseBins.SelectedIndex = 2;
+                productosComboBox.SelectedIndex = 1;
+            }
+            else
+            if(acceso == 2)
+            {
+
+                try
+                {
+                    if (acceso == 1)
+                    { traer_Procesos_SecadoTableAdapter.Fill(genesisDataSet1.Traer_Procesos_Secado, Convert.ToInt16(cod_ProductorTextBox.Text), Convert.ToInt16(CmbVariedad.SelectedValue.ToString()), null, 1); }
+                    else
+                     if (acceso == 2)
+                    {
+                        traer_Procesos_SecadoTableAdapter.Fill(genesisDataSet1.Traer_Procesos_Secado, Convert.ToInt16(cod_ProductorTextBox.Text), Convert.ToInt16(cod_Variedad), Convert.ToInt32(Lbl_Recepcion.Text), 2);
+                        traer_Tarjas_Vaciados_SecadoTableAdapter.Fill(genesisDataSet1.Traer_Tarjas_Vaciados_Secado, Convert.ToInt16(Lbl_Recepcion.Text));
+                    }
+
+
+                }
+                catch (Exception)
+                { }
+            }
             
         }
         private void nom_ProductorComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -78,7 +110,13 @@ namespace FormularioRomana
         {
             try
             {
-                  traer_Procesos_SecadoTableAdapter.Fill(genesisDataSet1.Traer_Procesos_Secado, Convert.ToInt16(cod_ProductorTextBox.Text), Convert.ToInt16(CmbVariedad.SelectedValue.ToString()));
+                if (acceso == 1)
+                { traer_Procesos_SecadoTableAdapter.Fill(genesisDataSet1.Traer_Procesos_Secado, Convert.ToInt16(cod_ProductorTextBox.Text), Convert.ToInt16(CmbVariedad.SelectedValue.ToString()), null, 1); }
+                else
+                 if (acceso == 2)
+                { traer_Procesos_SecadoTableAdapter.Fill(genesisDataSet1.Traer_Procesos_Secado, Convert.ToInt16(cod_ProductorTextBox.Text), 5, Convert.ToInt32(Lbl_Recepcion.Text), 2); }
+
+
             }
             catch (Exception)
             { }    
@@ -334,10 +372,6 @@ namespace FormularioRomana
            
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
 
         private void CmbBaseBins_SelectedIndexChanged(object sender, EventArgs e)
         {

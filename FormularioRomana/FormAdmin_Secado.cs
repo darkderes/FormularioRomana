@@ -53,7 +53,7 @@ namespace FormularioRomana
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var secado = new FormSecado();
+            var secado = new FormSecado(1);
             secado.Show();
         }
 
@@ -109,5 +109,18 @@ namespace FormularioRomana
             this.traer_Proceso_Secado_AdminTableAdapter.Fill(this.genesisDataSet.Traer_Proceso_Secado_Admin,productor, variedad,producto,Iscerrada);
         }
 
+        private void traer_Proceso_Secado_AdminDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0)
+                return;
+            FormSecado s = new FormSecado(2);
+            s.Lbl_Recepcion.Text = traer_Proceso_Secado_AdminDataGridView.Rows[e.RowIndex].Cells[nameof(dataGridViewTextBoxColumn1)].Value.ToString();
+            s.Lbl_Recepcion.Visible = true;
+            s.label9.Visible = true;
+            s.CmbVariedad.Text = traer_Proceso_Secado_AdminDataGridView.Rows[e.RowIndex].Cells[nameof(dataGridViewTextBoxColumn5)].Value.ToString();
+            s.cod_Variedad = Convert.ToInt32(traer_Proceso_Secado_AdminDataGridView.Rows[e.RowIndex].Cells[nameof(dataGridViewTextBoxColumn4)].Value.ToString());
+            s.cod_ProductorTextBox.Text = traer_Proceso_Secado_AdminDataGridView.Rows[e.RowIndex].Cells[nameof(dataGridViewTextBoxColumn3)].Value.ToString();
+            s.Show();
+        }
     }
 }

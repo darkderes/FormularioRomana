@@ -30232,13 +30232,15 @@ SELECT Id_Tarja, Fecha_Tarja, Tarja, Num_Proceso, Cod_Productor, Cod_Variedad, C
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Productor", global::System.Data.SqlDbType.SmallInt, 2, global::System.Data.ParameterDirection.Input, 5, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Variedad", global::System.Data.SqlDbType.SmallInt, 2, global::System.Data.ParameterDirection.Input, 5, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Proceso", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Acceso", global::System.Data.SqlDbType.SmallInt, 2, global::System.Data.ParameterDirection.Input, 5, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(GenesisDataSet.Traer_Procesos_SecadoDataTable dataTable, global::System.Nullable<short> Productor, global::System.Nullable<short> Variedad) {
+        public virtual int Fill(GenesisDataSet.Traer_Procesos_SecadoDataTable dataTable, global::System.Nullable<short> Productor, global::System.Nullable<short> Variedad, global::System.Nullable<int> Proceso, global::System.Nullable<short> Acceso) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((Productor.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((short)(Productor.Value));
@@ -30251,6 +30253,18 @@ SELECT Id_Tarja, Fecha_Tarja, Tarja, Num_Proceso, Cod_Productor, Cod_Variedad, C
             }
             else {
                 this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Proceso.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((int)(Proceso.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((Acceso.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((short)(Acceso.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -30263,7 +30277,7 @@ SELECT Id_Tarja, Fecha_Tarja, Tarja, Num_Proceso, Cod_Productor, Cod_Variedad, C
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual GenesisDataSet.Traer_Procesos_SecadoDataTable GetData(global::System.Nullable<short> Productor, global::System.Nullable<short> Variedad) {
+        public virtual GenesisDataSet.Traer_Procesos_SecadoDataTable GetData(global::System.Nullable<short> Productor, global::System.Nullable<short> Variedad, global::System.Nullable<int> Proceso, global::System.Nullable<short> Acceso) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((Productor.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((short)(Productor.Value));
@@ -30276,6 +30290,18 @@ SELECT Id_Tarja, Fecha_Tarja, Tarja, Num_Proceso, Cod_Productor, Cod_Variedad, C
             }
             else {
                 this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Proceso.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((int)(Proceso.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((Acceso.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((short)(Acceso.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             GenesisDataSet.Traer_Procesos_SecadoDataTable dataTable = new GenesisDataSet.Traer_Procesos_SecadoDataTable();
             this.Adapter.Fill(dataTable);
