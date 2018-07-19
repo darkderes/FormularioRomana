@@ -159,7 +159,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.traer_Proceso_Secado_AdminDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
-            this.traer_Proceso_Secado_AdminDataGridView.Location = new System.Drawing.Point(46, 194);
+            this.traer_Proceso_Secado_AdminDataGridView.Location = new System.Drawing.Point(12, 172);
             this.traer_Proceso_Secado_AdminDataGridView.Name = "traer_Proceso_Secado_AdminDataGridView";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
@@ -265,7 +265,7 @@
             this.groupBox1.Controls.Add(this.CmbVariedad);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBox1.Location = new System.Drawing.Point(46, 61);
+            this.groupBox1.Location = new System.Drawing.Point(12, 53);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(611, 113);
             this.groupBox1.TabIndex = 23;
@@ -457,7 +457,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkGray;
-            this.panel1.Location = new System.Drawing.Point(2, 451);
+            this.panel1.Location = new System.Drawing.Point(2, 398);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(872, 12);
             this.panel1.TabIndex = 24;
@@ -468,10 +468,10 @@
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(485, 469);
+            this.button4.Location = new System.Drawing.Point(455, 416);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(5);
-            this.button4.Size = new System.Drawing.Size(85, 28);
+            this.button4.Size = new System.Drawing.Size(77, 28);
             this.button4.TabIndex = 27;
             this.button4.Text = "MODIFICAR";
             this.button4.UseVisualStyleBackColor = false;
@@ -481,10 +481,10 @@
             this.button3.BackColor = System.Drawing.Color.Firebrick;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(576, 469);
+            this.button3.Location = new System.Drawing.Point(546, 416);
             this.button3.Name = "button3";
             this.button3.Padding = new System.Windows.Forms.Padding(5);
-            this.button3.Size = new System.Drawing.Size(83, 28);
+            this.button3.Size = new System.Drawing.Size(77, 28);
             this.button3.TabIndex = 26;
             this.button3.Text = "ELIMINAR ";
             this.button3.UseVisualStyleBackColor = false;
@@ -495,10 +495,10 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(396, 469);
+            this.button1.Location = new System.Drawing.Point(366, 416);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(5);
-            this.button1.Size = new System.Drawing.Size(80, 28);
+            this.button1.Size = new System.Drawing.Size(77, 28);
             this.button1.TabIndex = 25;
             this.button1.Text = "AGREGAR";
             this.button1.UseVisualStyleBackColor = false;
@@ -509,7 +509,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(2, 1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(710, 46);
+            this.pictureBox1.Size = new System.Drawing.Size(634, 46);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 28;
             this.pictureBox1.TabStop = false;
@@ -530,7 +530,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(711, 501);
+            this.ClientSize = new System.Drawing.Size(635, 451);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);

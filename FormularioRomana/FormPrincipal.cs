@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace FormularioRomana
 {
-    public partial class FormPrincipal : Form
+    public partial class FormPrincipal : MetroFramework.Forms.MetroForm
     {
         public FormPrincipal()
         {
@@ -33,12 +33,23 @@ namespace FormularioRomana
 
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
-           
+            // TODO: esta línea de código carga datos en la tabla 'genesisDataSet.Variedad' Puede moverla o quitarla según sea necesario.
+            this.variedadTableAdapter.Fill(this.genesisDataSet.Variedad);
+            // TODO: esta línea de código carga datos en la tabla 'genesisDataSet.Producto' Puede moverla o quitarla según sea necesario.
+            this.productoTableAdapter.Fill(this.genesisDataSet.Producto);
+
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void materialRaisedButton1_Click(object sender, EventArgs e)
         {
+            FormRecepciónes x = new FormRecepciónes();
+            x.ShowDialog();
+        }
 
+        private void materialRaisedButton2_Click(object sender, EventArgs e)
+        {
+            FormAdmin_Secado x = new FormAdmin_Secado();
+            x.ShowDialog();
         }
     }
 }
