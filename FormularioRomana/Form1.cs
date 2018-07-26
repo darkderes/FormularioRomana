@@ -62,6 +62,7 @@ namespace FormularioRomana
             panel2.Visible = false;
             panel3.Visible = false;
             panel4.Visible = false;
+        
             this.romanaTableAdapter.Fill(this.genesisDataSet.Romana);
             try
             {
@@ -116,7 +117,7 @@ namespace FormularioRomana
                     button5.Visible = false;
                     button9.Visible = false;
                     button12.Visible = false;
-                    button8.Visible = false;
+                    bunifuThinButton22.Visible = false;
                     button6.Visible = false;
                     button11.Visible = false;
                     Btn_Romana.Enabled = true;
@@ -154,7 +155,7 @@ namespace FormularioRomana
                     this.variedadTableAdapter.Fill(this.genesisDataSet.Variedad);
                     comboBox3.SelectedValue = variedad;
                     traer_Envases_ProcesoTableAdapter.Fill(genesisDataSet.Traer_Envases_Proceso, Convert.ToInt16(1));
-                    groupBox1.Enabled = false;
+                    //groupBox1.Enabled = false;
                     tabControl1.Visible = true;
                     tabControl1.Controls.Remove(tabControl1.TabPages["tabPage4"]);
                     tabControl1.Controls.Remove(tabControl1.TabPages["tabPage3"]);
@@ -207,7 +208,7 @@ namespace FormularioRomana
                     button5.Visible = false;
                     button9.Visible = false;
                     button12.Visible = false;
-                    button8.Visible = false;
+                    bunifuThinButton22.Visible = false;
                     button6.Visible = false;
                     button11.Visible = false;
                     Btn_Romana.Enabled = true;
@@ -267,7 +268,7 @@ namespace FormularioRomana
                     this.variedadTableAdapter.Fill(this.genesisDataSet.Variedad);
                     comboBox3.SelectedValue = variedad;
                     traer_Envases_ProcesoTableAdapter.Fill(genesisDataSet.Traer_Envases_Proceso, Convert.ToInt16(1));
-                    groupBox1.Enabled = false;
+              //      groupBox1.Enabled = false;
                     tabControl1.Visible = true;
                     tabControl1.Controls.Remove(tabControl1.TabPages["tabPage4"]);
                     tabControl1.Controls.Remove(tabControl1.TabPages["tabPage5"]);
@@ -656,165 +657,7 @@ namespace FormularioRomana
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }          
         }
-        private void button8_Click(object sender, EventArgs e)
-        {
-            try
-            {
 
-                Boolean is_numero = int.TryParse(TxtBultos.Text, out bultos);
-                if ((TxtBultos.Text.Length > 0) && (Txt_NumGuia.Text.Length > 0) && (is_numero))
-                {
-
-                    if ((comboBox2.Text == "Con Pelón") || ((comboBox2.Text == "Seca") && (bultos <= 24)))
-                    {
-                        id = Convert.ToInt32(recepcionesTableAdapter1.Insertar_Recepciones(Convert.ToInt16(cod_ProductorTextBox.Text), Convert.ToInt16(comboBox3.SelectedValue.ToString()), Convert.ToInt16(comboBox2.SelectedValue.ToString()), Convert.ToInt16(productosComboBox.SelectedValue.ToString()), Txt_NumGuia.Text, bultos, "16448502-1"));
-                        MessageBox.Show("Recepción ingresada", "Anakena", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        groupBox1.Enabled = false;
-                        tabControl1.Visible = true;
-                        label1.Visible = true;
-                        Lbl_Recepcion.Visible = true;
-                        Lbl_Recepcion.Text = id.ToString();
-                        if (comboBox2.Text == "Con Pelón")
-                        {
-                            try
-                            {
-                                tabControl1.Controls.Remove(tabControl1.TabPages["tabPage4"]);
-                                tabControl1.Controls.Remove(tabControl1.TabPages["tabPage3"]);
-                            }
-                            catch (Exception ex)
-                            {
-                                MessageBox.Show(ex.Message, "Anakena", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            }
-                        }
-                        else
-                        if (comboBox2.Text == "Seca")
-                        {
-                            try
-                            {
-                                tabControl1.Controls.Remove(tabControl1.TabPages["tabPage4"]);
-                            }
-                            catch (Exception ex)
-                            {
-                                MessageBox.Show(ex.Message, "Anakena", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            }
-                        }
-                    }
-                    else
-                    if (comboBox2.Text == "Seca")
-                    {
-                        double pesajes = 0;
-                        groupBox1.Enabled = false;
-                        if (bultos > 24 && bultos <= 50)
-                        {
-                            pesajes = 2;
-                        }
-                        else
-                        if (bultos > 51 && bultos <= 75)
-                        {
-                            pesajes = 3;
-                        }
-                        else
-                        if (bultos > 76 && bultos <= 80)
-                        {
-                            pesajes = 4;
-                        }
-                        if (bultos <= 80)
-                        {
-                            tabControl1.TabPages[1].Text = "Descripcion de Envases";
-                            if (bultos % pesajes == 0)
-                            {
-                                int aux = Convert.ToInt32(bultos / pesajes);
-                                for (int i = 0; i < pesajes; i++)
-                                {
-                                    id = Convert.ToInt32(recepcionesTableAdapter1.Insertar_Recepciones(Convert.ToInt16(cod_ProductorTextBox.Text), Convert.ToInt16(comboBox3.SelectedValue.ToString()), Convert.ToInt16(comboBox2.SelectedValue.ToString()), Convert.ToInt16(productosComboBox.SelectedValue.ToString()), Txt_NumGuia.Text, aux, "16448502-1"));
-                                }
-
-                                MessageBox.Show("Se han ingresado : " + (pesajes).ToString() + " De " + (aux).ToString());
-                                traer_Resumen_RecepcionTableAdapter.Fill(genesisDataSet.Traer_Resumen_Recepcion, Convert.ToInt16(cod_ProductorTextBox.Text), Convert.ToInt16(comboBox3.SelectedValue.ToString()), Convert.ToInt16(comboBox2.SelectedValue.ToString()), Txt_NumGuia.Text);
-                                tabControl1.Visible = true;
-                            }
-                            else
-                            {
-                                int aux = Convert.ToInt32(bultos / pesajes);
-                                int aux1 = Convert.ToInt32((aux * (pesajes - 1)));
-                                int aux2 = Convert.ToInt32(bultos - aux1);
-
-                                for (int i = 0; i < pesajes - 1; i++)
-                                {
-                                    id = Convert.ToInt32(recepcionesTableAdapter1.Insertar_Recepciones(Convert.ToInt16(cod_ProductorTextBox.Text), Convert.ToInt16(comboBox3.SelectedValue.ToString()), Convert.ToInt16(comboBox2.SelectedValue.ToString()), Convert.ToInt16(productosComboBox.SelectedValue.ToString()), Txt_NumGuia.Text, aux, "16448502-1"));
-                                }
-
-                                id = Convert.ToInt32(recepcionesTableAdapter1.Insertar_Recepciones(Convert.ToInt16(cod_ProductorTextBox.Text), Convert.ToInt16(comboBox3.SelectedValue.ToString()), Convert.ToInt16(comboBox2.SelectedValue.ToString()), Convert.ToInt16(productosComboBox.SelectedValue.ToString()), Txt_NumGuia.Text, aux2, "16448502-1"));
-                                MessageBox.Show("Se han ingresado : " + (pesajes - 1).ToString() + " Pesajes De " + (aux).ToString() + " bultos 1 Pesaje de " + aux2 + " Bultos");
-                                traer_Resumen_RecepcionTableAdapter.Fill(genesisDataSet.Traer_Resumen_Recepcion, Convert.ToInt16(cod_ProductorTextBox.Text), Convert.ToInt16(comboBox3.SelectedValue.ToString()), Convert.ToInt16(comboBox2.SelectedValue.ToString()), Txt_NumGuia.Text);
-                                tabControl1.Visible = true;
-                            }
-                            groupBox3.Visible = false;
-                            traer_Resumen_RecepcionDataGridView.Visible = false;
-
-                            tabControl1.Controls.Remove(tabControl1.TabPages["tabPage1"]);
-                            tabControl1.Controls.Remove(tabControl1.TabPages["tabPage2"]);
-                            tabControl1.Controls.Remove(tabControl1.TabPages["tabPage3"]);
-                            int Num_proceso = traer_Resumen_RecepcionDataGridView.RowCount;
-
-                            if (Num_proceso == 2)
-                            {
-                                panel1.Visible = true;
-                                panel2.Visible = true;
-                                LblRecepcion1.Text = traer_Resumen_RecepcionDataGridView.Rows[0].Cells[nameof(dataGridViewTextBoxColumn11)].Value.ToString();
-                                LblRecepcion2.Text = traer_Resumen_RecepcionDataGridView.Rows[1].Cells[nameof(dataGridViewTextBoxColumn11)].Value.ToString();
-                                LblBultos1.Text = "Bultos : " + traer_Resumen_RecepcionDataGridView.Rows[0].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString();
-                                LblBultos2.Text = "Bultos : " + traer_Resumen_RecepcionDataGridView.Rows[1].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString();
-                            }
-                            else
-                            if (Num_proceso == 3)
-                            {
-                                panel1.Visible = true;
-                                panel2.Visible = true;
-                                panel3.Visible = true;
-                                LblRecepcion1.Text = traer_Resumen_RecepcionDataGridView.Rows[0].Cells[nameof(dataGridViewTextBoxColumn11)].Value.ToString();
-                                LblRecepcion2.Text = traer_Resumen_RecepcionDataGridView.Rows[1].Cells[nameof(dataGridViewTextBoxColumn11)].Value.ToString();
-                                LblRecepcion3.Text = traer_Resumen_RecepcionDataGridView.Rows[2].Cells[nameof(dataGridViewTextBoxColumn11)].Value.ToString();
-                                LblBultos1.Text = "Bultos : " + traer_Resumen_RecepcionDataGridView.Rows[0].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString();
-                                LblBultos2.Text = "Bultos : " + traer_Resumen_RecepcionDataGridView.Rows[1].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString();
-                                LblBultos3.Text = "Bultos : " + traer_Resumen_RecepcionDataGridView.Rows[2].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString();
-                            }
-                            else
-                            if (Num_proceso == 4)
-                            {
-                                panel1.Visible = true;
-                                panel2.Visible = true;
-                                panel3.Visible = true;
-                                panel4.Visible = true;
-                                LblRecepcion1.Text = traer_Resumen_RecepcionDataGridView.Rows[0].Cells[nameof(dataGridViewTextBoxColumn11)].Value.ToString();
-                                LblRecepcion2.Text = traer_Resumen_RecepcionDataGridView.Rows[1].Cells[nameof(dataGridViewTextBoxColumn11)].Value.ToString();
-                                LblRecepcion3.Text = traer_Resumen_RecepcionDataGridView.Rows[2].Cells[nameof(dataGridViewTextBoxColumn11)].Value.ToString();
-                                LblRecepcion4.Text = traer_Resumen_RecepcionDataGridView.Rows[3].Cells[nameof(dataGridViewTextBoxColumn11)].Value.ToString();
-                                LblBultos1.Text = "Bultos : " + traer_Resumen_RecepcionDataGridView.Rows[0].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString();
-                                LblBultos2.Text = "Bultos : " + traer_Resumen_RecepcionDataGridView.Rows[1].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString();
-                                LblBultos3.Text = "Bultos : " + traer_Resumen_RecepcionDataGridView.Rows[2].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString();
-                                LblBultos4.Text = "Bultos : " + traer_Resumen_RecepcionDataGridView.Rows[3].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString();
-                            }
-
-                        }
-                        else
-                        {
-                            MessageBox.Show("Error");
-                        }
-                    }
-
-                }
-                else
-                {
-                    MessageBox.Show("Debe ingresar numero de guia y/0 bultos al sistema", "Anakena", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message, "Anakena", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }   
-        }
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -1027,18 +870,7 @@ namespace FormularioRomana
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            FormBusquedaProductores rc = new FormBusquedaProductores();
-            rc.ShowDialog();
-            if (rc.codigo.ToString() !=  "0")
-            {
-                cod_ProductorTextBox.Text = rc.codigo.ToString();
-                productoresTableAdapter.FiltroProductorByCodigo(genesisDataSet.Productores, (short)rc.codigo);
-            }
-            else
-            {
-                MessageBox.Show("Debe seleccionar algun productor", "Anakena", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.productoresTableAdapter.Fill(this.genesisDataSet.Productores);
-            }
+         
         }
         private void cod_ProductorTextBox_TextChanged(object sender, EventArgs e)
         {
@@ -1403,6 +1235,223 @@ namespace FormularioRomana
         {
             Informe_Recepcion x = new Informe_Recepcion(id);
             x.ShowDialog();
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void bunifuThinButton22_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                Boolean is_numero = int.TryParse(TxtBultos.Text, out bultos);
+                if ((TxtBultos.Text.Length > 0) && (Txt_NumGuia.Text.Length > 0) && (is_numero))
+                {
+
+                    if ((comboBox2.Text == "Con Pelón") || ((comboBox2.Text == "Seca") && (bultos <= 24)))
+                    {
+                        id = Convert.ToInt32(recepcionesTableAdapter1.Insertar_Recepciones(Convert.ToInt16(cod_ProductorTextBox.Text), Convert.ToInt16(comboBox3.SelectedValue.ToString()), Convert.ToInt16(comboBox2.SelectedValue.ToString()), Convert.ToInt16(productosComboBox.SelectedValue.ToString()), Txt_NumGuia.Text, bultos, "16448502-1"));
+                        MessageBox.Show("Recepción ingresada", "Anakena", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //   groupBox1.Enabled = false;
+                        tabControl1.Visible = true;
+                        label1.Visible = true;
+                        Lbl_Recepcion.Visible = true;
+                        Lbl_Recepcion.Text = id.ToString();
+                        if (comboBox2.Text == "Con Pelón")
+                        {
+                            try
+                            {
+                                tabControl1.Controls.Remove(tabControl1.TabPages["tabPage4"]);
+                                tabControl1.Controls.Remove(tabControl1.TabPages["tabPage3"]);
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show(ex.Message, "Anakena", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                        }
+                        else
+                        if (comboBox2.Text == "Seca")
+                        {
+                            try
+                            {
+                                tabControl1.Controls.Remove(tabControl1.TabPages["tabPage4"]);
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show(ex.Message, "Anakena", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                        }
+                    }
+                    else
+                    if (comboBox2.Text == "Seca")
+                    {
+                        double pesajes = 0;
+                        //groupBox1.Enabled = false;
+                        if (bultos > 24 && bultos <= 50)
+                        {
+                            pesajes = 2;
+                        }
+                        else
+                        if (bultos > 51 && bultos <= 75)
+                        {
+                            pesajes = 3;
+                        }
+                        else
+                        if (bultos > 76 && bultos <= 80)
+                        {
+                            pesajes = 4;
+                        }
+                        if (bultos <= 80)
+                        {
+                            tabControl1.TabPages[1].Text = "Descripcion de Envases";
+                            if (bultos % pesajes == 0)
+                            {
+                                int aux = Convert.ToInt32(bultos / pesajes);
+                                for (int i = 0; i < pesajes; i++)
+                                {
+                                    id = Convert.ToInt32(recepcionesTableAdapter1.Insertar_Recepciones(Convert.ToInt16(cod_ProductorTextBox.Text), Convert.ToInt16(comboBox3.SelectedValue.ToString()), Convert.ToInt16(comboBox2.SelectedValue.ToString()), Convert.ToInt16(productosComboBox.SelectedValue.ToString()), Txt_NumGuia.Text, aux, "16448502-1"));
+                                }
+
+                                MessageBox.Show("Se han ingresado : " + (pesajes).ToString() + " De " + (aux).ToString());
+                                traer_Resumen_RecepcionTableAdapter.Fill(genesisDataSet.Traer_Resumen_Recepcion, Convert.ToInt16(cod_ProductorTextBox.Text), Convert.ToInt16(comboBox3.SelectedValue.ToString()), Convert.ToInt16(comboBox2.SelectedValue.ToString()), Txt_NumGuia.Text);
+                                tabControl1.Visible = true;
+                            }
+                            else
+                            {
+                                int aux = Convert.ToInt32(bultos / pesajes);
+                                int aux1 = Convert.ToInt32((aux * (pesajes - 1)));
+                                int aux2 = Convert.ToInt32(bultos - aux1);
+
+                                for (int i = 0; i < pesajes - 1; i++)
+                                {
+                                    id = Convert.ToInt32(recepcionesTableAdapter1.Insertar_Recepciones(Convert.ToInt16(cod_ProductorTextBox.Text), Convert.ToInt16(comboBox3.SelectedValue.ToString()), Convert.ToInt16(comboBox2.SelectedValue.ToString()), Convert.ToInt16(productosComboBox.SelectedValue.ToString()), Txt_NumGuia.Text, aux, "16448502-1"));
+                                }
+
+                                id = Convert.ToInt32(recepcionesTableAdapter1.Insertar_Recepciones(Convert.ToInt16(cod_ProductorTextBox.Text), Convert.ToInt16(comboBox3.SelectedValue.ToString()), Convert.ToInt16(comboBox2.SelectedValue.ToString()), Convert.ToInt16(productosComboBox.SelectedValue.ToString()), Txt_NumGuia.Text, aux2, "16448502-1"));
+                                MessageBox.Show("Se han ingresado : " + (pesajes - 1).ToString() + " Pesajes De " + (aux).ToString() + " bultos 1 Pesaje de " + aux2 + " Bultos");
+                                traer_Resumen_RecepcionTableAdapter.Fill(genesisDataSet.Traer_Resumen_Recepcion, Convert.ToInt16(cod_ProductorTextBox.Text), Convert.ToInt16(comboBox3.SelectedValue.ToString()), Convert.ToInt16(comboBox2.SelectedValue.ToString()), Txt_NumGuia.Text);
+                                tabControl1.Visible = true;
+                            }
+                            groupBox3.Visible = false;
+                            traer_Resumen_RecepcionDataGridView.Visible = false;
+
+                            tabControl1.Controls.Remove(tabControl1.TabPages["tabPage1"]);
+                            tabControl1.Controls.Remove(tabControl1.TabPages["tabPage2"]);
+                            tabControl1.Controls.Remove(tabControl1.TabPages["tabPage3"]);
+                            int Num_proceso = traer_Resumen_RecepcionDataGridView.RowCount;
+
+                            if (Num_proceso == 2)
+                            {
+                                panel1.Visible = true;
+                                panel2.Visible = true;
+                                LblRecepcion1.Text = traer_Resumen_RecepcionDataGridView.Rows[0].Cells[nameof(dataGridViewTextBoxColumn11)].Value.ToString();
+                                LblRecepcion2.Text = traer_Resumen_RecepcionDataGridView.Rows[1].Cells[nameof(dataGridViewTextBoxColumn11)].Value.ToString();
+                                LblBultos1.Text = "Bultos : " + traer_Resumen_RecepcionDataGridView.Rows[0].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString();
+                                LblBultos2.Text = "Bultos : " + traer_Resumen_RecepcionDataGridView.Rows[1].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString();
+                            }
+                            else
+                            if (Num_proceso == 3)
+                            {
+                                panel1.Visible = true;
+                                panel2.Visible = true;
+                                panel3.Visible = true;
+                                LblRecepcion1.Text = traer_Resumen_RecepcionDataGridView.Rows[0].Cells[nameof(dataGridViewTextBoxColumn11)].Value.ToString();
+                                LblRecepcion2.Text = traer_Resumen_RecepcionDataGridView.Rows[1].Cells[nameof(dataGridViewTextBoxColumn11)].Value.ToString();
+                                LblRecepcion3.Text = traer_Resumen_RecepcionDataGridView.Rows[2].Cells[nameof(dataGridViewTextBoxColumn11)].Value.ToString();
+                                LblBultos1.Text = "Bultos : " + traer_Resumen_RecepcionDataGridView.Rows[0].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString();
+                                LblBultos2.Text = "Bultos : " + traer_Resumen_RecepcionDataGridView.Rows[1].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString();
+                                LblBultos3.Text = "Bultos : " + traer_Resumen_RecepcionDataGridView.Rows[2].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString();
+                            }
+                            else
+                            if (Num_proceso == 4)
+                            {
+                                panel1.Visible = true;
+                                panel2.Visible = true;
+                                panel3.Visible = true;
+                                panel4.Visible = true;
+                                LblRecepcion1.Text = traer_Resumen_RecepcionDataGridView.Rows[0].Cells[nameof(dataGridViewTextBoxColumn11)].Value.ToString();
+                                LblRecepcion2.Text = traer_Resumen_RecepcionDataGridView.Rows[1].Cells[nameof(dataGridViewTextBoxColumn11)].Value.ToString();
+                                LblRecepcion3.Text = traer_Resumen_RecepcionDataGridView.Rows[2].Cells[nameof(dataGridViewTextBoxColumn11)].Value.ToString();
+                                LblRecepcion4.Text = traer_Resumen_RecepcionDataGridView.Rows[3].Cells[nameof(dataGridViewTextBoxColumn11)].Value.ToString();
+                                LblBultos1.Text = "Bultos : " + traer_Resumen_RecepcionDataGridView.Rows[0].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString();
+                                LblBultos2.Text = "Bultos : " + traer_Resumen_RecepcionDataGridView.Rows[1].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString();
+                                LblBultos3.Text = "Bultos : " + traer_Resumen_RecepcionDataGridView.Rows[2].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString();
+                                LblBultos4.Text = "Bultos : " + traer_Resumen_RecepcionDataGridView.Rows[3].Cells[nameof(dataGridViewTextBoxColumn21)].Value.ToString();
+                            }
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error");
+                        }
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Debe ingresar numero de guia y/0 bultos al sistema", "Anakena", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message, "Anakena", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            FormBusquedaProductores rc = new FormBusquedaProductores();
+            rc.ShowDialog();
+            if (rc.codigo.ToString() != "0")
+            {
+                cod_ProductorTextBox.Text = rc.codigo.ToString();
+                productoresTableAdapter.FiltroProductorByCodigo(genesisDataSet.Productores, (short)rc.codigo);
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar algun productor", "Anakena", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.productoresTableAdapter.Fill(this.genesisDataSet.Productores);
+            }
+        }
+
+        private void bunifuSeparator1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabControl1_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            //get tabpage
+            //TabPage tabPages = tabControl1.TabPages[e.Index];
+            //Graphics graphics = e.Graphics;
+            //Brush textBrush = new SolidBrush(Color.Green); //fore color brush
+            //Rectangle tabBounds = tabControl1.GetTabRect(e.Index);
+            //if (e.State == DrawItemState.Selected)
+            //{
+            //    graphics.FillRectangle(Brushes.SkyBlue, e.Bounds); //fill background color
+            //}
+            //else
+            //{
+            //    textBrush = new System.Drawing.SolidBrush(e.ForeColor);
+            //    e.DrawBackground();
+            //}
+            //Font tabFont = new Font("Book Antiqua", 12, FontStyle.Italic | FontStyle.Bold, GraphicsUnit.Pixel);
+            //StringFormat strFormat = new StringFormat();
+            //strFormat.Alignment = StringAlignment.Near;
+            //strFormat.LineAlignment = StringAlignment.Near;
+            //// draw text
+            //graphics.DrawString(tabPages.Text, tabFont, textBrush, tabBounds, new StringFormat(strFormat));
+            //graphics.Dispose();
+            //textBrush.Dispose();
         }
     }
 }

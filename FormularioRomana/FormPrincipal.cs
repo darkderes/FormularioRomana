@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace FormularioRomana
 {
-    public partial class FormPrincipal : MetroFramework.Forms.MetroForm
+    public partial class FormPrincipal : Form
     {
         public FormPrincipal()
         {
@@ -27,29 +27,34 @@ namespace FormularioRomana
         {
             var admin_Secado = new FormAdmin_Secado();
             admin_Secado.ShowDialog();
-            //var secado = new FormSecado();
-            //secado.ShowDialog();
         }
 
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'genesisDataSet.Variedad' Puede moverla o quitarla según sea necesario.
-            this.variedadTableAdapter.Fill(this.genesisDataSet.Variedad);
-            // TODO: esta línea de código carga datos en la tabla 'genesisDataSet.Producto' Puede moverla o quitarla según sea necesario.
-            this.productoTableAdapter.Fill(this.genesisDataSet.Producto);
 
         }
 
         private void materialRaisedButton1_Click(object sender, EventArgs e)
         {
-            FormRecepciónes x = new FormRecepciónes();
-            x.ShowDialog();
+          
         }
 
         private void materialRaisedButton2_Click(object sender, EventArgs e)
         {
             FormAdmin_Secado x = new FormAdmin_Secado();
             x.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FormAdmin_Secado s = new FormAdmin_Secado();
+            s.ShowDialog();
+        }
+
+        private void bunifuTileButton1_Click(object sender, EventArgs e)
+        {
+            FormRecepciónes x = new FormRecepciónes();
+             x.ShowDialog();
         }
     }
 }

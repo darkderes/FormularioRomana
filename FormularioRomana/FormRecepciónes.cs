@@ -103,11 +103,7 @@ namespace FormularioRomana
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            FormBusquedaProductores productores = new FormBusquedaProductores();
-            productores.ShowDialog();
-            int i = productores.codigo;
-            cod_ProductorTextBox.Text = i.ToString();
-            productoresTableAdapter.FiltroProductorByCodigo(genesisDataSet1.Productores, (short)productores.codigo);
+          
         }
         private void fillByProductoresToolStripButton_Click(object sender, EventArgs e)
         {
@@ -165,9 +161,7 @@ namespace FormularioRomana
                                 traer_Resumen_Recepcion_FiltroDataGridView.Rows[e.RowIndex].Cells[nameof(dataGridViewTextBoxColumn14)].Style.BackColor = Color.Bisque;
                             }
                               
-                        }
-                           
-                        
+                        }                     
                         else
                         {
                             traer_Resumen_Recepcion_FiltroDataGridView.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.LightYellow;
@@ -330,6 +324,109 @@ namespace FormularioRomana
                     }
                 }
             }
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void bunifuCustomDataGrid1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if ((e.RowIndex >= 0) && (e.ColumnIndex > 0))
+            {
+                try
+                {
+                    if ((!string.IsNullOrEmpty(bunifuCustomDataGrid1.Rows[e.RowIndex].Cells[nameof(formalizadaDataGridViewTextBoxColumn)].Value.ToString())) || (!string.IsNullOrWhiteSpace(bunifuCustomDataGrid1.Rows[e.RowIndex].Cells[nameof(formalizadaDataGridViewTextBoxColumn)].Value.ToString())))
+                    {
+                        if (bunifuCustomDataGrid1.Rows[e.RowIndex].Cells[nameof(formalizadaDataGridViewTextBoxColumn)].Value.ToString() == "No")
+                        {
+                            bunifuCustomDataGrid1.Rows[e.RowIndex].DefaultCellStyle.ForeColor = Color.FromArgb(49,65,85);
+                            //if ((bunifuCustomDataGrid1.Rows[e.RowIndex].Cells[nameof(dataGridViewTextBoxColumn7)].Value.ToString() == "2") && (bunifuCustomDataGrid1.Rows[e.RowIndex].Cells[nameof(dataGridViewTextBoxColumn14)].Value.ToString() == "0"))
+                            //{
+                            //    bunifuCustomDataGrid1.Rows[e.RowIndex].Cells[nameof(dataGridViewTextBoxColumn14)].Style.BackColor = Color.Bisque;
+                            //}
+
+                        }
+                        else
+                        {
+                            bunifuCustomDataGrid1.Rows[e.RowIndex].DefaultCellStyle.ForeColor = Color.Red;
+                           // bunifuCustomDataGrid1.Rows[e.RowIndex].DefaultCellStyle.Font = new Font(bunifuCustomDataGrid1.DefaultCellStyle.Font,FontStyle.Bold);
+                        }
+                    }
+                }
+                catch (System.IndexOutOfRangeException ex)
+                { }
+                catch (System.NullReferenceException ex)
+                { }
+
+            }
+        }
+
+        private void bunifuThinButton22_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var recepcion = new Form1(1);
+            recepcion.ShowDialog();
+            this.traer_Resumen_Recepcion_FiltroTableAdapter.Fill(genesisDataSet.Traer_Resumen_Recepcion_Filtro, null, null, null, formalizada, humedad);
+            this.Show();
+        }
+
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+            short? productor = (!string.IsNullOrEmpty(cod_ProductorTextBox.Text)) ? Convert.ToInt16(cod_ProductorTextBox.Text) : (short?)null;
+            short? variedad = (!string.IsNullOrEmpty(CmbVariedad.SelectedValue.ToString()) && (CmbVariedad.SelectedIndex != 0)) ? Convert.ToInt16(CmbVariedad.SelectedValue.ToString()) : (short?)null;
+            short? producto = (!string.IsNullOrEmpty(productosComboBox.SelectedValue.ToString()) && (productosComboBox.SelectedIndex != 0)) ? Convert.ToInt16(productosComboBox.SelectedValue.ToString()) : (short?)null;
+            if (radioButton6.Checked)
+            {
+                formalizada = null;
+            }
+            else
+            if (radioButton5.Checked)
+            {
+                formalizada = 1;
+            }
+            else
+            if (radioButton4.Checked)
+            {
+                formalizada = 0;
+            }
+            if (radioButton1.Checked)
+            {
+                humedad = null;
+            }
+            else
+             if (radioButton2.Checked)
+            {
+                humedad = 1;
+            }
+            else
+            if (radioButton3.Checked)
+            {
+                humedad = 0;
+            }
+            try
+            {
+                this.traer_Resumen_Recepcion_FiltroTableAdapter.Fill(this.genesisDataSet.Traer_Resumen_Recepcion_Filtro, productor, variedad, producto, (short?)formalizada, humedad);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            FormBusquedaProductores productores = new FormBusquedaProductores();
+            productores.ShowDialog();
+            int i = productores.codigo;
+            cod_ProductorTextBox.Text = i.ToString();
+            productoresTableAdapter.FiltroProductorByCodigo(genesisDataSet1.Productores, (short)productores.codigo);
         }
     }
 }
